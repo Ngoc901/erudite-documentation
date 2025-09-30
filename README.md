@@ -19,6 +19,6 @@ Erudite Documentation contains the supporting documentation for the **Erudite Ed
 ## 🧑‍💻 Author
 The Erudite Team
 
-Niki Huawei
-Brian Miami
-Atai Mammut
+Niki Huawei<br>
+Brian Miami<br>
+Atai Mammut<br>
