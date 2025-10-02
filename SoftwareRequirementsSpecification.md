@@ -82,7 +82,7 @@ This document first introduces the vision and architecture, followed by specific
 ERUDITE is a collaborative learning platform. Students join courses, complete challenges of various types, receive grades and points, and appear in rankings. Authors create structured learning experiences, while moderators ensure safe communication and fairness.
 
 ### 2.2 Use Case Diagram
-![Use Case Diagram](./use_cases/UseCaseDiagramERUDITE.png)
+![Use Case Diagram](https://github.com/Ngoc901/erudite-documentation/raw/86ab56d155e878d049254e0e2557e5cda40cac5a/UCD.drawio.png)
 
 ### 2.3 Technology Stack
 **Client**:  
