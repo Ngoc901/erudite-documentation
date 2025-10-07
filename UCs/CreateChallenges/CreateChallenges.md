@@ -24,7 +24,11 @@ This use case describes how an Teacher creates a new challenge within a course t
 
 ### 2.1.1 Activity Diagram
 
+![Activity Diagram]([http://url/to/img.png](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallengesActivityDiagram.drawio.png))
+
 ### 2.1.2 Mock-up
+
+![Mock-up](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/Lo-Fi-CreateChallenge.png)
 
 ### 2.1.3 Narrative
 The Author uses this form to create structured learning tasks inside a topic. Once saved, the challenge is stored in the database and can later be edited or deleted. Auto-checking with correct answers.
