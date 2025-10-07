@@ -1,5 +1,5 @@
 # 1 Use-Case Name
-Edit Challenges
+Edit Challenges CRUD: Update
 
 ## 1.1 Brief Description
 
