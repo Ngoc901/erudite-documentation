@@ -11,6 +11,7 @@
 - [Overall Description](#2-overall-description)
     - [Vision](#21-vision)
     - [Use Case Diagram](#22-use-case-diagram)
+        - [Challenges](#22-use-case-diagram)
     - [Technology Stack](#23-technology-stack)
 - [Specific Requirements](#3-specific-requirements)
     - [Functionality](#31-functionality)
@@ -84,6 +85,9 @@ ERUDITE is a collaborative learning platform. Students join courses, complete ch
 ### 2.2 [Use Case Diagram](https://app.diagrams.net/#G1KlKqRBsCpliZRuRpVQTxwQJqvAv2_JSH#%7B%22pageId%22%3A%22QEc6X85PEJgYoR8-f0XZ%22%7D)
 
 ![Use Case Diagram](https://github.com/Ngoc901/erudite-documentation/raw/main/Requirements%20Diagram.drawio.png)
+
+## 2.2.1 Challenges
+[Create Challenges Use Case](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallenges.md)
 
 ### 2.3 Technology Stack
 **Client**:  
