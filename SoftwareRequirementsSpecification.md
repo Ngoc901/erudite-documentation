@@ -81,7 +81,7 @@ This document first introduces the vision and architecture, followed by specific
 ### 2.1 Vision
 ERUDITE is a collaborative learning platform. Students join courses, complete challenges of various types, receive grades and points, and appear in rankings. Authors create structured learning experiences, while moderators ensure safe communication and fairness.
 
-### 2.2 Use Case Diagram
+### 2.2 [Use Case Diagram] (https://app.diagrams.net/#G1KlKqRBsCpliZRuRpVQTxwQJqvAv2_JSH#%7B%22pageId%22%3A%22QEc6X85PEJgYoR8-f0XZ%22%7D)
 ![Use Case Diagram](https://github.com/Ngoc901/erudite-documentation/raw/main/Requirements%20Diagram.drawio.png)
 
 ### 2.3 Technology Stack
