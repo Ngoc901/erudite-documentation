@@ -32,7 +32,7 @@ This use case describes how an Teacher creates a new challenge within a course t
 
 ### 2.1.3 Narrative
 The Author uses this form to create structured learning tasks inside a topic. Once saved, the challenge is stored in the database and can later be edited or deleted. Auto-checking with correct answers.
-
+```
 Feature: Create a new challenge
 
   As a Teacher
@@ -65,7 +65,7 @@ Feature: Create a new challenge
     And press "create"
     Then I stay on the "create challenge" page
     And an error message is shown
-
+```
 ## 2.2 Alternative Flows
 Invalid Data: Missing title, body, correct answers, or points: error message, no save.
 
