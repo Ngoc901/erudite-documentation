@@ -24,7 +24,7 @@ This use case describes how an Teacher creates a new challenge within a course t
 
 ### 2.1.1 Activity Diagram
 
-![Activity Diagram](http://url/to/img.png](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallengesActivityDiagram.drawio.png )
+![Activity Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallengesActivityDiagram.drawio.png)
 
 ### 2.1.2 Mock-up
 
