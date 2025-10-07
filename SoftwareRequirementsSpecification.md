@@ -88,6 +88,8 @@ ERUDITE is a collaborative learning platform. Students join courses, complete ch
 
 ## 2.2.1 Challenges
 [Create Challenges Use Case](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallenges.md)
+[Edit Challenges Use Case](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
 
 ### 2.3 Technology Stack
 **Client**:  
