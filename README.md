@@ -7,7 +7,10 @@ Erudite Documentation contains the supporting documentation for the **Erudite Ed
 
 - **SRS (Software Requirements Specification)**  
   Detailed description of the platform’s purpose, scope, features, and system requirements.
-  
+- **UCD (Use Case Diagrams)**  
+  Visual representation of the main interactions between users and the system.
+- **UCs (Use Cases)** 
+  Step-by-step descriptions of how users achieve specific goals within the system.
 ---
 
 ## 📜 References  
