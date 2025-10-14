@@ -24,7 +24,7 @@ This use case describes how a Teacher creates a new course in the system. The co
 
 ### 2.1.1 Activity Diagram
 
-![Activity Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallengesActivityDiagramCorrected.drawio.png)
+![Activity Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateCourse/CreateCoursesActivityDiagram.drawio.png)
 
 ### 2.1.2 Mock-up
 
