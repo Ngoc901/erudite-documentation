@@ -32,35 +32,41 @@ This use case describes how a Teacher creates a new course in the system. The co
 
 ### 2.1.3 Narrative
 The Teacher uses this form to create new courses on the platform. Once saved, the course is stored in the database and appears in the catalog when published. The Teacher can later add modules and challenges to the course.
+
+
 ```
 Feature: Create a new course
 
-As a Teacher
-I want to create a course
-So that students can enroll and complete challenges.
+  As a Teacher
+  I want to create a course
+  So that students can enroll and complete challenges.
 
-Background:
-I am logged in as a Teacher
-And I am on the "courses" page
+  Background:
+    Given I am logged in as an existing teacher with verified email
 
-Scenario: Create course successfully
-When I click "Create Course"
-Then the "Create Course" form appears
-When I enter "Math Basics" as the title
-And "Introduction to basic math principles" as the description
-And select "English" as the language
-And "Beginner" as the level
-And press "Create"
-Then I see the "Course Details" page
-And a success message appears
+  Scenario: Successfully create a course
+    When I send a POST request to "/api/platform/courses/create/" with the following data:
+        |             |                                       |
+        | title       | Math Basics                           |
+        | description | Introduction to basic math principles |
+        | language    | English                               |
+        | level       | beginner                              |
+        | status      | published                             |
+    Then the course response status code should be 201
+    And the course response should contain "Course created successfully."
 
-Scenario: Fail to create a course with invalid data
-When I leave title and description empty
-And press "Create"
-Then I stay on the create form
-And an error message is shown
+  Scenario: Fail to create a course with missing title and description
+    When I send a POST request to "/api/platform/courses/create/" with the following data:
+      | title       |                                          |
+      | description |                                          |
+      | language    | English                                  |
+      | level       | beginner                                 |
+      | status      | draft                                    |
+    Then the course response status code should be 400
+    And the course response should contain "title"
 
 ```
+
 ## 2.2 Alternative Flows
 - **Cancel:** Teacher clicks “Cancel”: Return to Courses page without saving.  
 - **Validation error:** Missing or invalid input: Show error, no save.   
