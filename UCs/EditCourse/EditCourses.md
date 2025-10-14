@@ -34,29 +34,32 @@ This use case describes how a Teacher edits an existing course. The Teacher can 
 ### 2.1.3 Narrative
 The Teacher uses this form to maintain and update existing courses. Once saved, the modified course data is stored in the database and updated in the course catalog if published.
 ```
-Feature: Edit an existing course
+Feature: Update an existing course
+  As a Teacher
+  I want to edit a course
+  So that I can change its title or details after creation.
 
-As a Teacher
-I want to edit a course
-So that I can update its information or correct mistakes.
+  Background:
+    Given I am logged in as an existing teacher with verified email for updating
+    And a course already exists with title "Math Basics" and slug "math-basics"
 
-Background:
-I am logged in as a Teacher
-And I am on the "course details" page
+  Scenario: Successfully update a course
+    When I send a PATCH request to "/api/platform/courses/{course_slug}/update/" with the following data:
+      |             |                              |
+      | title       | Advanced Math Basics 2       |
+      | description | Updated course description   |
+      | level       | intermediate                 |
+      | status      | published                    |
+    Then the course update response status code should be 200
+    And the course response should contain "Advanced Math Basics"
 
-Scenario: Edit course successfully
-When I click "Edit Course"
-Then the "Edit Course" form appears
-When I change the title to "Updated Math Basics"
-And update the description
-And press "Save"
-Then I see the updated "Course Details" page
-And a success message appears
-
-Scenario: Fail to edit a course with invalid data
-When I remove the title and press "Save"
-Then I stay on the edit form
-And an error message is shown
+  Scenario: Fail to update course with invalid data
+    When I send a PATCH request to "/api/platform/courses/{course_slug}/update/" with the following data:
+      |             |                              |
+      | title       |                              |
+      | description |                              |
+    Then the course update response should contain "No changes detected"
+    And the course response should contain "title"
 
 ```
 ## 2.2 Alternative Flows
