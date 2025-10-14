@@ -28,7 +28,7 @@ This use case describes how a Teacher creates a new course in the system. The co
 
 ### 2.1.2 Mock-up
 
-![Mock-up](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/Lo-Fi.png)
+![Mock-up](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateCourse/CreateCourse%3AEditCourse.png)
 
 ### 2.1.3 Narrative
 The Teacher uses this form to create new courses on the platform. Once saved, the course is stored in the database and appears in the catalog when published. The Teacher can later add modules and challenges to the course.
