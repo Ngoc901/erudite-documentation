@@ -16,7 +16,7 @@ This use case describes how a Teacher creates a new course in the system. The co
    - Language  
    - Level (beginner/intermediate/advanced)  
    - Optional: cover image  
-   - Optional: visibility (draft/public)
+   - Optional: visibility (draft/public/archived)
 5. Teacher fills out the form and submits it.
 6. System validates the inputs.
 7. System inserts the new course record into the database.
