@@ -25,7 +25,7 @@ This use case describes how a Teacher edits an existing course. The Teacher can 
 
 ### 2.1.1 Activity Diagram
 
-![Activity Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallengesActivityDiagramCorrected.drawio.png)
+![Activity Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditCourse/EditCouresesActivityDiagram.drawio.png)
 
 ### 2.1.2 Mock-up
 
