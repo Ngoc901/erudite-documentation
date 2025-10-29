@@ -72,17 +72,6 @@ ERUDITE is built using the **MVS pattern** (a REST-oriented variant of MVC) for 
 
 Django REST Framework (DRF) is a powerful and flexible toolkit built on top of Django that simplifies the creation of RESTful APIs. Django REST is a library for the Django Framework. Before APIs, Django was used as a web framework for building solid web applications, and it used the MVT pattern, which consists of Model View Template.
 
-### Frontend (React + Zustand)
-JavaScript is not a fully object-oriented language, technically, OOP can be implemented, however it was decided to keep the project procedural for simplicity. React codebases also rarely follow strict OOP patterns, therefore, generating a UML diagram based on class structures, simply is not relevant in our case. Instead, a layered project structure was designed, which is illustrated below.
-
-![Layered Frontend Project Structure](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/front-struct.png))
-
-#### Client-server Architecture 
-
-### Backend
-
-![Client-Server-Architecture](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/client-server-architecture.png))
-
 Django follows the **MVT** (Model–View–Template) pattern, which in DRF becomes **MVS**:
 
 - **Model**: Django ORM models (e.g., Post, User, Comment).
@@ -92,6 +81,17 @@ Django follows the **MVT** (Model–View–Template) pattern, which in DRF becom
 ![Difference between MVS and MVT](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVCvsMVT.png))
 
 ![MVS Pattern in Django](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVS-pattern-in-django.png))
+
+### Frontend (React + Zustand)
+JavaScript is not a fully object-oriented language, technically, OOP can be implemented, however it was decided to keep the project procedural for simplicity. React codebases also rarely follow strict OOP patterns, therefore, generating a UML diagram based on class structures, simply is not relevant in our case. Instead, a layered project structure was designed, which is illustrated below.
+
+![Layered Frontend Project Structure](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/front-struct.png))
+
+#### Client-server Architecture 
+
+![Client-Server-Architecture](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/client-server-architecture.png))
+
+
 
 
 ## 3. Architectural Goals and Constraints
