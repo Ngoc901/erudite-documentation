@@ -127,6 +127,7 @@ ERUDITE follows a **modular Django architecture**, where each app corresponds to
 
 ### 5.2 Architecturally Significant Design Packages
 
+Database Models for Backend
 ![DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/db-model.png)
 ![Generated DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/generated-db-model.png)
 
