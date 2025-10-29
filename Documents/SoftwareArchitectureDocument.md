@@ -36,19 +36,19 @@ This document describes the architecture of the Erudite project.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 
-| Abbreviation | Description                            |
-| ----------- | -------------------------------------- |
-| API         | Application Programming Interface      |
-| MVC         | Model View Controller                  |
-| REST        | Representational State Transfer        |
-| JWT         | JSON Web Token                         |
-| DRF         | Django REST Framework                  |
-| SPA         | Single Page Application                |
-| ORM         | Object Relational Mapper               |
-| CI/CD       | Continuous Integration / Continuous Deployment |
-| DBMS        | Database Management System             |
-| VCS         | Version Control System                 |
-| SRS         | Software Requirements Specification    |
+| Abbreviation | Description                                    |
+| -----------  | ---------------------------------------------- |
+| API          | Application Programming Interface              |
+| MVC          | Model View Controller                          |
+| REST         | Representational State Transfer                |
+| JWT          | JSON Web Token                                 |
+| DRF          | Django REST Framework                          |
+| SPA          | Single Page Application                        |
+| ORM          | Object Relational Mapper                       |
+| CI/CD        | Continuous Integration / Continuous Deployment |
+| DBMS         | Database Management System                     |
+| VCS          | Version Control System                         |
+| SRS          | Software Requirements Specification            |
 
 ### 1.4 References
 
@@ -75,13 +75,13 @@ Django REST Framework (DRF) is a powerful and flexible toolkit built on top of D
 ### Frontend (React + Zustand)
 JavaScript is not a fully object-oriented language, technically, OOP can be implemented, however it was decided to keep the project procedural for simplicity. React codebases also rarely follow strict OOP patterns, therefore, generating a UML diagram based on class structures, simply is not relevant in our case. Instead, a layered project structure was designed, which is illustrated below.
 
-![Layered Frontend Project Structure](Images/front-struct.png)
+![Layered Frontend Project Structure]([Images/front-struct.png](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/front-struct.png))
 
 #### Client-server Architecture 
 
 ### Backend
 
-![Client-Server-Architecture](Images/client-server-architecture.png)
+![Client-Server-Architecture]([Images/client-server-architecture.png](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/client-server-architecture.png))
 
 Django follows the **MVT** (Model–View–Template) pattern, which in DRF becomes **MVS**:
 
@@ -89,9 +89,9 @@ Django follows the **MVT** (Model–View–Template) pattern, which in DRF becom
 - **View**: APIView, ViewSet, or GenericViewSet — handle requests.
 - **Template / Serializer**: Converts model data into JSON and vice versa.
 
-![Difference between MVS and MVT](Images/MVCvsMVT.png)
+![Difference between MVS and MVT]([Images/MVCvsMVT.png](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVCvsMVT.png))
 
-![MVS Pattern in Django](Images/MVS-pattern-in-django.png)
+![MVS Pattern in Django]([Images/MVS-pattern-in-django.png](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVS-pattern-in-django.png))
 
 
 ## 3. Architectural Goals and Constraints
@@ -115,7 +115,7 @@ Media files (e.g., photos from challenges) are stored using **Cloudinary**.
 
 
 ## 4. Use-Case View
-![Use-Case Diagram](Diagrams/UCD.png)
+![Use-Case Diagram]([Diagrams/UCD.png](https://github.com/Ngoc901/erudite-documentation/blob/main/Diagrams/UCD.png))
 
 ### 4.1 Use-Case Realizations
 n/a
@@ -129,7 +129,7 @@ ERUDITE follows a **modular Django architecture**, where each app corresponds to
 
 Django REST Framework provides ready-to-use libraries that allows you to generate a complete CRUD functionality with just a few lines of code. These are called ViewSets, available in the rest_framework.viewsets module. In addition to ViewSets, DRF also offers generic views, which we actively use in our backend application to simplify common API operations.
 
-![Class diagram with MVS pattern](Images/class-diagram-with-mvs-patterns.png)
+![Class diagram with MVS pattern]([Images/class-diagram-with-mvs-patterns.png](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/class-diagram-with-mvs-patterns.png))
 
 ## 6. Process View
 n/a
