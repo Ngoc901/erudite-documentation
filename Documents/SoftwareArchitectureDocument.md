@@ -127,6 +127,9 @@ ERUDITE follows a **modular Django architecture**, where each app corresponds to
 
 ### 5.2 Architecturally Significant Design Packages
 
+![DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/db-model.png)
+![Generated DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/generated-db-model.png)
+
 Django REST Framework provides ready-to-use libraries that allows you to generate a complete CRUD functionality with just a few lines of code. These are called ViewSets, available in the rest_framework.viewsets module. In addition to ViewSets, DRF also offers generic views, which we actively use in our backend application to simplify common API operations.
 
 ![Class diagram with MVS pattern](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/class-diagram-with-mvs-patterns.png)
