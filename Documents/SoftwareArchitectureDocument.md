@@ -137,7 +137,7 @@ n/a
 ![Client-Server-Architecture](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/client-server-architecture.png)
 
 ## 8. Implementation View
-n/a
+![Generated Class Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/generated-class-diagram.png)
 ### 8.1 Overview
 n/a
 ### 8.2 Layers
