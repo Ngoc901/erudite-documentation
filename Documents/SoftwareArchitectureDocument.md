@@ -74,24 +74,12 @@ Django REST Framework (DRF) is a powerful and flexible toolkit built on top of D
 
 Django follows the **MVT** (Model–View–Template) pattern, which in DRF becomes **MVS**:
 
-- **Model**: Django ORM models (e.g., Post, User, Comment).
-- **View**: APIView, ViewSet, or GenericViewSet — handle requests.
-- **Template / Serializer**: Converts model data into JSON and vice versa.
-
 ![Difference between MVS and MVT](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVCvsMVT.png)
-
-![MVS Pattern in Django](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVS-pattern-in-django.png)
 
 ### Frontend (React + Zustand)
 JavaScript is not a fully object-oriented language, technically, OOP can be implemented, however it was decided to keep the project procedural for simplicity. React codebases also rarely follow strict OOP patterns, therefore, generating a UML diagram based on class structures, simply is not relevant in our case. Instead, a layered project structure was designed, which is illustrated below.
 
 ![Layered Frontend Project Structure](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/front-struct.png)
-
-#### Client-server Architecture 
-
-![Client-Server-Architecture](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/client-server-architecture.png)
-
-
 
 
 ## 3. Architectural Goals and Constraints
@@ -124,12 +112,17 @@ n/a
 
 ### 5.1 Overview
 ERUDITE follows a **modular Django architecture**, where each app corresponds to a functional domain.
+**MVS Model**
+
+- **Model**: Django ORM models (e.g., Post, User, Comment).
+- **View**: APIView, ViewSet, or GenericViewSet — handle requests.
+- **Template / Serializer**: Converts model data into JSON and vice versa.
+
+
+![MVS Pattern in Django](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVS-pattern-in-django.png)
+
 
 ### 5.2 Architecturally Significant Design Packages
-
-Database Models for Backend
-![DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/db-model.png)
-![Generated DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/generated-db-model.png)
 
 Django REST Framework provides ready-to-use libraries that allows you to generate a complete CRUD functionality with just a few lines of code. These are called ViewSets, available in the rest_framework.viewsets module. In addition to ViewSets, DRF also offers generic views, which we actively use in our backend application to simplify common API operations.
 
@@ -138,7 +131,11 @@ Django REST Framework provides ready-to-use libraries that allows you to generat
 ## 6. Process View
 n/a
 ## 7. Deployment View
-n/a
+
+#### Client-server Architecture 
+
+![Client-Server-Architecture](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/client-server-architecture.png)
+
 ## 8. Implementation View
 n/a
 ### 8.1 Overview
@@ -146,7 +143,10 @@ n/a
 ### 8.2 Layers
 n/a
 ## 9. Data View
-n/a
+Database Models for Backend
+![DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/db-model.png)
+![Generated DB Model for Backend](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/generated-db-model.png)
+
 ## 10. Size and Performance
 n/a
 ## 11. Quality/Metrics
