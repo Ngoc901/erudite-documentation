@@ -11,6 +11,7 @@
 - [Overall Description](#2-overall-description)
     - [Vision](#21-vision)
     - [Use Case Diagram](#22-use-case-diagram)
+        - [Authentication & Authorization](#22-use-case-diagram)    
         - [Challenges](#22-use-case-diagram)
         - [Courses & Topics](#22-use-case-diagram)
     - [Technology Stack](#23-technology-stack)
@@ -119,7 +120,7 @@ ERUDITE is a collaborative learning platform. Students join courses, complete ch
 
 [View Courses Use Case CRUD: Read](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
 
-###Topics
+### Topics
 
 [Create Topics Use Case CRUD: Create](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateCourse/CreateCourses.md)
 
