@@ -93,16 +93,41 @@ ERUDITE is a collaborative learning platform. Students join courses, complete ch
 
 ![Use Case Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/Diagrams/Requirements%20Diagram_Updated_2025_11.drawio.png)
 
-## 2.2.1 Challenges
+## 2.2.1 Authentication & Authorization
+[Register Use Case](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallenges.md)
+
+[Login Use Case](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+[Logout Use Case](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+[Authenticate User Use Case](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+## 2.2.2 Challenges
 [Create Challenges Use Case CRUD: Create](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallenges.md)
 
 [Edit Challenges Use Case CRUD: Update](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
 
-## 2.2.2 Courses & Topics
+[View Challenges Use Case CRUD: Read](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+## 2.2.3 Courses & Topics
+### Courses
 [Create Courses Use Case CRUD: Create](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateCourse/CreateCourses.md)
 
 [Edit Courses Use Case CRUD: Update](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
 
+[Delete Courses Use Case CRUD: Delete](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+[View Courses Use Case CRUD: Read](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+###Topics
+
+[Create Topics Use Case CRUD: Create](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateCourse/CreateCourses.md)
+
+[Edit Topics Use Case CRUD: Update](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+[Delete Create Use Case CRUD: Delete](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+
+[View Topics Use Case CRUD: Read](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
 
 ### 2.3 Technology Stack
 **Client**:  
