@@ -56,28 +56,34 @@ Planned subsystems:
 - **Admin Panel**: Manage users, courses, system settings.  
 
 ### 1.3 Definitions, Acronyms and Abbreviations
-| Abbrevation | Explanation                            |
-| ----------- | -------------------------------------- |
-| SRS         | Software Requirements Specification    |
-| UC          | Use Case                               |
-| JWT         | JSON Web Token                         |
-| a11y        | Accessibility                          |
-| i18n        | Internationalization                   |
-| SPA         | Single Page Application                |
-| MVP         | Minimum Viable Product                 |
+
+| Abbreviation | Description                                      |
+|--------------|--------------------------------------------------|
+| SRS          | Software Requirements Specification              |
+| UC           | Use Case                                         |
+| JWT          | JSON Web Token                                   |
+| a11y         | Accessibility                                    |
+| i18n         | Internationalization                             |
+| SPA          | Single Page Application                          |
+| MVP          | Minimum Viable Product                           |
+| OAuth        | Open Authorization                               |
+| TTFB         | Time To First Byte                               |
+| E2E          | End-to-End (testing)                             |
+| WCAG         | Web Content Accessibility Guidelines             |
+| GDPR         | General Data Protection Regulation               |
+
 
 ### 1.4 References
-| Title                                                              | Date       | Publishing organization   |
-| -------------------------------------------------------------------|:----------:| ------------------------- |
-| ERUDITE Project Docs (internal)                                    | 30.09.2025 | ERUDITE Team              |
-| [Django REST Framework](https://www.django-rest-framework.org/)    | 2025       | Django Software Foundation|
-| [React](https://react.dev)                                         | 2025       | Meta Open Source          |
+| Title                                                            |    Date    | Publishing organization   |
+|------------------------------------------------------------------|:----------:| ------------------------- |
+| ERUDITE Project Docs (internal)                                  | 30.09.2025 | ERUDITE Team              |
+| [Django REST Framework](https://www.django-rest-framework.org/)  |   2025     | Django Software Foundation|
+| [React](https://react.dev)                                       |    2025    | Meta Open Source          |
 
 ### 1.5 Overview
-This document first introduces the vision and architecture, followed by specific requirements (functional and non-functional). It concludes with supporting information and references.
+This document outlines the system's vision and high-level architecture, followed by detailed functional and non-functional requirements. It includes use cases, technology stack, interfaces, and supporting information to guide implementation and verification.
 
 ---
-
 ## 2. Overall Description
 
 ### 2.1 Vision
@@ -123,6 +129,7 @@ ERUDITE is a collaborative learning platform. Students join courses, complete ch
 
 **Testing**:  
 - UNIT tests
+- Cucumber Tests
 - Linters
 
 ---
