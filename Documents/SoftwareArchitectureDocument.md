@@ -85,7 +85,7 @@ Django REST Framework (DRF) is a toolkit built on Django for creating RESTful AP
 
 Django follows the **MVT** (Model–View–Template) pattern, which in DRF becomes **MVS**:
 
-![Difference between MVS and MVT](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVCvsMVT.png){ width="500" }
+![Difference between MVS and MVT](https://github.com/Ngoc901/erudite-documentation/blob/main/Images/MVCvsMVT.png)
 
 ### Frontend (React + Zustand)
 The frontend is a component-based SPA using React. While JavaScript supports OOP, ERUDITE adopts a functional/procedural approach for simplicity, avoiding complex class hierarchies. State is managed via Zustand (MVVM-inspired), with a layered structure for components, services, and utilities.
