@@ -95,7 +95,7 @@ ERUDITE is a collaborative learning platform. Students join courses, complete ch
 ![Use Case Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/Diagrams/UCD_2025_11.jpg)
 
 **Our Scope for the third semester**
-[Use Case Diagram Scope](https://github.com/Ngoc901/erudite-documentation/blob/main/Diagrams/UCD_Scope.jpg)
+![Use Case Diagram Scope](https://github.com/Ngoc901/erudite-documentation/blob/main/Diagrams/UCD_Scope.jpg)
 
 
 ## 2.2.1 Authentication & Authorization
