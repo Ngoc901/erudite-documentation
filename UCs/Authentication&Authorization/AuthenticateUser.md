@@ -26,10 +26,10 @@ If authentication is successful, the request proceeds; otherwise, the system ret
 7. If authentication succeeds, the system grants access to the requested resource.
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/UserAuthentication.drawio.png)
+![Activity Diagram](../ActivityDiagram/UserAuthentication.drawio.png)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Auth-lofi.png)
+![Mock-up](../Images/Auth-lofi.png)
 
 ### 2.1.2 Narrative
 Every protected request must be authenticated.  

@@ -24,10 +24,10 @@ Upon successful login, the system issues authentication tokens (JWT) that allow 
 7. System displays confirmation: **“Login successful.”**
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/Login.jpg)
+![Activity Diagram](../Authentication&Authorization/Login.md)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Auth-lofi.png)
+![Mock-up](../Images/Auth-lofi.png)
 
 ### 2.1.3 Narrative
 The user enters their credentials and submits the login form.  

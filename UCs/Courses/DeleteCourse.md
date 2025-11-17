@@ -20,10 +20,10 @@ Deleting a course removes its entire structure, including Topics and Challenges.
 8. System displays confirmation: **“Course deleted successfully.”**
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/DeleteCourse.jpg)
+![Activity Diagram](../ActivityDiagram/DeleteCourse.jpg)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Courses-lofi.png)
+![Mock-up](../Images/Courses-lofi.png)
 
 ### 2.1.3 Narrative
 The Teacher selects a Course from their list and initiates the delete action.

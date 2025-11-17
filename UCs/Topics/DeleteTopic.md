@@ -22,10 +22,10 @@ A Topic may contain challenges. Once deleted, the Topic is no longer shown in th
 10. System shows confirmation: **“Topic deleted successfully.”**
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/DeleteTopic.jpg)
+![Activity Diagram](../ActivityDiagram/DeleteTopic.jpg)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Topics-lofi.png)
+![Mock-up](../Images/Topics-lofi.png)
 
 ### 2.1.3 Narrative
 The Teacher opens the Topics list of a course and selects a Topic to delete.  

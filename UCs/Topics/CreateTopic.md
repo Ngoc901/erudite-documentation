@@ -23,10 +23,10 @@ A Topic contains a title. Once created, the Topic becomes part of the course str
 9. System shows confirmation: **“Topic created successfully.”**
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/CreateTopic.jpg)
+![Activity Diagram](../ActivityDiagram/CreateTopic.jpg)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Topics-lofi.png)
+![Mock-up](../Images/Topics-lofi.png)
 
 ### 2.1.3 Narrative
 The Teacher uses this form to create new Topics inside a course.

@@ -25,10 +25,10 @@ The list may include course titles, descriptions, language, difficulty level, an
 6. User selects a Course to view more details (optional).
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/ViewCourses/ViewCoursesActivityDiagram.png)
+![Activity Diagram](../ActivityDiagram/ViewCourse.jpg)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Courses-lofi.png)
+![Mock-up](../Images/Courses-lofi.png)
 
 ### 2.1.3 Narrative
 The user navigates to the Courses section where the platform loads Courses in a paginated manner to ensure performance and scalability.  

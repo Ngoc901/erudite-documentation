@@ -23,10 +23,10 @@ A Topic displays its title and the list of challenges that belong to it.
 8. User can interact with the Topic or select a challenge to continue.
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/ViewTopic.drawio.png)
+![Activity Diagram](../ActivityDiagram/ViewTopic.drawio.png)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Topics-lofi.png)
+![Mock-up](../Images/Topics-lofi.png)
 
 ### 2.1.3 Narrative
 The user selects a course and views its Topics.  

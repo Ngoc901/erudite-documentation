@@ -22,10 +22,10 @@ This use case describes how a new User creates an account on the platform.
 8. System displays confirmation
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/Register.jpg)
+![Activity Diagram](../ActivityDiagram/Register.jpg)
 
 ### 2.1.2 Mock-up
-![Mock-up](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/Register/RegisterMockup.png)
+![Mock-up](../Images/Auth-lofi.png)
 
 ### 2.1.3 Narrative
 The User fills out the registration form with an email and password.  

@@ -21,10 +21,10 @@ This use case describes how an authenticated User logs out of the platform.
 7. System displays confirmation.
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/Logout.jpg)
+![Activity Diagram](../ActivityDiagram/Logout.jpg)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Auth-lofi.png)
+![Mock-up](../Images/Auth-lofi.png)
 
 ### 2.1.3 Narrative
 The user initiates the logout action from any part of the platform.  

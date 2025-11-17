@@ -24,10 +24,10 @@ A Teacher may modify the Topic title. After saving, the updated Topic informatio
 10. System displays confirmation: **“Topic updated successfully.”**
 
 ### 2.1.1 Activity Diagram
-![Activity Diagram](../../ActivityDiagram/EditTopic.jpg)
+![Activity Diagram](../ActivityDiagram/EditTopic.jpg)
 
 ### 2.1.2 Mock-up
-![Mock-up](../../Images/Topics-lofi.png)
+![Mock-up](../Images/Topics-lofi.png)
 
 ### 2.1.3 Narrative
 The Teacher selects an existing Topic and opens the edit form.  
