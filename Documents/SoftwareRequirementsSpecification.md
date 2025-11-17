@@ -90,47 +90,47 @@ This document outlines the system's vision and high-level architecture, followed
 ### 2.1 Vision
 ERUDITE is a collaborative learning platform. Students join courses, complete challenges of various types, receive grades and points, and appear in rankings. Authors create structured learning experiences, while moderators ensure safe communication and fairness.
 
-### 2.2 [Use Case Diagram](https://app.diagrams.net/#G1KlKqRBsCpliZRuRpVQTxwQJqvAv2_JSH#%7B%22pageId%22%3A%22QEc6X85PEJgYoR8-f0XZ%22%7D)
+### 2.2 [Use Case Diagram](../Diagrams/UCD_2025_11.jpg)
 
-![Use Case Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/Diagrams/UCD_2025_11.jpg)
+![Use Case Diagram](../Diagrams/UCD_2025_11.jpg)
 
 **Our Scope for the third semester**
-![Use Case Diagram Scope](https://github.com/Ngoc901/erudite-documentation/blob/main/Diagrams/UCD_Scope.jpg)
+![Use Case Diagram Scope](../Diagrams/UCD_Scope.jpg)
 
 
 ## 2.2.1 Authentication & Authorization
-[Register Use Case](../UCs/Authentication&Authorization/Register/Register.md)
+[Register Use Case](../UCs/Authentication&Authorization/Register.md)
 
-[Login Use Case](../UCs/Authentication&Authorization/Login/Login.md)
+[Login Use Case](../UCs/Authentication&Authorization/Login.md)
 
-[Logout Use Case](../UCs/Authentication&Authorization/Logout/Logout.md)
+[Logout Use Case](../UCs/Authentication&Authorization/Logout.md)
 
-[Authenticate User Use Case](../UCs/Authentication&Authorization/AuthenticateUser/AuthenticateUser.md)
+[Authenticate User Use Case](../UCs/Authentication&Authorization/AuthenticateUser.md)
 
 ## 2.2.2 Challenges
-[Create Challenges Use Case CRUD: Create](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/CreateChallenges.md)
+[Create Challenges Use Case CRUD: Create](../UCs/Challenges/CreateChallenges.md)
 
-[Edit Challenges Use Case CRUD: Update](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallenges.md)
+[Edit Challenges Use Case CRUD: Update](../UCs/Challenges/EditChallenges.md)
 
 ## 2.2.3 Courses & Topics
 ### Courses
-[Create Courses Use Case CRUD: Create](../UCs/Courses/CreateCourse/CreateCourses.md)
+[Create Courses Use Case CRUD: Create](../UCs/Courses/CreateCourses.md)
 
-[Edit Courses Use Case CRUD: Update](../UCs/Courses/EditCourse/EditCourses.md)
+[Edit Courses Use Case CRUD: Update](../UCs/Courses/EditCourses.md)
 
-[Delete Courses Use Case CRUD: Delete](../UCs/Courses/DeleteCourse/DeleteCourse.md)
+[Delete Courses Use Case CRUD: Delete](../UCs/Courses/DeleteCourse.md)
 
-[View Courses Use Case CRUD: Read](../UCs/Courses/ViewCourse/ViewCourse.md)
+[View Courses Use Case CRUD: Read](../UCs/Courses/ViewCourse.md)
 
 ### Topics
 
-[Create Topics Use Case CRUD: Create](../UCs/Topics/CreateTopic/CreateTopic.md)
+[Create Topics Use Case CRUD: Create](../UCs/Topics/CreateTopic.md)
 
-[Edit Topics Use Case CRUD: Update](../UCs/Topics/EditTopic/EditTopic.md)
+[Edit Topics Use Case CRUD: Update](../UCs/Topics/EditTopic.md)
 
-[Delete Create Use Case CRUD: Delete](../UCs/Topics/DeleteTopic/DeleteTopic.md)
+[Delete Create Use Case CRUD: Delete](../UCs/Topics/DeleteTopic.md)
 
-[View Topics Use Case CRUD: Read](../UCs/Topics/ViewTopic/ViewTopic.md)
+[View Topics Use Case CRUD: Read](../UCs/Topics/ViewTopic.md)
 
 ### 2.3 Technology Stack
 **Client**:  
