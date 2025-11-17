@@ -29,7 +29,7 @@ This use case describes how a Teacher edits an existing course. The Teacher can 
 
 ### 2.1.2 Mock-up
 
-![Mock-up](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateCourse/CreateCourse%3AEditCourse.png)
+![Mock-up](../../Images/Courses-lofi.png)
 
 ### 2.1.3 Narrative
 The Teacher uses this form to maintain and update existing courses. Once saved, the modified course data is stored in the database and updated in the course catalog if published.
