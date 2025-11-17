@@ -25,11 +25,11 @@ This use case describes how a Teacher edits an existing challenge within a cours
 
 ### 2.1.1 Activity Diagram
 
-![Activity Diagram](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/EditChallenges/EditChallengesActivityDiagramCorrected.drawio.png)
+![Activity Diagram](../ActivityDiagram/EditChallengesActivityDiagramCorrected.drawio.png)
 
 ### 2.1.2 Mock-up
 
-![Mock-up](https://github.com/Ngoc901/erudite-documentation/blob/main/UCs/CreateChallenges/Lo-Fi.png)
+![Mock-up](../Images/Challenges-Lofi.png)
 
 ### 2.1.3 Narrative
 The Author uses this form to create structured learning tasks inside a topic. Once saved, the challenge is stored in the database and can later be edited or deleted. Auto-checking with correct answers.
