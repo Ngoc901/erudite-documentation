@@ -1,5 +1,5 @@
-# 1 Use-Case Name
-Edit Course CRUD: Update
+# 1 Use-Case Name: Edit Course 
+Use-case: Edit Course CRUD: Update
 
 ## 1.1 Brief Description
 
@@ -33,7 +33,7 @@ This use case describes how a Teacher edits an existing course. The Teacher can 
 
 ### 2.1.3 Narrative
 The Teacher uses this form to maintain and update existing courses. Once saved, the modified course data is stored in the database and updated in the course catalog if published.
-```
+```gherkin
 Feature: Update an existing course
   As a Teacher
   I want to edit a course
@@ -60,8 +60,8 @@ Feature: Update an existing course
       | description |                              |
     Then the course update response should contain "No changes detected"
     And the course response should contain "title"
-
 ```
+[Link to feature file](https://github.com/coffee3333/erudite-django-web-app/blob/main/features/update_course.feature)
 ## 2.2 Alternative Flows
 - **Invalid Data:** Missing title or description: Show validation error.  
 - **Cancel:** Teacher clicks “Cancel”: Return to course details without saving.   

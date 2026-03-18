@@ -1,5 +1,6 @@
-# 1 Use-Case Name
-Authenticate User — Authorization Check
+# 1 Use-Case Name: Authenticate User
+
+Use-case: Authenticate User
 
 ## 1.1 Brief Description
 
@@ -39,46 +40,55 @@ If authentication fails, the system blocks access, ensuring secure operations ac
 ---
 
 ```gherkin
-Feature: Authenticate user for protected endpoints
+Feature: User Authentication
+  As a registered user
+  I want to log in and log out
+  So that I can access protected resources securely
 
-  As a System
-  I want to validate the user's identity
-  So that only authorized users can access protected resources.
+  Background:
+    Given a registered user exists with email "test@example.com" and password "secret123@A"
 
-  Scenario: Successful authentication
-    Given the user has a valid access token
-    When the user sends a request to "/api/platform/courses/"
-    Then the system grants access
-    And the response status code should be 200
+  Scenario: Successful login
+    When I send a POST request to "/api/users/auth/login/" with email "test@example.com" and password "secret123@A"
+    Then the response status code should be 200
+    And the response should contain "access" and "refresh" tokens
 
-  Scenario: Missing token
-    When the user sends a request without an Authorization header
-    Then the status code should be 401
-    And the response should contain "Authentication credentials were not provided."
+  Scenario: Failed login with invalid credentials
+    When I send a POST request to "/api/users/auth/login/" with email "test@example.com" and password "wrongpass"
+    Then the response status code should be 401
 
-  Scenario: Invalid token
-    When the user sends a request with a malformed token
-    Then the status code should be 401
-    And the response should contain "Invalid token"
-
-  Scenario: Expired token
-    When the user sends a request with an expired access token
-    Then the status code should be 401
-    And the response should contain "Token has expired"
+  Scenario: Successful logout
+    Given a registered user exists with email "test@example.com" and password "secret123@A"
+    Given I am logged in with email "test@example.com" and password "secret123@A"
+    When I send a POST request to "/api/users/auth/logout/" with a valid refresh token
+    Then the response status code should be 205
+    And the response should contain "Successfully logged out"
 ```
+[Link to feature file](https://github.com/coffee3333/erudite-django-web-app/blob/main/features/authentication.feature)
 
 ## 2.2 Alternative Flows
 
-- **Missing token**  
 
-- **Invalid token**  
+### Missing Token  
+- The user sends a request without an Authorization header.  
+- The system rejects the request.  
+- The system returns HTTP 401 Unauthorized.  
 
+### Invalid Token
+- The user sends a request with a invalid token.
+- The system fails validation.
+- The system returns HTTP 401 Unauthorized.
 
-- **Expired token**  
+### Expired Token
+- The user sends a request with an expired token.
+- The system detects expiration.
+- The system denies access.
+- The system returns HTTP 401 Unauthorized.
 
-
-- **Inactive User**  
-
+### Inactive User
+- The token is valid but belongs to an inactive user account.
+- The system denies access.
+- The system returns HTTP 403 Forbidden or 401 Unauthorized.
 
 ---
 

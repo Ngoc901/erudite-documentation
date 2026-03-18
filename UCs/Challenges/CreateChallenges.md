@@ -1,4 +1,5 @@
-# 1 Use-Case Name
+# 1 Use-Case Name: Create Challenges
+
 Create Challenges CRUD: Create
 
 ## 1.1 Brief Description

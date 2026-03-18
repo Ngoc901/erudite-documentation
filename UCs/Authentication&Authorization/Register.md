@@ -1,5 +1,5 @@
-# 1 Use-Case Name
-User Registration — Authentication (Create Account)
+# 1 Use-Case Name: Registration
+Use-case: User Registration - Authentication (Create Account)
 
 ## 1.1 Brief Description
 
@@ -35,33 +35,31 @@ A new unverified account is created.
 ---
 
 ```gherkin
-Feature: User Registration
+Feature: User Authentication
+  As a registered user
+  I want to log in and log out
+  So that I can access protected resources securely
 
-  As a new User
-  I want to create an account
-  So that I can log in and access learning features.
+  Background:
+    Given a registered user exists with email "test@example.com" and password "secret123@A"
 
-  Scenario: Successful registration
-    When I send a POST request to "/api/auth/register/" with:
-        | email    | newuser@example.com |
-        | password | strongPassword123   |
-    Then the response status code should be 201
-    And the response should contain "Verification email sent"
+  Scenario: Successful login
+    When I send a POST request to "/api/users/auth/login/" with email "test@example.com" and password "secret123@A"
+    Then the response status code should be 200
+    And the response should contain "access" and "refresh" tokens
 
-  Scenario: Registration fails with existing email
-    When I send a POST request to "/api/auth/register/" with:
-        | email    | existing@example.com |
-        | password | strongPassword123    |
-    Then the response status code should be 400
-    And the response should contain "Email already in use"
+  Scenario: Failed login with invalid credentials
+    When I send a POST request to "/api/users/auth/login/" with email "test@example.com" and password "wrongpass"
+    Then the response status code should be 401
 
-  Scenario: Registration fails with invalid fields
-    When I send a POST request to "/api/auth/register/" with:
-        | email    | not-an-email |
-        | password | short        |
-    Then the response status code should be 400
-    And the response should contain "Invalid email" or "Password too short"
+  Scenario: Successful logout
+    Given a registered user exists with email "test@example.com" and password "secret123@A"
+    Given I am logged in with email "test@example.com" and password "secret123@A"
+    When I send a POST request to "/api/users/auth/logout/" with a valid refresh token
+    Then the response status code should be 205
+    And the response should contain "Successfully logged out"
 ```
+[Link to feature file](https://github.com/coffee3333/erudite-django-web-app/blob/main/features/authentication.feature)
 
 ## 2.2 Alternative Flows
 

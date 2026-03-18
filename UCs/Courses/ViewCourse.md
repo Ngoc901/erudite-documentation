@@ -1,5 +1,5 @@
-# 1 Use-Case Name
-View Courses — CRUD: Read
+# 1 Use-Case Name: View Courses
+Use-case: View Courses — CRUD: Read
 
 ## 1.1 Brief Description
 

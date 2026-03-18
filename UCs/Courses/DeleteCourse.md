@@ -1,5 +1,5 @@
-# 1 Use-Case Name
-Delete Course — CRUD: Delete
+# 1 Use-Case Name: Delete Course
+Use-case: Delete Course — CRUD: Delete
 
 ## 1.1 Brief Description
 

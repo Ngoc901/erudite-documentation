@@ -1,5 +1,6 @@
-# 1 Use-Case Name
-User Login — Authentication
+# 1 Use-Case Name: Login
+
+Use case: User Login - Authentication
 
 ## 1.1 Brief Description
 
@@ -37,33 +38,31 @@ The login flow grants access to personalized features such as course enrollment,
 ---
 
 ```gherkin
-Feature: User Login
+Feature: User Authentication
+  As a registered user
+  I want to log in and log out
+  So that I can access protected resources securely
 
-  As a User
-  I want to log into the platform
-  So that I can access my courses and profile.
+  Background:
+    Given a registered user exists with email "test@example.com" and password "secret123@A"
 
   Scenario: Successful login
-    When I send a POST request to "/api/auth/login/" with:
-        | email    | user@example.com |
-        | password | correct_password |
+    When I send a POST request to "/api/users/auth/login/" with email "test@example.com" and password "secret123@A"
     Then the response status code should be 200
-    And the response should contain an access token
+    And the response should contain "access" and "refresh" tokens
 
-  Scenario: Login fails with incorrect password
-    When I send a POST request to "/api/auth/login/" with:
-        | email    | user@example.com |
-        | password | wrong_password   |
+  Scenario: Failed login with invalid credentials
+    When I send a POST request to "/api/users/auth/login/" with email "test@example.com" and password "wrongpass"
     Then the response status code should be 401
-    And the response should contain "Invalid credentials"
 
-  Scenario: Login fails with non-existing email
-    When I send a POST request to "/api/auth/login/" with:
-        | email    | nonexistent@mail.com |
-        | password | test123              |
-    Then the response status code should be 404
-    And the response should contain "User not found"
+  Scenario: Successful logout
+    Given a registered user exists with email "test@example.com" and password "secret123@A"
+    Given I am logged in with email "test@example.com" and password "secret123@A"
+    When I send a POST request to "/api/users/auth/logout/" with a valid refresh token
+    Then the response status code should be 205
+    And the response should contain "Successfully logged out"
 ```
+[Link to feature file](https://github.com/coffee3333/erudite-django-web-app/blob/main/features/authentication.feature)
 
 ## 2.2 Alternative Flows
 

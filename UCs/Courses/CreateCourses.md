@@ -1,5 +1,5 @@
-# 1 Use-Case Name
-Create Course CRUD: Create
+# 1 Use-Case Name: Create Course
+Use-case: Create Course CRUD: Create
 
 ## 1.1 Brief Description
 
@@ -34,7 +34,7 @@ This use case describes how a Teacher creates a new course in the system. The co
 The Teacher uses this form to create new courses on the platform. Once saved, the course is stored in the database and appears in the catalog when published. The Teacher can later add modules and challenges to the course.
 
 
-```
+```gherkin
 Feature: Create a new course
 
   As a Teacher
@@ -64,8 +64,8 @@ Feature: Create a new course
       | status      | draft                                    |
     Then the course response status code should be 400
     And the course response should contain "title"
-
 ```
+[Link to feature file](https://github.com/coffee3333/erudite-django-web-app/blob/main/features/create_course.feature)
 
 ## 2.2 Alternative Flows
 - **Cancel:** Teacher clicks “Cancel”: Return to Courses page without saving.  
