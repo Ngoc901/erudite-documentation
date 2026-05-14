@@ -1,13 +1,13 @@
 # Erudite Documentation 🐘
 
-Supporting documentation for the **Erudite Education Platform** — a full-stack e-learning system built with Django REST Framework and React.
+Supporting documentation for the **Erudite Education Platform** - a full-stack e-learning system built with Django REST Framework and React.
 
 ---
 
 ## 📑 Contents
 
 - **[SRS (Software Requirements Specification)](Documents/SoftwareRequirementsSpecification.md)**  
-  Platform purpose, scope, actors, functional and non-functional requirements — split across Semester 1 and Semester 2 deliverables.
+  Platform purpose, scope, actors, functional and non-functional requirements - split across Semester 1 and Semester 2 deliverables.
 
 - **[SAD (Software Architecture Document)](Documents/SoftwareArchitectureDocument.md)**  
   Architectural views (Use-Case, Logical, Process, Deployment, Implementation), technology stack, and quality metrics.
