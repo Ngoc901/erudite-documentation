@@ -393,7 +393,7 @@ ERUDITE uses **SonarCloud** for static analysis on both repositories, integrated
 - **Security** - Backend has 32 issues (grade C); frontend is clean (A). Security hotspots in auth and token handling have not yet been formally reviewed.
 - **Reliability** - Backend is clean (A). Frontend has 482 issues (C) mostly from null checks and unhandled promises typical in JavaScript.
 - **Maintainability** - Both score A. Issues are non-blocking code smells addressed incrementally.
-- **Coverage** - Both below the 80% target. Core logic is covered; UI components and edge-case API paths are the main gaps.
+- **Coverage** - Both above the 30% minimum target. Backend at 55.5%, frontend at 45.3%. Core logic is covered; UI components and edge-case API paths remain the main gaps for future improvement.
 - **Duplications** - 5.2% and 4.3% - well within acceptable limits.
 
 ### 11.3 Planned Improvements
@@ -401,6 +401,6 @@ ERUDITE uses **SonarCloud** for static analysis on both repositories, integrated
 | Priority | Area                   | Action                                                       |
 | -------- | ---------------------- | ------------------------------------------------------------ |
 | High     | Security (backend)     | Resolve 32 security issues and complete hotspot review       |
-| High     | Coverage               | Increase coverage to ≥ 80% on both repositories              |
+| Medium   | Coverage               | Increase coverage beyond current 55.5% / 45.3% — focus on topic, lesson, and challenge endpoints |
 | Medium   | Reliability (frontend) | Fix null checks and unhandled promise rejections             |
 | Low      | Maintainability        | Address code smells incrementally during feature development |

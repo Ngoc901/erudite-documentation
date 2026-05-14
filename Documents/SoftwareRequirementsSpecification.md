@@ -117,11 +117,13 @@ Following feedback from **Liberating Education**, the scope was extended. The Mo
 
 ### 1.4 References
 
-| Title                                                           |    Date    | Publishing organization    |
-| --------------------------------------------------------------- | :--------: | -------------------------- |
-| ERUDITE Project Docs (internal)                                 | 2026-05-14 | ERUDITE Team               |
-| [Django REST Framework](https://www.django-rest-framework.org/) | 2026-05-14 | Django Software Foundation |
-| [React](https://react.dev)                                      | 2026-05-14 | Meta Open Source           |
+| Title                                                                                                   |    Date    | Publishing organization    |
+| ------------------------------------------------------------------------------------------------------- | :--------: | -------------------------- |
+| ERUDITE Project Docs (internal)                                                                         | 2026-05-14 | ERUDITE Team               |
+| [Backend Repository](https://github.com/coffee3333/erudite-django-web-app)                             | 2026-05-14 | ERUDITE Team               |
+| [Frontend Repository](https://github.com/coffee3333/erudite-react-web-app)                             | 2026-05-14 | ERUDITE Team               |
+| [Django REST Framework](https://www.django-rest-framework.org/)                                         | 2026-05-14 | Django Software Foundation |
+| [React](https://react.dev)                                                                              | 2026-05-14 | Meta Open Source           |
 
 ### 1.5 Overview
 

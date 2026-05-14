@@ -427,7 +427,7 @@ Full list: [`package.json`](https://github.com/coffee3333/erudite-react-web-app/
 | Frontend unit tests passing (22/22) | ✅ Achieved |
 | Backend CI pipeline green | ✅ Achieved |
 | Frontend CI pipeline green | ✅ Achieved |
-| SonarCloud - backend coverage | 49.8% (goal: ≥ 60%) |
+| SonarCloud - backend coverage | 55.5% ✅ (minimum: 30%, achieved: 55.5%) |
 | SonarCloud - frontend security rating | A, 0 security issues ✅ |
 
 ---
@@ -439,7 +439,7 @@ Full list: [`package.json`](https://github.com/coffee3333/erudite-react-web-app/
 | Missing env vars break CI | Medium | High | All vars set as GitHub Actions env vars with placeholder values |
 | Migration conflicts block test DB | Low | High | Migrations regenerated from scratch; `migrate` runs before every CI job |
 | BDD steps drift from endpoint changes | Medium | Medium | Step definitions reviewed on every endpoint change |
-| Coverage stays below target | Medium | Medium | Expand tests to topic/lesson/challenge endpoints next iteration |
+| Coverage stays below target | Low | Medium | Expand tests to topic/lesson/challenge endpoints next iteration |
 | E2E tests flaky without live backend | High | Low | E2E is manual-trigger only - not blocking PRs |
 
 ---
@@ -453,3 +453,7 @@ Full list: [`package.json`](https://github.com/coffee3333/erudite-react-web-app/
 ### 13.2 Frontend Tests (Vitest)
 
 ![Frontend tests](../Images/frontend-tests.png)
+
+### 13.3 SonarCloud Analysis
+
+![SonarCloud Metrics](../Images/SAD-Images/sonarcloud-metrics.png)
