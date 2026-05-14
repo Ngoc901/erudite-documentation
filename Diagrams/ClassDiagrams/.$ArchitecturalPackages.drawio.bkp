@@ -1,0 +1,317 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram id="arch-packages-v2" name="Page-1">
+    <mxGraphModel dx="2262" dy="1811" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page_bg" parent="1" style="rounded=2;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="1327" width="2282" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#F1F5F9;" value="ERUDITE - Django Backend: Architecturally Significant Design Packages" vertex="1">
+          <mxGeometry height="36" width="2360" x="20" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontColor=#64748B;" value="config · authentication · core · lti - Models · Views · Serializers · Design Patterns · Infrastructure" vertex="1">
+          <mxGeometry height="24" width="2360" x="20" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="col_config" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#334155;" value="" vertex="1">
+          <mxGeometry height="240" width="300" x="40" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr_config" parent="1" style="rounded=2;fillColor=#164E63;strokeColor=#0891B2;fontColor=#F1F5F9;fontSize=13;fontStyle=1;html=1;" value="⚙️  config" vertex="1">
+          <mxGeometry height="36" width="276" x="52" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="cfg_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=center;" value="Project Root" vertex="1">
+          <mxGeometry height="16" width="276" x="52" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="cfg_settings" parent="1" style="rounded=2;fillColor=#164E63;strokeColor=#0891B2;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;settings.py&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;INSTALLED_APPS · DB · JWT config&lt;/font&gt;" vertex="1">
+          <mxGeometry height="42" width="276" x="52" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="cfg_urls" parent="1" style="rounded=2;fillColor=#164E63;strokeColor=#0891B2;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;urls.py&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Root router · /api/users/ · /api/platform/ · /lti/&lt;/font&gt;" vertex="1">
+          <mxGeometry height="42" width="276" x="52" y="236" as="geometry" />
+        </mxCell>
+        <mxCell id="cfg_celery" parent="1" style="rounded=2;fillColor=#164E63;strokeColor=#0891B2;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;celery.py&lt;/b&gt; · &lt;b&gt;wsgi.py&lt;/b&gt; · &lt;b&gt;asgi.py&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="276" x="52" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="col_auth" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#334155;" value="" vertex="1">
+          <mxGeometry height="318" width="767" x="380" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr_auth" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=13;fontStyle=1;html=1;" value="🔐  authentication" vertex="1">
+          <mxGeometry height="36" width="744" x="392" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_model_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="MODELS" vertex="1">
+          <mxGeometry height="16" width="100" x="392" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_user" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;User&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;AbstractBaseUser · email · username&lt;br/&gt;role (student/teacher) · slug · photo&lt;br/&gt;email_verified · moodle_platform&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="230" x="392" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_otp" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;PasswordResetOTP&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;otp_code · is_used · is_valid()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="56" width="230" x="392" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_emailcode" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;EmailVerificationCode&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;code · is_used · is_valid()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="56" width="230" x="392" y="348" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_ser_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="SERIALIZERS" vertex="1">
+          <mxGeometry height="16" width="140" x="638" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_ser" parent="1" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;RegisterSerializer&lt;/b&gt;&lt;br/&gt;&lt;b&gt;LoginSerializer&lt;/b&gt;&lt;br/&gt;&lt;b&gt;UserProfileSerializer&lt;/b&gt;&lt;br/&gt;&lt;b&gt;PasswordResetSerializer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="230" x="638" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_helpers_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="HELPERS" vertex="1">
+          <mxGeometry height="16" width="100" x="638" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_helpers" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#475569;fontColor=#94A3B8;fontSize=11;html=1;align=center;" value="permissions.py · filters.py&lt;br/&gt;pagination.py · utils.py · urls.py" vertex="1">
+          <mxGeometry height="42" width="230" x="638" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_view_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="VIEWS" vertex="1">
+          <mxGeometry height="16" width="100" x="884" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="auth_views" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;RegisterView&lt;/b&gt; · &lt;b&gt;LoginView&lt;/b&gt; · &lt;b&gt;LogoutView&lt;/b&gt;&lt;br/&gt;&lt;b&gt;ProfileView&lt;/b&gt; · &lt;b&gt;GoogleOAuthView&lt;/b&gt;&lt;br/&gt;&lt;b&gt;VerifyEmailView&lt;/b&gt; · &lt;b&gt;ResetPasswordView&lt;/b&gt;&lt;br/&gt;&lt;b&gt;DashboardView&lt;/b&gt; · &lt;b&gt;TeacherDashboardView&lt;/b&gt;&lt;br/&gt;&lt;b&gt;LeaderboardView&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="242" x="884" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="col_lti" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#334155;" value="" vertex="1">
+          <mxGeometry height="338" width="776" x="1240" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr_lti" parent="1" style="rounded=2;fillColor=#164E63;strokeColor=#0891B2;fontColor=#F1F5F9;fontSize=13;fontStyle=1;html=1;" value="🔗  lti  (Moodle Integration)" vertex="1">
+          <mxGeometry height="36" width="752" x="1252" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_model_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="MODELS" vertex="1">
+          <mxGeometry height="16" width="100" x="1252" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_reg" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;LTIRegistration&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;issuer · client_id · deployment_id&lt;br/&gt;auth_request_url · access_token_url&lt;br/&gt;platform_jwks_url · tool_key pair&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="1252" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_map" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;LTIResourceMapping&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;registration → LTIRegistration&lt;br/&gt;resource_link_id · course → Course&lt;br/&gt;lineitem_url (AGS)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="1252" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_session" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;LTISession&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;user → User · registration&lt;br/&gt;resource_mapping · lti_user_id&lt;br/&gt;score_url&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="240" x="1504" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_view_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="VIEWS" vertex="1">
+          <mxGeometry height="16" width="100" x="1504" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_views" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;LTI 1.3 Launch Handler&lt;/b&gt;&lt;br/&gt;&lt;b&gt;JWKS Endpoint&lt;/b&gt;&lt;br/&gt;&lt;b&gt;AGS Grade Passback&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="1504" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_utils_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="UTILS &amp; TASKS" vertex="1">
+          <mxGeometry height="16" width="120" x="1760" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_utils" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#475569;fontColor=#94A3B8;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;utils.py&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;JWT verification&lt;br/&gt;JWKS key resolution&lt;br/&gt;Grade submission helpers&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="230" x="1760" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_tasks" parent="1" style="rounded=2;fillColor=#450A0A;strokeColor=#DC2626;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;tasks.py&lt;/b&gt; (Celery)&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Async grade passback to Moodle&lt;/font&gt;" vertex="1">
+          <mxGeometry height="56" width="230" x="1760" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="lti_moodle" parent="1" style="rounded=2;fillColor=#0F4C75;strokeColor=#1B6CA8;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;Moodle LMS&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;LTI 1.3 JWT launches&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="1810" y="358" as="geometry" />
+        </mxCell>
+        <mxCell id="arr_lti_moodle" edge="1" parent="1" source="lti_moodle" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0891B2;fontColor=#94A3B8;fontSize=10;endArrow=block;endFill=1;rounded=1;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=4;" target="lti_views" value="LTI 1.3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1777" y="388" />
+              <mxPoint x="1777" y="411" />
+              <mxPoint x="1624" y="411" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="col_core" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#334155;" value="" vertex="1">
+          <mxGeometry height="522" width="2231" x="40" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr_core" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=13;fontStyle=1;html=1;" value="🧠  core" vertex="1">
+          <mxGeometry height="36" width="2208" x="52" y="592" as="geometry" />
+        </mxCell>
+        <mxCell id="core_model_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="MODELS" vertex="1">
+          <mxGeometry height="16" width="100" x="52" y="636" as="geometry" />
+        </mxCell>
+        <mxCell id="m_course" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;Course&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;owner → User · title · slug&lt;br/&gt;level · status · language&lt;br/&gt;completion_threshold&lt;br/&gt;lti_token (UUID) · featured_image&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="52" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_topic" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;Topic&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;course → Course&lt;br/&gt;owner → User&lt;br/&gt;title · slug · sort_order&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="210" x="274" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_lesson" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;Lesson&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;topic → Topic · owner → User&lt;br/&gt;title · slug · content · video_url&lt;br/&gt;content_type · photo · sort_order&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="210" x="496" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_challenge" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;Challenge&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;topic → Topic · title · slug&lt;br/&gt;challenge_type · difficulty&lt;br/&gt;points · hint · solution_explanation&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="210" x="718" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_option" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;ChallengeOption&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;challenge → Challenge&lt;br/&gt;text · is_correct&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="940" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_submission" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;Submission&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;challenge → Challenge · user → User&lt;br/&gt;attempt_no · status · score&lt;br/&gt;answer_text · hint_used&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="210" x="1162" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_enrollment" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;CourseEnrollment&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;course → Course · student → User&lt;br/&gt;enrolled_at · lti_source&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="1384" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_feedback" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;CourseFeedback&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;course → Course · user → User&lt;br/&gt;rating (1-5) · comment&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="1606" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_bookmark" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;CourseBookmark&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;course → Course&lt;br/&gt;user → User&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="1828" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="m_certificate" parent="1" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=10;spacingTop=6;" value="&lt;b&gt;Certificate&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;user → User · course → Course&lt;br/&gt;certificate_id (UUID) · score_pct&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="2040" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="core_ser_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="SERIALIZERS" vertex="1">
+          <mxGeometry height="16" width="120" x="52" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="s_course" parent="1" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;CourseSerializer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="52" y="798" as="geometry" />
+        </mxCell>
+        <mxCell id="s_topic" parent="1" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;TopicSerializer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="274" y="798" as="geometry" />
+        </mxCell>
+        <mxCell id="s_lesson" parent="1" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;LessonSerializer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="496" y="798" as="geometry" />
+        </mxCell>
+        <mxCell id="s_challenge" parent="1" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;ChallengeSerializer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="718" y="798" as="geometry" />
+        </mxCell>
+        <mxCell id="s_enrollment" parent="1" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;EnrollmentSerializer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="940" y="798" as="geometry" />
+        </mxCell>
+        <mxCell id="s_feedback" parent="1" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;FeedbackSerializer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="1162" y="798" as="geometry" />
+        </mxCell>
+        <mxCell id="core_view_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="VIEWS" vertex="1">
+          <mxGeometry height="16" width="80" x="52" y="852" as="geometry" />
+        </mxCell>
+        <mxCell id="v_course" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;CourseViewSet&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="52" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_topic" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;TopicViewSet&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="274" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_lesson" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;LessonViewSet&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="496" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_challenge" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;ChallengeViewSet&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="718" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_submission" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;SubmissionView · ChallengeCheckView&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="940" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_enrollment" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;EnrollmentView&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="1162" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_feedback" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;FeedbackView&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="1384" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_bookmark" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;BookmarkView&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="1606" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_certificate" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;CertificateView&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="1828" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="v_runcode" parent="1" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;RunCodeView&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="210" x="2050" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="core_pat_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="DESIGN PATTERNS  (core/patterns/)" vertex="1">
+          <mxGeometry height="16" width="300" x="52" y="926" as="geometry" />
+        </mxCell>
+        <mxCell id="p_factory" parent="1" style="rounded=2;fillColor=#450A0A;strokeColor=#DC2626;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=12;spacingTop=8;verticalAlign=top;" value="&lt;b&gt;🏭  Factory&lt;/b&gt;&lt;hr/&gt;&lt;font color=&#39;#CBD5E1&#39;&gt;GraderFactory&lt;br/&gt;resolve(challenge_type) → grader key&lt;br/&gt;Dispatches: quiz_mcq · quiz_text · text · code&lt;br/&gt;Keeps dispatch logic in one place&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="280" x="52" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="p_strategy" parent="1" style="rounded=2;fillColor=#450A0A;strokeColor=#DC2626;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=12;spacingTop=8;verticalAlign=top;" value="&lt;b&gt;♟  Strategy&lt;/b&gt;&lt;hr/&gt;&lt;font color=&#39;#CBD5E1&#39;&gt;ScoringStrategy (ABC)&lt;br/&gt;ExactMatchScoringStrategy&lt;br/&gt;PartialCreditScoringStrategy&lt;br/&gt;ScoringContext (delegates)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="280" x="352" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="p_observer" parent="1" style="rounded=2;fillColor=#450A0A;strokeColor=#DC2626;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=12;spacingTop=8;verticalAlign=top;" value="&lt;b&gt;👁  Observer&lt;/b&gt;&lt;hr/&gt;&lt;font color=&#39;#CBD5E1&#39;&gt;EnrollmentObserver (ABC)&lt;br/&gt;EnrollmentEventBus (singleton)&lt;br/&gt;EnrollmentAuditLogObserver&lt;br/&gt;EnrollmentEvent (data object)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="280" x="652" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="p_builder" parent="1" style="rounded=2;fillColor=#450A0A;strokeColor=#DC2626;fontColor=#F1F5F9;fontSize=11;html=1;align=left;spacingLeft=12;spacingTop=8;verticalAlign=top;" value="&lt;b&gt;🔧  Builder&lt;/b&gt;&lt;hr/&gt;&lt;font color=&#39;#CBD5E1&#39;&gt;CertificateBuilder&lt;br/&gt;set_recipient · set_course&lt;br/&gt;set_certificate_id · set_score&lt;br/&gt;build() → PDF bytes&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="280" x="952" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="core_util_lbl" parent="1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=10;fontStyle=1;fontColor=#64748B;align=left;" value="UTILS &amp; EXECUTION  (core/utils/ · core/execution/)" vertex="1">
+          <mxGeometry height="16" width="360" x="1260" y="926" as="geometry" />
+        </mxCell>
+        <mxCell id="u_access" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#475569;fontColor=#94A3B8;fontSize=11;html=1;align=center;" value="&lt;b&gt;access.py&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Permission helpers&lt;/font&gt;" vertex="1">
+          <mxGeometry height="56" width="200" x="1260" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="u_completion" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#475569;fontColor=#94A3B8;fontSize=11;html=1;align=center;" value="&lt;b&gt;completion.py&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Progress tracking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="56" width="200" x="1472" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="u_cert_pdf" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#475569;fontColor=#94A3B8;fontSize=11;html=1;align=center;" value="&lt;b&gt;certificate_pdf.py&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;PDF generation&lt;/font&gt;" vertex="1">
+          <mxGeometry height="56" width="200" x="1684" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="u_executor" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#475569;fontColor=#94A3B8;fontSize=11;html=1;align=center;" value="&lt;b&gt;execution/executor.py&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Sandboxed code runner&lt;/font&gt;" vertex="1">
+          <mxGeometry height="56" width="200" x="1896" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="col_infra" parent="1" style="rounded=2;fillColor=#1E293B;strokeColor=#334155;" value="" vertex="1">
+          <mxGeometry height="120" width="2022" x="144.5" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr_infra" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=13;fontStyle=1;html=1;" value="🏗️  Infrastructure" vertex="1">
+          <mxGeometry height="36" width="1998" x="156.5" y="1182" as="geometry" />
+        </mxCell>
+        <mxCell id="inf_pg" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;🗄️  PostgreSQL&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Primary database&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="270" x="156.5" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="inf_cloudinary" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;☁️  Cloudinary&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Media &amp; image storage&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="270" x="444.5" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="inf_jwt" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;🔑  JWT (simplejwt)&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Stateless auth tokens&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="270" x="732.5" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="inf_celery" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;⚡  Celery + Redis&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Async task queue&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="270" x="1020.5" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="inf_gh" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;🔄  GitHub Actions&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;CI/CD · pytest · BDD&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="270" x="1308.5" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="inf_docker" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;🐳  Docker + Nginx&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Containerised deployment&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="270" x="1596.5" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="inf_sonar" parent="1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;align=center;" value="&lt;b&gt;📊  SonarCloud&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#94A3B8&#39;&gt;Code quality &amp; coverage&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="270" x="1884.5" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="arr_cfg_auth" edge="1" parent="1" source="col_config" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0891B2;fontColor=#64748B;fontSize=10;endArrow=block;endFill=1;rounded=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=4;" target="col_auth" value="registers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr_cfg_core" edge="1" parent="1" source="col_config" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0891B2;fontColor=#64748B;fontSize=10;endArrow=block;endFill=1;rounded=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.067;entryY=0.003;entryDx=0;entryDy=0;strokeWidth=4;entryPerimeter=0;" target="col_core" value="registers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr_auth_lti" edge="1" parent="1" source="col_auth" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0891B2;fontColor=#64748B;fontSize=10;endArrow=block;endFill=1;rounded=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=6;" target="col_lti" value="registers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr_core_auth" edge="1" parent="1" source="col_core" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#9333EA;fontColor=#64748B;fontSize=10;endArrow=block;endFill=1;rounded=1;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=4;exitX=0.324;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="col_auth" value="ForeignKey → User">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="763" y="584" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr_lti_core" edge="1" parent="1" source="col_lti" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#9333EA;fontColor=#64748B;fontSize=10;endArrow=block;endFill=1;rounded=1;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=4;entryX=0.712;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;" target="col_core" value="ForeignKey → Course">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1156" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr_core_infra" edge="1" parent="1" source="col_core" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#64748B;fontSize=10;endArrow=block;endFill=1;rounded=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=4;" target="col_infra" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WRU30K5D_5iL5lWd6FQ4-3" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="250" width="240" x="2028" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_bg" parent="WRU30K5D_5iL5lWd6FQ4-3" style="rounded=2;fillColor=#0D1B2A;strokeColor=#1E3A5F;" value="" vertex="1">
+          <mxGeometry height="250" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_title" parent="WRU30K5D_5iL5lWd6FQ4-3" style="text;html=1;fillColor=none;strokeColor=none;align=center;fontSize=14;fontStyle=1;fontColor=#F1F5F9;" value="Legend" vertex="1">
+          <mxGeometry height="20" width="240" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="chip_model" parent="WRU30K5D_5iL5lWd6FQ4-3" style="rounded=2;fillColor=#3B0764;strokeColor=#9333EA;fontColor=#F1F5F9;fontSize=11;html=1;" value="  🗃️  Model" vertex="1">
+          <mxGeometry height="24" width="208" x="16" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="chip_view" parent="WRU30K5D_5iL5lWd6FQ4-3" style="rounded=2;fillColor=#14532D;strokeColor=#16A34A;fontColor=#F1F5F9;fontSize=11;html=1;" value="  ⚙️  View" vertex="1">
+          <mxGeometry height="24" width="208" x="16" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="chip_ser" parent="WRU30K5D_5iL5lWd6FQ4-3" style="rounded=2;fillColor=#78350F;strokeColor=#D97706;fontColor=#F1F5F9;fontSize=11;html=1;" value="  🔄  Serializer" vertex="1">
+          <mxGeometry height="24" width="208" x="16" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="chip_pattern" parent="WRU30K5D_5iL5lWd6FQ4-3" style="rounded=2;fillColor=#450A0A;strokeColor=#DC2626;fontColor=#F1F5F9;fontSize=11;html=1;" value="  🏭  Design Pattern" vertex="1">
+          <mxGeometry height="24" width="208" x="16" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="chip_routing" parent="WRU30K5D_5iL5lWd6FQ4-3" style="rounded=2;fillColor=#164E63;strokeColor=#0891B2;fontColor=#F1F5F9;fontSize=11;html=1;" value="  🔀  Routing / Config" vertex="1">
+          <mxGeometry height="24" width="208" x="16" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="chip_infra" parent="WRU30K5D_5iL5lWd6FQ4-3" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;html=1;" value="  🏗️  Infrastructure" vertex="1">
+          <mxGeometry height="24" width="208" x="16" y="198" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

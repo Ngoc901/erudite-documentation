@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="960" height="480" fill="#f0f0f0"/>
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Page header -->
+  <text x="24" y="86" font-size="22" font-weight="bold" fill="#222">All Courses</text>
+  <text x="24" y="104" font-size="12" fill="#999">4 courses available</text>
+
+  <!-- Search bar -->
+  <rect x="640" y="68" width="200" height="32" rx="16" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="660" y="89" font-size="12" fill="#aaa">Search courses...</text>
+
+  <!-- Saved button -->
+  <rect x="852" y="68" width="84" height="32" rx="16" fill="#e0e0e0" stroke="#ccc" stroke-width="1"/>
+  <polygon points="864,76 874,76 874,96 869,91 864,96" fill="#666"/>
+  <text x="903" y="89" font-size="12" fill="#555" text-anchor="middle">Saved</text>
+
+  <!-- Row 1 of cards -->
+  <!-- Card 1 -->
+  <rect x="24" y="118" width="290" height="150" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="24" y="118" width="290" height="80" rx="8" fill="#e0e0e0"/>
+  <text x="169" y="162" font-size="11" fill="#aaa" text-anchor="middle">[course image]</text>
+  <text x="36" y="216" font-size="12" font-weight="bold" fill="#333">Competitive Programming</text>
+  <text x="36" y="232" font-size="10" fill="#999">TheGodteacher  ·  Apr 10, 2026</text>
+  <text x="36" y="250" font-size="10" fill="#888">Progress</text>
+  <rect x="36" y="254" width="220" height="4" rx="2" fill="#ddd"/>
+  <rect x="282" y="248" width="28" height="16" rx="4" fill="#e0e0e0"/>
+  <text x="296" y="260" font-size="10" fill="#666" text-anchor="middle">0%</text>
+
+  <!-- Card 2 -->
+  <rect x="334" y="118" width="290" height="150" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="334" y="118" width="290" height="80" rx="8" fill="#e0e0e0"/>
+  <text x="479" y="162" font-size="11" fill="#aaa" text-anchor="middle">[course image]</text>
+  <text x="346" y="216" font-size="12" font-weight="bold" fill="#333">Web Development with Python</text>
+  <text x="346" y="232" font-size="10" fill="#999">TheGodteacher  ·  Apr 10, 2026</text>
+  <text x="346" y="250" font-size="10" fill="#888">Progress</text>
+  <rect x="346" y="254" width="220" height="4" rx="2" fill="#ddd"/>
+  <rect x="592" y="248" width="28" height="16" rx="4" fill="#e0e0e0"/>
+  <text x="606" y="260" font-size="10" fill="#666" text-anchor="middle">0%</text>
+
+  <!-- Card 3 -->
+  <rect x="644" y="118" width="290" height="150" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="644" y="118" width="290" height="80" rx="8" fill="#e0e0e0"/>
+  <text x="789" y="162" font-size="11" fill="#aaa" text-anchor="middle">[course image]</text>
+  <text x="656" y="216" font-size="12" font-weight="bold" fill="#333">Mathematics for Programmers</text>
+  <text x="656" y="232" font-size="10" fill="#999">TheGodteacher  ·  Apr 10, 2026</text>
+  <text x="656" y="250" font-size="10" fill="#888">Progress</text>
+  <rect x="656" y="254" width="220" height="4" rx="2" fill="#ddd"/>
+  <rect x="902" y="248" width="28" height="16" rx="4" fill="#e0e0e0"/>
+  <text x="916" y="260" font-size="10" fill="#666" text-anchor="middle">0%</text>
+
+  <!-- Row 2 of cards -->
+  <!-- Card 4 -->
+  <rect x="24" y="282" width="290" height="150" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="24" y="282" width="290" height="80" rx="8" fill="#e0e0e0"/>
+  <text x="169" y="326" font-size="11" fill="#aaa" text-anchor="middle">[course image]</text>
+  <text x="36" y="380" font-size="12" font-weight="bold" fill="#333">Algorithms &amp; Data Structures</text>
+  <text x="36" y="396" font-size="10" fill="#999">TheGodteacher  ·  Apr 10, 2026</text>
+  <text x="36" y="414" font-size="10" fill="#888">Progress</text>
+  <rect x="36" y="418" width="220" height="4" rx="2" fill="#ddd"/>
+  <rect x="282" y="412" width="28" height="16" rx="4" fill="#e0e0e0"/>
+  <text x="296" y="424" font-size="10" fill="#666" text-anchor="middle">0%</text>
+
+</svg>

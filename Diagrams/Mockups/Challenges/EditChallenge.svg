@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="690" font-family="Arial, sans-serif">
+  <rect width="960" height="690" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Modal backdrop -->
+  <rect x="0" y="52" width="960" height="638" fill="#e8e8e8" opacity="0.6"/>
+
+  <!-- Edit Dialog -->
+  <rect x="200" y="64" width="560" height="610" rx="10" fill="#fff" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="200" y="64" width="560" height="48" rx="10" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="220" y="94" font-size="16" font-weight="bold" fill="#222">Edit Challenge</text>
+  <rect x="530" y="74" width="36" height="20" rx="10" fill="#e0e0e0"/>
+  <text x="548" y="88" font-size="10" fill="#555" text-anchor="middle">quiz</text>
+  <text x="736" y="94" font-size="18" fill="#aaa" text-anchor="middle">×</text>
+
+  <!-- Title -->
+  <text x="220" y="136" font-size="12" fill="#666">Title *</text>
+  <rect x="220" y="144" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="166" font-size="12" fill="#444">What is the capital of France?</text>
+
+  <!-- Body -->
+  <text x="220" y="198" font-size="12" fill="#666">Question / Body *</text>
+  <rect x="220" y="206" width="520" height="60" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="226" font-size="12" fill="#444">Choose the correct capital of France from below:</text>
+
+  <!-- Difficulty + Points -->
+  <text x="220" y="286" font-size="12" fill="#666">Difficulty *</text>
+  <rect x="220" y="294" width="240" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="316" font-size="12" fill="#444">easy ▼</text>
+
+  <text x="476" y="286" font-size="12" fill="#666">Points *</text>
+  <rect x="476" y="294" width="264" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="492" y="316" font-size="12" fill="#444">10</text>
+
+  <!-- Options -->
+  <text x="220" y="350" font-size="12" fill="#666">Options (comma-separated) *</text>
+  <rect x="220" y="358" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="380" font-size="12" fill="#444">Paris, London, Berlin, Madrid</text>
+
+  <!-- Correct answer -->
+  <text x="220" y="414" font-size="12" fill="#666">Correct answer *</text>
+  <rect x="220" y="422" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="444" font-size="12" fill="#444">Paris</text>
+
+  <!-- Hint -->
+  <text x="220" y="478" font-size="12" fill="#666">Hint (optional)</text>
+  <rect x="220" y="486" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="508" font-size="12" fill="#444">Think about famous landmarks</text>
+
+  <!-- Solution -->
+  <text x="220" y="542" font-size="12" fill="#666">Solution explanation (optional)</text>
+  <rect x="220" y="550" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="572" font-size="12" fill="#444">Paris is the capital of France…</text>
+
+  <!-- Footer -->
+  <line x1="200" y1="602" x2="760" y2="602" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="566" y="612" width="80" height="32" rx="6" fill="#ddd"/>
+  <text x="606" y="632" font-size="12" fill="#555" text-anchor="middle">Cancel</text>
+  <rect x="656" y="612" width="84" height="32" rx="6" fill="#888"/>
+  <text x="698" y="632" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Save</text>
+</svg>

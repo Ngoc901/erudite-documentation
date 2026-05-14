@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="#f0f0f0"/>
+
+  <!-- Navbar (logged-in state) -->
+  <rect x="0" y="0" width="900" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="900" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <!-- Avatar -->
+  <circle cx="862" cy="30" r="16" fill="#bbb"/>
+  <text x="862" y="35" font-size="11" fill="#fff" text-anchor="middle">U</text>
+
+  <!-- Dropdown menu -->
+  <rect x="790" y="52" width="120" height="110" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="850" y="80" font-size="12" fill="#555" text-anchor="middle">Profile</text>
+  <line x1="800" y1="90" x2="900" y2="90" stroke="#eee" stroke-width="1"/>
+  <text x="850" y="113" font-size="12" fill="#555" text-anchor="middle">Dashboard</text>
+  <line x1="800" y1="122" x2="900" y2="122" stroke="#eee" stroke-width="1"/>
+  <rect x="800" y="130" width="100" height="24" rx="4" fill="#ddd"/>
+  <text x="850" y="147" font-size="12" font-weight="bold" fill="#555" text-anchor="middle">Logout</text>
+
+  <!-- Card -->
+  <rect x="280" y="170" width="340" height="240" rx="12" fill="#fff" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Icon -->
+  <circle cx="450" cy="220" r="28" fill="#e8e8e8"/>
+  <text x="450" y="227" font-size="20" fill="#999" text-anchor="middle">↩</text>
+
+  <!-- Title -->
+  <text x="450" y="278" font-size="20" font-weight="bold" fill="#222" text-anchor="middle">Log out</text>
+  <text x="450" y="300" font-size="12" fill="#888" text-anchor="middle">Are you sure you want to log out?</text>
+
+  <!-- Buttons -->
+  <rect x="305" y="320" width="140" height="40" rx="8" fill="#ddd"/>
+  <text x="375" y="345" font-size="13" fill="#555" text-anchor="middle">Cancel</text>
+
+  <rect x="455" y="320" width="140" height="40" rx="8" fill="#999"/>
+  <text x="525" y="345" font-size="13" fill="#fff" text-anchor="middle">Log out</text>
+
+</svg>

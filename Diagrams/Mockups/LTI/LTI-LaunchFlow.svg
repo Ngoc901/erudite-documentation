@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" font-family="Arial, sans-serif">
+  <rect width="960" height="440" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+
+  <!-- Title -->
+  <text x="480" y="92" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">LTI 1.3 Launch Flow</text>
+  <text x="480" y="110" font-size="12" fill="#999" text-anchor="middle">Moodle → Erudite authentication sequence</text>
+
+  <!-- Step boxes -->
+  <!-- Step 1: Moodle -->
+  <rect x="40" y="128" width="200" height="220" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="40" y="128" width="200" height="32" rx="8" fill="#e8e8e8"/>
+  <text x="140" y="149" font-size="13" font-weight="bold" fill="#444" text-anchor="middle">1. Moodle</text>
+  <text x="56" y="180" font-size="11" fill="#555">Student clicks LTI</text>
+  <text x="56" y="196" font-size="11" fill="#555">activity link</text>
+  <text x="56" y="220" font-size="11" fill="#888">→ GET /lti/oidc-init/</text>
+  <text x="56" y="236" font-size="11" fill="#888">  iss, login_hint,</text>
+  <text x="56" y="252" font-size="11" fill="#888">  target_link_uri</text>
+  <text x="56" y="276" font-size="11" fill="#555">Moodle receives</text>
+  <text x="56" y="292" font-size="11" fill="#555">redirect + nonce</text>
+  <text x="56" y="308" font-size="11" fill="#888">→ POST /lti/launch/</text>
+  <text x="56" y="324" font-size="11" fill="#888">  signed JWT</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="240" y1="238" x2="328" y2="238" stroke="#bbb" stroke-width="1.5"/>
+  <polygon points="328,233 338,238 328,243" fill="#bbb"/>
+  <line x1="338" y1="278" x2="250" y2="278" stroke="#bbb" stroke-width="1.5"/>
+  <polygon points="250,273 240,278 250,283" fill="#bbb"/>
+
+  <!-- Step 2: Erudite backend -->
+  <rect x="338" y="128" width="284" height="220" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="338" y="128" width="284" height="32" rx="8" fill="#e8e8e8"/>
+  <text x="480" y="149" font-size="13" font-weight="bold" fill="#444" text-anchor="middle">2. Erudite Backend</text>
+  <text x="354" y="180" font-size="11" fill="#555">Validate JWT signature</text>
+  <text x="354" y="196" font-size="11" fill="#555">via Moodle JWKS</text>
+  <text x="354" y="220" font-size="11" fill="#555">Create / find user account</text>
+  <text x="354" y="236" font-size="11" fill="#555">Auto-enroll in mapped course</text>
+  <text x="354" y="252" font-size="11" fill="#555">Create LTISession record</text>
+  <text x="354" y="276" font-size="11" fill="#555">Issue JWT access + refresh</text>
+  <text x="354" y="292" font-size="11" fill="#555">tokens for Erudite</text>
+  <text x="354" y="316" font-size="11" fill="#888">→ Redirect to /lti-landing</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="622" y1="238" x2="710" y2="238" stroke="#bbb" stroke-width="1.5"/>
+  <polygon points="710,233 720,238 710,243" fill="#bbb"/>
+
+  <!-- Step 3: Erudite frontend -->
+  <rect x="720" y="128" width="200" height="220" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="720" y="128" width="200" height="32" rx="8" fill="#e8e8e8"/>
+  <text x="820" y="149" font-size="13" font-weight="bold" fill="#444" text-anchor="middle">3. Erudite Frontend</text>
+  <text x="736" y="180" font-size="11" fill="#555">Show spinner:</text>
+  <text x="736" y="196" font-size="11" fill="#888">"Signing in via</text>
+  <text x="736" y="212" font-size="11" fill="#888"> Moodle…"</text>
+  <text x="736" y="236" font-size="11" fill="#555">Store tokens</text>
+  <text x="736" y="252" font-size="11" fill="#555">Fetch user profile</text>
+  <text x="736" y="276" font-size="11" fill="#555">Redirect to course</text>
+  <text x="736" y="292" font-size="11" fill="#888">→ /course/&lt;slug&gt;</text>
+
+  <!-- Grade passback note -->
+  <rect x="40" y="368" width="880" height="44" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="56" y="388" font-size="12" fill="#555">Grade Passback: when student submits a challenge, Erudite sends score back to Moodle via AGS</text>
+  <text x="56" y="404" font-size="11" fill="#aaa">POST to Moodle /scores endpoint with Bearer token (Celery async task, up to 3 retries)</text>
+</svg>

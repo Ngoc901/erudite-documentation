@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" font-family="Arial, sans-serif">
+
+  <!-- Page background -->
+  <rect width="960" height="560" fill="#f0f0f0"/>
+
+  <!-- Certificate outer border -->
+  <rect x="40" y="48" width="880" height="490" rx="10" fill="#1a1c2e" stroke="#555" stroke-width="2"/>
+
+  <!-- Inner border -->
+  <rect x="56" y="62" width="848" height="462" rx="8" fill="none" stroke="#444" stroke-width="1"/>
+
+  <!-- Decorative corner circles (top-left, top-right, bottom-left, bottom-right) -->
+  <circle cx="80"  cy="86"  r="18" fill="none" stroke="#555" stroke-width="1" opacity="0.4"/>
+  <circle cx="880" cy="86"  r="18" fill="none" stroke="#555" stroke-width="1" opacity="0.4"/>
+  <circle cx="80"  cy="488" r="18" fill="none" stroke="#555" stroke-width="1" opacity="0.4"/>
+  <circle cx="880" cy="488" r="18" fill="none" stroke="#555" stroke-width="1" opacity="0.4"/>
+
+  <!-- ERUDITE logo text -->
+  <text x="480" y="122" font-size="38" font-weight="bold" fill="#c0b0e0" text-anchor="middle" letter-spacing="8">ERUDITE</text>
+
+  <!-- Divider line with diamond -->
+  <line x1="100" y1="138" x2="430" y2="138" stroke="#666" stroke-width="1"/>
+  <polygon points="480,130 488,138 480,146 472,138" fill="#888"/>
+  <line x1="530" y1="138" x2="860" y2="138" stroke="#666" stroke-width="1"/>
+
+  <!-- "This is to certify that" -->
+  <text x="480" y="176" font-size="13" fill="#aaa" text-anchor="middle" font-style="italic">This is to certify that</text>
+
+  <!-- Student name -->
+  <text x="480" y="224" font-size="36" font-weight="bold" fill="#f0f0f0" text-anchor="middle">Student Name</text>
+
+  <!-- Name underline -->
+  <line x1="280" y1="234" x2="680" y2="234" stroke="#888" stroke-width="1"/>
+
+  <!-- "has successfully completed" -->
+  <text x="480" y="266" font-size="13" fill="#aaa" text-anchor="middle">has successfully completed</text>
+
+  <!-- Course title -->
+  <text x="480" y="304" font-size="20" font-weight="bold" fill="#e0e0e0" text-anchor="middle">Competitive Programming</text>
+
+  <!-- Metadata line -->
+  <text x="480" y="340" font-size="12" fill="#888" text-anchor="middle">April 10, 2026  ·  Level: Advanced  ·  Score: 90.0%</text>
+
+  <!-- Footer divider -->
+  <line x1="100" y1="380" x2="860" y2="380" stroke="#444" stroke-width="1"/>
+
+  <!-- Certificate ID footer -->
+  <text x="480" y="402" font-size="9" fill="#666" text-anchor="middle">Certificate ID: B6FE8730  ·  Issued by Erudite Platform</text>
+
+  <!-- Download button (shown below the certificate preview) -->
+  <rect x="370" y="440" width="220" height="40" rx="6" fill="#888"/>
+  <text x="480" y="465" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">⬇  Download Certificate PDF</text>
+
+</svg>

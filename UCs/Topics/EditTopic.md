@@ -1,110 +1,82 @@
-# 1 Use-Case Name
-Edit Topic — CRUD: Update
+# Use-Case Name: Edit Topic
 
-## 1.1 Brief Description
+Use-case: Edit Topic — CRUD: Update
 
-This use case describes how a Teacher edits an existing **Topic** within a course.
-A Teacher may modify the Topic title. After saving, the updated Topic information appears in the course’s Topics list.
+## 1. Brief Description
 
----
-
-# 2 Flow of Events
-
-## 2.1 Basic Flow
-1. Teacher logs into the platform.
-2. Teacher navigates to **Courses** and selects an existing course.
-3. Teacher opens the **Topics** section for that course.
-4. Teacher selects the Topic they want to edit.
-5. Teacher clicks **“Edit Topic.”**
-6. System displays an edit form containing:
-   - Topic title (pre-filled)
-7. Teacher updates the title and submits the form.
-8. System validates the input.
-9. System updates the Topic record in the database.
-10. System displays confirmation: **“Topic updated successfully.”**
-
-### 2.1.1 Activity Diagram
-![Activity Diagram](../ActivityDiagram/EditTopic.jpg)
-
-### 2.1.2 Mock-up
-![Mock-up](../Images/Topics-lofi.png)
-
-### 2.1.3 Narrative
-The Teacher selects an existing Topic and opens the edit form.  
-After updating the information, the Teacher submits the form, and the system applies the changes. 
-The updated Topic is immediately reflected in the course’s Topics list.
+A Teacher updates the title, description, or sort order of an existing topic within their course.
 
 ---
+
+## 2. Basic Flow
+
+1. Teacher navigates to the topic within their course.
+2. Teacher clicks **"Edit Topic"**.
+3. System displays a pre-filled form with the topic's current data.
+4. Teacher modifies the desired fields.
+5. Teacher clicks **"Save"**.
+6. System sends `PATCH /api/platform/topics/<slug>/update/` with the changed fields.
+7. System validates and saves the changes.
+8. System responds with HTTP 200 and updated topic data.
+
+### 2.1 Activity Diagram
+
+![Edit Topic Activity Diagram](../../Diagrams/ActivityDiagrams/Topics/EditTopic.drawio.png)
+
+### 2.2 Mock-up
+
+![Mock-up](../../Diagrams/Mockups/Topics/EditTopic.svg)
+
+### 2.3 Alternate Flows
+
+- **Invalid data:** Empty title → HTTP 400.
+- **Cancel:** Returns to topic view without saving.
+- **Non-owner:** HTTP 403.
+
+### 2.4 Narrative
 
 ```gherkin
-Feature: Edit an existing topic/module
-
+Feature: Edit Topic
   As a Teacher
-  I want to edit a topic in a course
-  So that I can update or improve its content.
+  I want to edit a topic in my course
+  So that I can fix errors or reorder content
 
   Background:
-    Given I am logged in as a teacher with verified email
-    And a course with ID 10 exists
-    And a topic with ID 5 exists for course 10
+    Given I am logged in as a Teacher
+    And a topic with slug "chapter-1-algebra" exists in my course
 
-  Scenario: Successfully edit a topic
-    When I send a PATCH request to "/api/platform/courses/10/topics/5/update/" with:
-        | title | Updated Topic Title |
-    Then the response status code should be 200
-    And the response should contain "Topic updated successfully."
+  Scenario: Successfully update a topic title
+    When I send a PATCH request to "/api/platform/topics/chapter-1-algebra/update/" with:
+      | title | Chapter 1: Linear Algebra |
+    Then the response status code is 200
+    And the topic title is updated
 
-  Scenario: Fail to edit a topic with empty title
-    When I send a PATCH request to "/api/platform/courses/10/topics/5/update/" with:
-        | title |           |
-    Then the response status code should be 400
-    And the response should contain "title"
-
-  Scenario: Attempt to edit a non-existing topic
-    When I send a PATCH request to "/api/platform/courses/10/topics/999/update/" with:
-        | title | Algebra Basics |
-    Then the response status code should be 404
-    And the response should contain "Topic not found"
+  Scenario: Non-owner cannot edit topic
+    Given I am a different Teacher
+    When I send a PATCH request to the topic
+    Then the response status code is 403
 ```
 
-## 2.2 Alternative Flows
-
-- **Cancel:** Return to Topics list without saving.
-
-- **Validation error:** Invalid input
-
-- **Topic not found**
-
-- **Permission error:** Teacher does not own the course.
-
 ---
 
-# 3 Special Requirements
+## 3. Preconditions
 
-- Only authenticated users with **role = teacher** can edit Topics. 
-- The Topic must belong to the selected course
-- Topic titles must be unique within the same course.  
+- Teacher is logged in.
+- The topic exists and belongs to a course owned by the Teacher.
 
----
+## 4. Postconditions
 
-# 4 Preconditions
+- Updated `Topic` record is persisted in the database.
 
-- Teacher is logged in and active.  
-- The course exists and is active.  
-- The Topic exists for the selected course.  
-- Teacher has permission to modify the course.  
+## 5. Exceptions
 
----
+- **Topic not found:** HTTP 404.
+- **Permission denied:** HTTP 403.
 
-# 5 Postconditions
+## 6. Link to SRS
 
-- The Topic record is updated in the database.  
-- The updated Topic information appears in the Topics list.  
+[Software Requirements Specification](../../Documents/SoftwareRequirementsSpecification.md)
 
----
+## 7. CRUD Classification
 
-# 6 Extension Points
-
-- **Delete Topic:** Teacher may delete the Topic after editing it.  
-- **Add Challenge:** Teacher may add challenges to the updated Topic.  
-- **View Topic:** Teacher can view the updated Topic details.  
+- **Update** — modifies an existing Topic record.

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="860" font-family="Arial, sans-serif">
+  <rect width="960" height="860" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Profile header card -->
+  <rect x="24" y="64" width="912" height="100" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <circle cx="76" cy="114" r="34" fill="#ddd"/>
+  <circle cx="76" cy="106" r="12" fill="#bbb"/>
+  <path d="M52,130 Q52,118 76,118 Q100,118 100,130" fill="#bbb"/>
+  <text x="124" y="100" font-size="17" font-weight="bold" fill="#222">student_alice</text>
+  <rect x="124" y="106" width="46" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="147" y="119" font-size="10" fill="#666" text-anchor="middle">student</text>
+  <rect x="178" y="106" width="80" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="218" y="119" font-size="10" fill="#555" text-anchor="middle">✓ verified</text>
+  <text x="124" y="138" font-size="12" fill="#888">alice@example.com  ·  Joined Jan 2024</text>
+  <!-- rank badge -->
+  <rect x="800" y="90" width="112" height="38" rx="8" fill="#e8e8e8"/>
+  <text x="856" y="106" font-size="11" fill="#555" text-anchor="middle">Rank</text>
+  <text x="856" y="122" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">#4</text>
+
+  <!-- Stat cards row -->
+  <rect x="24" y="178" width="160" height="76" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="104" y="206" font-size="11" fill="#888" text-anchor="middle">Total Points</text>
+  <text x="104" y="234" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">340</text>
+
+  <rect x="196" y="178" width="160" height="76" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="276" y="206" font-size="11" fill="#888" text-anchor="middle">Passed</text>
+  <text x="276" y="234" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">18</text>
+
+  <rect x="368" y="178" width="160" height="76" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="448" y="206" font-size="11" fill="#888" text-anchor="middle">Attempted</text>
+  <text x="448" y="234" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">24</text>
+
+  <rect x="540" y="178" width="160" height="76" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="620" y="206" font-size="11" fill="#888" text-anchor="middle">Certificates</text>
+  <text x="620" y="234" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">1</text>
+
+  <rect x="712" y="178" width="224" height="76" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="824" y="206" font-size="11" fill="#888" text-anchor="middle">Courses Enrolled</text>
+  <text x="824" y="234" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">3</text>
+
+  <!-- Two column layout -->
+  <!-- Left column: course progress -->
+  <rect x="24" y="268" width="580" height="370" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="40" y="294" font-size="14" font-weight="bold" fill="#333">In Progress</text>
+  <line x1="40" y1="302" x2="588" y2="302" stroke="#eee" stroke-width="1"/>
+
+  <!-- Course progress row 1 -->
+  <text x="40" y="326" font-size="13" font-weight="bold" fill="#222">Python for Beginners</text>
+  <rect x="40" y="332" width="400" height="6" rx="3" fill="#e0e0e0"/>
+  <rect x="40" y="332" width="240" height="6" rx="3" fill="#bbb"/>
+  <text x="452" y="340" font-size="11" fill="#888">60%</text>
+
+  <!-- Course progress row 2 -->
+  <text x="40" y="364" font-size="13" font-weight="bold" fill="#222">Data Structures</text>
+  <rect x="40" y="370" width="400" height="6" rx="3" fill="#e0e0e0"/>
+  <rect x="40" y="370" width="100" height="6" rx="3" fill="#bbb"/>
+  <text x="452" y="378" font-size="11" fill="#888">25%</text>
+
+  <!-- Course progress row 3 -->
+  <text x="40" y="402" font-size="13" font-weight="bold" fill="#222">Algorithms 101</text>
+  <rect x="40" y="408" width="400" height="6" rx="3" fill="#e0e0e0"/>
+  <rect x="40" y="408" width="20" height="6" rx="3" fill="#bbb"/>
+  <text x="452" y="416" font-size="11" fill="#888">5%</text>
+
+  <line x1="40" y1="430" x2="588" y2="430" stroke="#eee" stroke-width="1"/>
+  <text x="40" y="452" font-size="14" font-weight="bold" fill="#333">Completed</text>
+
+  <!-- Completed course -->
+  <rect x="40" y="460" width="528" height="44" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="56" y="480" font-size="13" font-weight="bold" fill="#444">Web Fundamentals</text>
+  <text x="56" y="496" font-size="11" fill="#888">Completed · 92%</text>
+  <rect x="480" y="468" width="78" height="20" rx="6" fill="#888"/>
+  <text x="519" y="482" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">Certificate</text>
+
+  <!-- Certificates section -->
+  <text x="40" y="530" font-size="14" font-weight="bold" fill="#333">Certificates</text>
+  <line x1="40" y1="538" x2="588" y2="538" stroke="#eee" stroke-width="1"/>
+  <rect x="40" y="548" width="528" height="52" rx="8" fill="#ececec" stroke="#bbb" stroke-width="1"/>
+  <circle cx="64" cy="574" r="14" fill="#ddd"/>
+  <text x="64" y="579" font-size="11" fill="#888" text-anchor="middle"></text>
+  <text x="88" y="570" font-size="13" font-weight="bold" fill="#444">Web Fundamentals</text>
+  <text x="88" y="586" font-size="11" fill="#888">Issued Mar 2024  ·  Score 92%</text>
+  <rect x="474" y="560" width="84" height="24" rx="6" fill="#888"/>
+  <text x="516" y="576" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">Download PDF</text>
+
+  <!-- Right column: recent activity -->
+  <rect x="616" y="268" width="320" height="370" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="632" y="294" font-size="14" font-weight="bold" fill="#333">Recent Activity</text>
+  <line x1="632" y1="302" x2="920" y2="302" stroke="#eee" stroke-width="1"/>
+
+  <!-- Activity rows -->
+  <circle cx="644" cy="324" r="5" fill="#aaa"/>
+  <text x="658" y="320" font-size="12" fill="#333">What is a linked list?</text>
+  <text x="658" y="334" font-size="10" fill="#aaa">Data Structures  ·  passed  ·  10pts</text>
+  <text x="658" y="346" font-size="10" fill="#ccc">Today 14:32</text>
+
+  <line x1="632" y1="356" x2="920" y2="356" stroke="#f5f5f5" stroke-width="1"/>
+  <circle cx="644" cy="374" r="5" fill="#ccc"/>
+  <text x="658" y="370" font-size="12" fill="#333">Big-O complexity</text>
+  <text x="658" y="384" font-size="10" fill="#aaa">Data Structures  ·  failed  ·  0pts</text>
+  <text x="658" y="396" font-size="10" fill="#ccc">Today 13:10</text>
+
+  <line x1="632" y1="406" x2="920" y2="406" stroke="#f5f5f5" stroke-width="1"/>
+  <circle cx="644" cy="424" r="5" fill="#aaa"/>
+  <text x="658" y="420" font-size="12" fill="#333">Double the number</text>
+  <text x="658" y="434" font-size="10" fill="#aaa">Python for Beginners  ·  passed  ·  20pts</text>
+  <text x="658" y="446" font-size="10" fill="#ccc">Yesterday 20:05</text>
+
+  <line x1="632" y1="456" x2="920" y2="456" stroke="#f5f5f5" stroke-width="1"/>
+  <circle cx="644" cy="474" r="5" fill="#aaa"/>
+  <text x="658" y="470" font-size="12" fill="#333">Capital of France?</text>
+  <text x="658" y="484" font-size="10" fill="#aaa">Python for Beginners  ·  passed  ·  10pts</text>
+  <text x="658" y="496" font-size="10" fill="#ccc">Yesterday 19:44</text>
+
+  <line x1="632" y1="506" x2="920" y2="506" stroke="#f5f5f5" stroke-width="1"/>
+  <circle cx="644" cy="524" r="5" fill="#ccc"/>
+  <text x="658" y="520" font-size="12" fill="#333">Fibonacci sequence</text>
+  <text x="658" y="534" font-size="10" fill="#aaa">Algorithms 101  ·  failed  ·  0pts</text>
+  <text x="658" y="546" font-size="10" fill="#ccc">Apr 30 11:20</text>
+
+  <line x1="632" y1="556" x2="920" y2="556" stroke="#f5f5f5" stroke-width="1"/>
+  <circle cx="644" cy="574" r="5" fill="#aaa"/>
+  <text x="658" y="570" font-size="12" fill="#333">Binary search</text>
+  <text x="658" y="584" font-size="10" fill="#aaa">Algorithms 101  ·  passed  ·  15pts</text>
+  <text x="658" y="596" font-size="10" fill="#ccc">Apr 29 09:15</text>
+
+  <!-- Saved courses section -->
+  <rect x="24" y="652" width="912" height="88" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="40" y="678" font-size="14" font-weight="bold" fill="#333">Saved Courses</text>
+  <line x1="40" y1="686" x2="920" y2="686" stroke="#eee" stroke-width="1"/>
+  <rect x="40" y="698" width="200" height="30" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="56" y="717" font-size="12" fill="#444">Machine Learning</text>
+  <rect x="252" y="698" width="200" height="30" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="268" y="717" font-size="12" fill="#444">Linear Algebra</text>
+  <rect x="464" y="698" width="200" height="30" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="480" y="717" font-size="12" fill="#444">Web Development</text>
+</svg>

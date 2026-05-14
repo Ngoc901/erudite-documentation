@@ -1,0 +1,374 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram id="erd-backend" name="ERD">
+    <mxGraphModel dx="2545" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2800" pageHeight="2000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="1300" width="2370" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#F1F5F9;" value="ERUDITE - Entity Relationship Diagram (Backend)" vertex="1">
+          <mxGeometry height="36" width="800" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#94A3B8;" value="authentication · core · lti  |  PostgreSQL / SQLite" vertex="1">
+          <mxGeometry height="22" width="600" x="40" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="user_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312E81;strokeColor=#6366F1;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="USER" vertex="1">
+          <mxGeometry height="36" width="340" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="user_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#6366F1;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;username VARCHAR(50) UNIQUE&#xa;email VARCHAR UNIQUE&#xa;user_bio VARCHAR(255) NULL&#xa;photo VARCHAR NULL&#xa;is_staff BOOLEAN&#xa;is_active BOOLEAN&#xa;date_joined DATETIME&#xa;email_verified BOOLEAN&#xa;slug VARCHAR(60) UNIQUE&#xa;role VARCHAR(20) {student|teacher}&#xa;moodle_platform VARCHAR(200) NULL&#xa;password VARCHAR (hashed)" vertex="1">
+          <mxGeometry height="226" width="340" x="40" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="otp_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312E81;strokeColor=#6366F1;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="PASSWORD_RESET_OTP" vertex="1">
+          <mxGeometry height="36" width="340" x="40" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="otp_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#6366F1;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 user_id (FK → USER)&#xa;otp_code VARCHAR(6)&#xa;created_at DATETIME&#xa;is_used BOOLEAN" vertex="1">
+          <mxGeometry height="100" width="340" x="40" y="446" as="geometry" />
+        </mxCell>
+        <mxCell id="evc_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312E81;strokeColor=#6366F1;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="EMAIL_VERIFICATION_CODE" vertex="1">
+          <mxGeometry height="36" width="340" x="40" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="evc_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#6366F1;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 user_id (FK → USER)&#xa;code VARCHAR(6)&#xa;created_at DATETIME&#xa;is_used BOOLEAN" vertex="1">
+          <mxGeometry height="100" width="340" x="40" y="596" as="geometry" />
+        </mxCell>
+        <mxCell id="course_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="COURSE" vertex="1">
+          <mxGeometry height="36" width="340" x="560" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="course_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#10B981;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 owner_id (FK → USER)&#xa;title VARCHAR(200)&#xa;description TEXT&#xa;language VARCHAR(30)&#xa;level VARCHAR(20) {beginner|intermediate|advanced}&#xa;status VARCHAR(20) {draft|published|archived|private}&#xa;featured_image VARCHAR NULL&#xa;completion_threshold SMALLINT&#xa;lti_token UUID UNIQUE&#xa;created_at DATETIME&#xa;updated_at DATETIME&#xa;slug VARCHAR(200) UNIQUE" vertex="1">
+          <mxGeometry height="236" width="340" x="560" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="topic_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="TOPIC" vertex="1">
+          <mxGeometry height="36" width="340" x="560" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="topic_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#10B981;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 course_id (FK → COURSE)&#xa;🔗 owner_id (FK → USER)&#xa;title VARCHAR(200)&#xa;description TEXT&#xa;sort_order INTEGER&#xa;slug VARCHAR(200) UNIQUE" vertex="1">
+          <mxGeometry height="140" width="340" x="560" y="476" as="geometry" />
+        </mxCell>
+        <mxCell id="lesson_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="LESSON" vertex="1">
+          <mxGeometry height="36" width="340" x="560" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="lesson_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#10B981;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 topic_id (FK → TOPIC)&#xa;🔗 owner_id (FK → USER)&#xa;title VARCHAR(200)&#xa;slug VARCHAR(220) UNIQUE&#xa;content TEXT&#xa;video_url VARCHAR NULL&#xa;content_type VARCHAR(20) {text|video|mixed}&#xa;photo VARCHAR NULL&#xa;sort_order INTEGER&#xa;estimated_minutes INTEGER&#xa;created_at DATETIME&#xa;updated_at DATETIME" vertex="1">
+          <mxGeometry height="226" width="340" x="560" y="726" as="geometry" />
+        </mxCell>
+        <mxCell id="chal_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#78350F;strokeColor=#F59E0B;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="CHALLENGE" vertex="1">
+          <mxGeometry height="36" width="340" x="1040" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="chal_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#F59E0B;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 topic_id (FK → TOPIC)&#xa;title VARCHAR(200)&#xa;body TEXT&#xa;points INTEGER&#xa;difficulty VARCHAR(10) {easy|medium|hard}&#xa;challenge_type VARCHAR(20) {quiz|text|code}&#xa;sort_order INTEGER&#xa;photo VARCHAR NULL&#xa;hint TEXT&#xa;solution_explanation TEXT&#xa;slug VARCHAR(200) UNIQUE&#xa;created_at DATETIME" vertex="1">
+          <mxGeometry height="236" width="340" x="1040" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="opt_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#78350F;strokeColor=#F59E0B;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="CHALLENGE_OPTION" vertex="1">
+          <mxGeometry height="36" width="340" x="1040" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="opt_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#F59E0B;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 challenge_id (FK → CHALLENGE)&#xa;text VARCHAR(255)" vertex="1">
+          <mxGeometry height="80" width="340" x="1040" y="476" as="geometry" />
+        </mxCell>
+        <mxCell id="ans_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#78350F;strokeColor=#F59E0B;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="CHALLENGE_CORRECT_ANSWER" vertex="1">
+          <mxGeometry height="36" width="340" x="1040" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="ans_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#F59E0B;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 challenge_id (OneToOne → CHALLENGE)&#xa;correct_answer VARCHAR(255)&#xa;case_sensitive BOOLEAN" vertex="1">
+          <mxGeometry height="90" width="340" x="1040" y="656" as="geometry" />
+        </mxCell>
+        <mxCell id="code_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#78350F;strokeColor=#F59E0B;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="CODE_CHALLENGE_CONFIG" vertex="1">
+          <mxGeometry height="36" width="340" x="1040" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="code_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#F59E0B;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 challenge_id (OneToOne → CHALLENGE)&#xa;language VARCHAR(30) {python|javascript|java|cpp|sql}&#xa;solution_template TEXT&#xa;solution_hidden TEXT&#xa;time_limit_seconds INTEGER&#xa;memory_limit_mb INTEGER" vertex="1">
+          <mxGeometry height="130" width="340" x="1040" y="846" as="geometry" />
+        </mxCell>
+        <mxCell id="tc_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#78350F;strokeColor=#F59E0B;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="CODE_TEST_CASE" vertex="1">
+          <mxGeometry height="36" width="340" x="1040" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="tc_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#F59E0B;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 config_id (FK → CODE_CHALLENGE_CONFIG)&#xa;stdin TEXT&#xa;expected_stdout TEXT&#xa;is_public BOOLEAN&#xa;weight FLOAT&#xa;description VARCHAR(200)" vertex="1">
+          <mxGeometry height="130" width="340" x="1040" y="1086" as="geometry" />
+        </mxCell>
+        <mxCell id="sub_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="SUBMISSION" vertex="1">
+          <mxGeometry height="36" width="340" x="1520" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#3B82F6;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 challenge_id (FK → CHALLENGE)&#xa;🔗 user_id (FK → USER)&#xa;attempt_no INTEGER&#xa;answer_text TEXT NULL&#xa;status VARCHAR(20) {pending|passed|failed|graded|rejected}&#xa;score FLOAT&#xa;feedback TEXT&#xa;hint_used BOOLEAN&#xa;solution_revealed BOOLEAN&#xa;created_at DATETIME&#xa;graded_at DATETIME NULL&#xa;«unique» challenge + user + attempt_no" vertex="1">
+          <mxGeometry height="236" width="340" x="1520" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="csr_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="CODE_SUBMISSION_RESULT" vertex="1">
+          <mxGeometry height="36" width="340" x="1520" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="csr_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#3B82F6;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 submission_id (FK → SUBMISSION)&#xa;🔗 test_case_id (FK → CODE_TEST_CASE)&#xa;status VARCHAR(30) {accepted|wrong_answer|&#xa;    time_limit|memory_limit|&#xa;    runtime_error|compilation_error}&#xa;stdout TEXT&#xa;stderr TEXT&#xa;execution_time_ms FLOAT NULL&#xa;memory_used_mb FLOAT NULL" vertex="1">
+          <mxGeometry height="186" width="340" x="1520" y="476" as="geometry" />
+        </mxCell>
+        <mxCell id="enroll_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="COURSE_ENROLLMENT" vertex="1">
+          <mxGeometry height="36" width="340" x="40" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="enroll_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#10B981;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 course_id (FK → COURSE)&#xa;🔗 student_id (FK → USER)&#xa;enrolled_at DATETIME&#xa;lti_source VARCHAR(200) NULL&#xa;«unique» course + student" vertex="1">
+          <mxGeometry height="120" width="340" x="40" y="786" as="geometry" />
+        </mxCell>
+        <mxCell id="book_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="COURSE_BOOKMARK" vertex="1">
+          <mxGeometry height="36" width="340" x="40" y="946" as="geometry" />
+        </mxCell>
+        <mxCell id="book_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#10B981;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 course_id (FK → COURSE)&#xa;🔗 user_id (FK → USER)&#xa;created_at DATETIME&#xa;«unique» course + user" vertex="1">
+          <mxGeometry height="100" width="340" x="40" y="982" as="geometry" />
+        </mxCell>
+        <mxCell id="cert_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="CERTIFICATE" vertex="1">
+          <mxGeometry height="36" width="340" x="560" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="cert_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#10B981;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 user_id (FK → USER)&#xa;🔗 course_id (FK → COURSE)&#xa;certificate_id UUID UNIQUE&#xa;issued_at DATETIME&#xa;score_pct FLOAT&#xa;«unique» user + course" vertex="1">
+          <mxGeometry height="120" width="340" x="560" y="1026" as="geometry" />
+        </mxCell>
+        <mxCell id="fb_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="COURSE_FEEDBACK" vertex="1">
+          <mxGeometry height="36" width="340" x="1520" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="fb_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#10B981;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 course_id (FK → COURSE)&#xa;🔗 user_id (FK → USER)&#xa;rating SMALLINT [1–5]&#xa;comment TEXT&#xa;created_at DATETIME&#xa;updated_at DATETIME&#xa;«unique» course + user" vertex="1">
+          <mxGeometry height="150" width="340" x="1520" y="796" as="geometry" />
+        </mxCell>
+        <mxCell id="lreg_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#831843;strokeColor=#EC4899;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="LTI_REGISTRATION" vertex="1">
+          <mxGeometry height="36" width="340" x="1940" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lreg_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#EC4899;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;name VARCHAR(100)&#xa;issuer VARCHAR UNIQUE&#xa;client_id VARCHAR(255)&#xa;deployment_id VARCHAR(255)&#xa;auth_request_url VARCHAR&#xa;access_token_url VARCHAR&#xa;platform_jwks_url VARCHAR&#xa;tool_private_key TEXT&#xa;tool_public_key TEXT&#xa;tool_key_id VARCHAR(64)&#xa;created_at DATETIME" vertex="1">
+          <mxGeometry height="210" width="340" x="1940" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="lmap_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#831843;strokeColor=#EC4899;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="LTI_RESOURCE_MAPPING" vertex="1">
+          <mxGeometry height="36" width="340" x="1940" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="lmap_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#EC4899;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, auto)&#xa;─────────────────────&#xa;🔗 registration_id (FK → LTI_REGISTRATION)&#xa;🔗 course_id (FK → COURSE) NULL&#xa;resource_link_id VARCHAR(255)&#xa;lineitem_url VARCHAR NULL&#xa;«unique» registration + resource_link_id" vertex="1">
+          <mxGeometry height="120" width="340" x="1940" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="lses_hdr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#831843;strokeColor=#EC4899;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;arcSize=8;" value="LTI_SESSION" vertex="1">
+          <mxGeometry height="36" width="340" x="1940" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="lses_body" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#EC4899;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="🔑 id (PK, UUID)&#xa;─────────────────────&#xa;🔗 user_id (FK → USER)&#xa;🔗 registration_id (FK → LTI_REGISTRATION)&#xa;🔗 resource_mapping_id (FK → LTI_RESOURCE_MAPPING)&#xa;lti_user_id VARCHAR(255)&#xa;score_url VARCHAR NULL&#xa;created_at DATETIME" vertex="1">
+          <mxGeometry height="140" width="340" x="1940" y="696" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="user_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="otp_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="213" />
+              <mxPoint x="10" y="496" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="user_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="evc_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="213" />
+              <mxPoint x="10" y="646" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="user_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="course_body" value="owns">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="course_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="topic_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="160" />
+              <mxPoint x="540" y="546" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="topic_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="lesson_body" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="topic_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="chal_body" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="chal_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="opt_body" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r8" edge="1" parent="1" source="chal_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERone;startArrow=ERmandOne;" target="ans_body" value="1:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r9" edge="1" parent="1" source="chal_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERone;startArrow=ERmandOne;" target="code_body" value="1:1">
+          <mxGeometry relative="1" x="-0.0014" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="980" y="254" />
+              <mxPoint x="980" y="911" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r10" edge="1" parent="1" source="code_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="tc_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="911" />
+              <mxPoint x="1000" y="1151" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r11" edge="1" parent="1" source="chal_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="sub_body" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r12" edge="1" parent="1" source="user_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;dashed=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="sub_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="213" />
+              <mxPoint x="530" y="80" />
+              <mxPoint x="1690" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r13" edge="1" parent="1" source="sub_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="csr_body" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r14" edge="1" parent="1" source="tc_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="csr_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1430" y="1150" />
+              <mxPoint x="1490" y="1150" />
+              <mxPoint x="1490" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r15" edge="1" parent="1" source="course_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;exitX=0.002;exitY=0.097;exitDx=0;exitDy=0;exitPerimeter=0;" target="enroll_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="159" />
+              <mxPoint x="540" y="230" />
+              <mxPoint x="490" y="230" />
+              <mxPoint x="490" y="846" />
+            </Array>
+            <mxPoint x="550" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r16" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;dashed=1;" target="enroll_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="210" />
+              <mxPoint x="20" y="790" />
+            </Array>
+            <mxPoint x="40" y="210" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r17" edge="1" parent="1" source="course_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;exitX=0;exitY=0.087;exitDx=0;exitDy=0;exitPerimeter=0;" target="book_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="157" />
+              <mxPoint x="540" y="230" />
+              <mxPoint x="490" y="230" />
+              <mxPoint x="490" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r18" edge="1" parent="1" source="course_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="cert_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="300" />
+              <mxPoint x="1010" y="1030" />
+              <mxPoint x="960" y="1030" />
+              <mxPoint x="960" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r19" edge="1" parent="1" source="user_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;dashed=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="cert_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="213" />
+              <mxPoint x="20" y="1120" />
+              <mxPoint x="520" y="1120" />
+              <mxPoint x="520" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r20" edge="1" parent="1" source="course_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="fb_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="200" />
+              <mxPoint x="1020" y="840" />
+              <mxPoint x="1520" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r21" edge="1" parent="1" source="user_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="fb_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="270" />
+              <mxPoint x="530" y="970" />
+              <mxPoint x="970" y="970" />
+              <mxPoint x="970" y="990" />
+              <mxPoint x="1410" y="990" />
+              <mxPoint x="1410" y="871" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r22" edge="1" parent="1" source="lreg_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="lmap_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2330" y="150" />
+              <mxPoint x="2330" y="516" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r23" edge="1" parent="1" source="lmap_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="lses_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2330" y="516" />
+              <mxPoint x="2330" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r24" edge="1" parent="1" source="lreg_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;" target="lses_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2340" y="150" />
+              <mxPoint x="2340" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r25" edge="1" parent="1" source="lmap_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERone;startArrow=ERmany;dashed=1;" target="course_body" value="maps to">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1900" y="470" />
+              <mxPoint x="1900" y="70" />
+              <mxPoint x="820" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r26" edge="1" parent="1" source="user_body" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;dashed=1;" target="lses_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="170" />
+              <mxPoint x="510" y="70" />
+              <mxPoint x="810" y="70" />
+              <mxPoint x="810" y="60" />
+              <mxPoint x="1910" y="60" />
+              <mxPoint x="1910" y="766" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r27" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERmandOne;dashed=1;" target="book_body" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="210" />
+              <mxPoint x="20" y="1000" />
+            </Array>
+            <mxPoint x="40" y="210" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZzRyR0LV0kcustClcRuR-1" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="260" width="420" x="1920" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_bg" parent="ZzRyR0LV0kcustClcRuR-1" style="rounded=2;fillColor=#0D1B2A;strokeColor=#1E3A5F;" value="" vertex="1">
+          <mxGeometry height="260" width="420" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_title" parent="ZzRyR0LV0kcustClcRuR-1" style="text;html=1;fillColor=none;strokeColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#F1F5F9;" value="Legend" vertex="1">
+          <mxGeometry height="22" width="420" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_auth" parent="ZzRyR0LV0kcustClcRuR-1" style="rounded=2;fillColor=#312E81;strokeColor=#6366F1;fontColor=#F1F5F9;fontSize=11;align=left;spacingLeft=8;" value="  authentication app" vertex="1">
+          <mxGeometry height="26" width="386" x="16" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_course" parent="ZzRyR0LV0kcustClcRuR-1" style="rounded=2;fillColor=#064E3B;strokeColor=#10B981;fontColor=#F1F5F9;fontSize=11;align=left;spacingLeft=8;" value="  core: Course / Topic / Lesson / Enrollment / Bookmark / Certificate / Feedback" vertex="1">
+          <mxGeometry height="26" width="386" x="16" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_chal" parent="ZzRyR0LV0kcustClcRuR-1" style="rounded=2;fillColor=#78350F;strokeColor=#F59E0B;fontColor=#F1F5F9;fontSize=11;align=left;spacingLeft=8;" value="  core: Challenge / Options / Answer / Code" vertex="1">
+          <mxGeometry height="26" width="386" x="16" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_sub" parent="ZzRyR0LV0kcustClcRuR-1" style="rounded=2;fillColor=#1E3A5F;strokeColor=#3B82F6;fontColor=#F1F5F9;fontSize=11;align=left;spacingLeft=8;" value="  core: Submission / Result" vertex="1">
+          <mxGeometry height="26" width="386" x="16" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_lti" parent="ZzRyR0LV0kcustClcRuR-1" style="rounded=2;fillColor=#831843;strokeColor=#EC4899;fontColor=#F1F5F9;fontSize=11;align=left;spacingLeft=8;" value="  lti app" vertex="1">
+          <mxGeometry height="26" width="386" x="16" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_fk" parent="ZzRyR0LV0kcustClcRuR-1" style="text;html=1;fillColor=none;strokeColor=none;align=left;fontSize=11;fontColor=#94A3B8;" value="━━▶  FK (solid = same-app)     - -▶  FK (dashed = cross-app)" vertex="1">
+          <mxGeometry height="22" width="386" x="16" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_pk" parent="ZzRyR0LV0kcustClcRuR-1" style="text;html=1;fillColor=none;strokeColor=none;align=left;fontSize=11;fontColor=#94A3B8;" value="🔑 Primary Key     🔗 Foreign Key / Reference" vertex="1">
+          <mxGeometry height="22" width="386" x="16" y="224" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

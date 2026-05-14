@@ -1,0 +1,135 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram id="GoogleOAuth" name="Page-1">
+    <mxGraphModel dx="1018" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;labelBackgroundColor=none;" value="Google OAuth" vertex="1">
+          <mxGeometry height="40" width="760" x="80" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=13;swimlaneLine=1;strokeWidth=2;labelBackgroundColor=none;" value="User" vertex="1">
+          <mxGeometry height="1040" width="260" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="3" style="ellipse;aspect=fixed;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="110" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Click &quot;Sign in with Google&quot;" vertex="1">
+          <mxGeometry height="40" width="200" x="30" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Select Google account and grant access" vertex="1">
+          <mxGeometry height="50" width="200" x="30" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Send Google token to POST /api/users/auth/google/" vertex="1">
+          <mxGeometry height="50" width="200" x="40" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="3" style="ellipse;aspect=fixed;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="110" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Store tokens in localStorage" vertex="1">
+          <mxGeometry height="40" width="200" x="30" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Redirect to Dashboard" vertex="1">
+          <mxGeometry height="40" width="200" x="30" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="3" style="ellipse;html=1;shape=endState;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="105" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=13;swimlaneLine=1;strokeWidth=2;labelBackgroundColor=none;" value="Google" vertex="1">
+          <mxGeometry height="1040" width="260" x="300" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Display OAuth consent screen" vertex="1">
+          <mxGeometry height="40" width="200" x="30" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return authorization token to frontend" vertex="1">
+          <mxGeometry height="50" width="200" x="30" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=13;swimlaneLine=1;strokeWidth=2;labelBackgroundColor=none;" value="System" vertex="1">
+          <mxGeometry height="1040" width="550" x="580" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="5" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Validate token with Google API" vertex="1">
+          <mxGeometry height="40" width="200" x="240" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="5" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Token valid?" vertex="1">
+          <mxGeometry height="60" width="180" x="250" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="5" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return HTTP 400 / Display error" vertex="1">
+          <mxGeometry height="40" width="180" x="20" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="5" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Extract email and name from token claims" vertex="1">
+          <mxGeometry height="50" width="200" x="240" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="5" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="User with this email exists?" vertex="1">
+          <mxGeometry height="60" width="190" x="40" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="5" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Create new User (email_verified=true, role=student)" vertex="1">
+          <mxGeometry height="50" width="200" x="330" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="5" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Generate JWT Access + Refresh tokens" vertex="1">
+          <mxGeometry height="40" width="200" x="60" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="5" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return tokens to frontend" vertex="1">
+          <mxGeometry height="40" width="200" x="60" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="56" edge="1" parent="5" source="12" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="57" edge="1" parent="5" source="13" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="14" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="59" edge="1" parent="5" source="13" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="16" value="yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="60" edge="1" parent="5" source="16" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="61" edge="1" parent="5" source="17" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="18" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="62" edge="1" parent="5" source="17" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="20" value="yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="63" edge="1" parent="5" source="18" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64" edge="1" parent="5" source="20" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="50" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="52" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="55" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="58" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="65" edge="1" parent="1" source="21" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="1040" />
+              <mxPoint x="450" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="66" edge="1" parent="1" source="22" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="67" edge="1" parent="1" source="23" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

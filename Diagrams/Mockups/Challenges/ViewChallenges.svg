@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="590" font-family="Arial, sans-serif">
+  <rect width="960" height="670" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Topic header -->
+  <text x="24" y="80" font-size="20" font-weight="bold" fill="#222">Greedy Algorithms</text>
+  <text x="24" y="98" font-size="12" fill="#999">Topic 01  ·  Competitive Programming</text>
+
+  <!-- Teacher buttons -->
+  <rect x="24" y="110" width="130" height="30" rx="6" fill="#ddd" stroke="#ccc" stroke-width="1"/>
+  <text x="89" y="130" font-size="12" fill="#444" text-anchor="middle">+ Add Challenge</text>
+  <rect x="164" y="110" width="150" height="30" rx="6" fill="#ddd" stroke="#ccc" stroke-width="1"/>
+  <text x="239" y="130" font-size="12" fill="#444" text-anchor="middle">+ Add Code Challenge</text>
+
+  <!-- ── QUIZ CHALLENGE CARD ── y=152 h=230 → ends y=382 -->
+  <rect x="24" y="152" width="912" height="230" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="24" y="152" width="912" height="5" rx="4" fill="#bbb"/>
+
+  <!-- index + title row -->
+  <circle cx="52" cy="185" r="16" fill="#ddd"/>
+  <text x="52" y="190" font-size="11" font-weight="bold" fill="#555" text-anchor="middle">01</text>
+  <text x="80" y="188" font-size="14" font-weight="bold" fill="#222">What is the capital of France?</text>
+  <rect x="400" y="175" width="38" height="18" rx="9" fill="#ebebeb"/>
+  <text x="419" y="188" font-size="10" fill="#666" text-anchor="middle">10 pts</text>
+  <rect x="446" y="175" width="38" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="465" y="188" font-size="10" fill="#666" text-anchor="middle">easy</text>
+  <rect x="492" y="175" width="38" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="511" y="188" font-size="10" fill="#666" text-anchor="middle">quiz</text>
+
+  <!-- divider -->
+  <line x1="44" y1="200" x2="916" y2="200" stroke="#eee" stroke-width="1"/>
+
+  <!-- options -->
+  <circle cx="56" cy="218" r="7" fill="none" stroke="#bbb" stroke-width="1.5"/>
+  <text x="72" y="223" font-size="12" fill="#444">Paris</text>
+  <circle cx="56" cy="238" r="7" fill="none" stroke="#bbb" stroke-width="1.5"/>
+  <text x="72" y="243" font-size="12" fill="#444">London</text>
+  <circle cx="56" cy="258" r="7" fill="#999" stroke="#999" stroke-width="1.5"/>
+  <text x="72" y="263" font-size="12" fill="#444">Berlin</text>
+  <circle cx="56" cy="278" r="7" fill="none" stroke="#bbb" stroke-width="1.5"/>
+  <text x="72" y="283" font-size="12" fill="#444">Madrid</text>
+
+  <!-- hint / solution -->
+  <rect x="44" y="296" width="110" height="26" rx="5" fill="#ebebeb" stroke="#ddd" stroke-width="1"/>
+  <text x="99" y="313" font-size="11" fill="#666" text-anchor="middle">Use hint (−50%)</text>
+  <rect x="164" y="296" width="110" height="26" rx="5" fill="#ebebeb" stroke="#ddd" stroke-width="1"/>
+  <text x="219" y="313" font-size="11" fill="#666" text-anchor="middle">Reveal solution</text>
+
+  <!-- submit button -->
+  <rect x="800" y="296" width="116" height="26" rx="13" fill="#999"/>
+  <text x="858" y="313" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Submit answer</text>
+
+  <!-- teacher toolbar — inside card -->
+  <line x1="44" y1="334" x2="916" y2="334" stroke="#eee" stroke-width="1"/>
+  <text x="56" y="355" font-size="11" fill="#888">Show answer</text>
+  <text x="820" y="355" font-size="11" fill="#888">✎ Edit</text>
+  <text x="868" y="355" font-size="11" fill="#888">Delete</text>
+
+  <!-- ── TEXT CHALLENGE CARD ── y=394 h=180 → ends y=574 -->
+  <rect x="24" y="394" width="912" height="180" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="24" y="394" width="912" height="5" rx="4" fill="#ccc"/>
+
+  <circle cx="52" cy="426" r="16" fill="#ddd"/>
+  <text x="52" y="431" font-size="11" font-weight="bold" fill="#555" text-anchor="middle">02</text>
+  <text x="80" y="429" font-size="14" font-weight="bold" fill="#222">Explain Big-O notation in one sentence.</text>
+  <rect x="530" y="417" width="38" height="18" rx="9" fill="#ebebeb"/>
+  <text x="549" y="430" font-size="10" fill="#666" text-anchor="middle">20 pts</text>
+  <rect x="576" y="417" width="46" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="599" y="430" font-size="10" fill="#666" text-anchor="middle">medium</text>
+  <rect x="630" y="417" width="34" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="647" y="430" font-size="10" fill="#666" text-anchor="middle">text</text>
+
+  <line x1="44" y1="442" x2="916" y2="442" stroke="#eee" stroke-width="1"/>
+
+  <!-- text input + submit -->
+  <rect x="44" y="452" width="750" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="60" y="473" font-size="12" fill="#bbb">Type your answer…</text>
+  <rect x="806" y="452" width="100" height="34" rx="17" fill="#999"/>
+  <text x="856" y="473" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Submit</text>
+
+  <rect x="44" y="498" width="110" height="26" rx="5" fill="#ebebeb" stroke="#ddd" stroke-width="1"/>
+  <text x="99" y="515" font-size="11" fill="#666" text-anchor="middle">Use hint (−50%)</text>
+  <rect x="164" y="498" width="110" height="26" rx="5" fill="#ebebeb" stroke="#ddd" stroke-width="1"/>
+  <text x="219" y="515" font-size="11" fill="#666" text-anchor="middle">Reveal solution</text>
+
+  <!-- teacher toolbar — inside card -->
+  <line x1="44" y1="535" x2="916" y2="535" stroke="#eee" stroke-width="1"/>
+  <text x="56" y="556" font-size="11" fill="#888">Show answer</text>
+  <text x="820" y="556" font-size="11" fill="#888">✎ Edit</text>
+  <text x="868" y="556" font-size="11" fill="#888">Delete</text>
+</svg>

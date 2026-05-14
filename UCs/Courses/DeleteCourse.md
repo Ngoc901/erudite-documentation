@@ -1,104 +1,85 @@
-# 1 Use-Case Name: Delete Course
+# Use-Case Name: Delete Course
+
 Use-case: Delete Course — CRUD: Delete
 
-## 1.1 Brief Description
+## 1. Brief Description
 
-This use case describes how a Teacher deletes an existing **Course** from the platform.
-Deleting a course removes its entire structure, including Topics and Challenges.
----
-
-# 2 Flow of Events
-
-## 2.1 Basic Flow
-1. Teacher logs into the platform.
-2. Teacher navigates to the **Courses** section.
-3. Teacher selects the Course they want to delete.
-4. Teacher clicks **“Delete Course.”**
-5. Teacher confirms the deletion.
-6. System checks permissions and verifies whether deletion is allowed.
-7. System deletes the Course record from the database.
-8. System displays confirmation: **“Course deleted successfully.”**
-
-### 2.1.1 Activity Diagram
-![Activity Diagram](../ActivityDiagram/DeleteCourse.jpg)
-
-### 2.1.2 Mock-up
-![Mock-up](../Images/Courses-lofi.png)
-
-### 2.1.3 Narrative
-The Teacher selects a Course from their list and initiates the delete action.
-The system presents a warning because deletion is irreversible.  
-Upon confirmation, the system removes the Course and all associated data (e.g., Topics, Challenges).
-The Course is no longer visible on the platform.
+A Teacher permanently deletes a course they own. Deletion is cascading: all associated topics, lessons, challenges, submissions, enrollments, and certificates for that course are also removed.
 
 ---
+
+## 2. Basic Flow
+
+1. Teacher navigates to the course detail page.
+2. Teacher clicks **"Delete Course"**.
+3. System shows a confirmation dialog: *"Are you sure? This will permanently delete the course and all its content."*
+4. Teacher confirms by clicking **"Delete"**.
+5. System sends `DELETE /api/platform/courses/<slug>/delete/`.
+6. System performs a cascading delete of:
+   - All Topics (and their Lessons, Challenges, Submissions)
+   - All CourseEnrollments
+   - All Certificates
+   - All Bookmarks and Feedback for this course
+7. System responds with HTTP 204 No Content.
+8. Teacher is redirected to the Courses list.
+
+### 2.1 Activity Diagram
+
+![Delete Course Activity Diagram](../../Diagrams/ActivityDiagrams/Courses/DeleteCourse.drawio.png)
+
+### 2.2 Mock-up
+
+![Mock-up](../../Diagrams/Mockups/Courses/DeleteCourse.svg)
+
+### 2.3 Alternate Flows
+
+- **Cancel:** Teacher clicks "Cancel" on the confirmation dialog → no deletion occurs.
+- **Non-owner attempt:** System returns HTTP 403.
+
+### 2.4 Narrative
 
 ```gherkin
-Feature: Delete an existing course
-
+Feature: Delete Course
   As a Teacher
-  I want to delete a course
-  So that I can remove outdated or unnecessary content.
+  I want to delete a course I own
+  So that I can remove outdated content from the platform
 
   Background:
-    Given I am logged in as a teacher
-    And a course with ID 15 exists
+    Given I am logged in as a Teacher
+    And a course with slug "old-course" exists and I am its owner
 
   Scenario: Successfully delete a course
-    When I send a DELETE request to "/api/platform/courses/15/delete/"
-    Then the response status code should be 204
-    And the course should no longer exist in the database
+    When I send a DELETE request to "/api/platform/courses/old-course/delete/"
+    Then the response status code is 204
+    And the course no longer appears in the catalog
 
-  Scenario: Attempt to delete a non-existing course
-    When I send a DELETE request to "/api/platform/courses/999/delete/"
-    Then the response status code should be 404
-    And the response should contain "Course not found"
-
-  Scenario: Permission denied
-    Given I am logged in as a student
-    When I send a DELETE request to "/api/platform/courses/15/delete/"
-    Then the response status code should be 403
-    And the response should contain "Not authorized"
+  Scenario: Non-owner cannot delete a course
+    Given I am logged in as a different Teacher
+    When I send a DELETE request to "/api/platform/courses/old-course/delete/"
+    Then the response status code is 403
 ```
 
-## 2.2 Alternative Flows
-
-- **Cancel:** No deletion occurs.
-
-- **Course not found**  
-- **Permission error** 
-
-- **Dependency error:** Course cannot be deleted because Topics or Challenges are protected.
-
 ---
 
-# 3 Special Requirements
+## 3. Preconditions
 
-- Only authenticated users with **role = teacher** can delete courses.
-- Course deletion may cascade to Topics and Challenges.
-- System must display a clear confirmation prompt before deletion.  
+- Teacher is logged in with `email_verified = true`.
+- The course exists and the Teacher is its `owner`.
 
+## 4. Postconditions
 
----
+- The Course and all cascaded child records are permanently deleted.
+- The course slug becomes available for reuse.
 
-# 4 Preconditions
+## 5. Exceptions
 
-- Teacher is logged in and active.
-- The Course exists.
-- Teacher owns the course or has deletion permissions.
+- **Course not found:** HTTP 404.
+- **Permission denied:** HTTP 403 for non-owners.
 
----
+## 6. Link to SRS
 
-# 5 Postconditions
+[Software Requirements Specification](../../Documents/SoftwareRequirementsSpecification.md)
 
-- The Course record is removed from the database.  
-- The Course no longer appears in the Courses list.  
-- Topics and Challenges associated with the Course may also be removed.  
+## 7. CRUD Classification
 
----
-
-# 6 Extension Points
-
-- **Edit Course:** Teacher may modify course content before deletion.
-- **View Courses:** User may return to the course list after deletion.
-- **Delete Topics:** Some systems may require deleting Topics before removing the Course.
+- **Delete** — removes a Course record and cascades.

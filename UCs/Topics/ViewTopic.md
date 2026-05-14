@@ -1,105 +1,71 @@
-# 1 Use-Case Name
-View Topic — CRUD: Read
+# Use-Case Name: View Topic
 
-## 1.1 Brief Description
+Use-case: View Topic & Its Items — CRUD: Read
 
-This use case describes how a Teacher or Student views an existing **Topic** within a course.  
-A Topic displays its title and the list of challenges that belong to it.
+## 1. Brief Description
 
----
-
-# 2 Flow of Events
-
-## 2.1 Basic Flow
-1. User logs into the platform (optional for public courses).
-2. User navigates to the **Courses** section.
-3. User selects an existing course.
-4. User opens the **Topics** section for that course.
-5. User selects a specific Topic to view.
-6. System retrieves Topic details from the database.
-7. System displays:
-   - Topic title
-   - List of challenges under the Topic
-8. User can interact with the Topic or select a challenge to continue.
-
-### 2.1.1 Activity Diagram
-![Activity Diagram](../ActivityDiagram/ViewTopic.drawio.png)
-
-### 2.1.2 Mock-up
-![Mock-up](../Images/Topics-lofi.png)
-
-### 2.1.3 Narrative
-The user selects a course and views its Topics.  
-Upon selecting a Topic, the system fetches and displays all relevant information, including a list of challenges.  
-Students may only see Topics that are visible or unlocked based on permissions or challenge progress.  
-Teachers can see all Topics, including drafts or hidden ones.
+A user views the items within a topic: a merged, ordered list of lessons and challenges. Access depends on the parent course status. Students can track which items they have completed.
 
 ---
+
+## 2. Basic Flow
+
+1. User navigates to a course and clicks on a topic.
+2. System fetches `GET /api/platform/topics/<slug>/items/`.
+3. System checks course access rules:
+   - `published` → any authenticated user.
+   - `private` → enrolled students or owner.
+4. System returns the merged, `sort_order`-sorted list of Lessons and Challenges.
+5. Each item shows: type (`lesson` / `challenge`), title, estimated time or points, completion status.
+
+### 2.1 Activity Diagram
+
+![View Topic Activity Diagram](../../Diagrams/ActivityDiagrams/Topics/ViewTopic.drawio.png)
+
+### 2.2 Mock-up
+
+![Mock-up](../../Diagrams/Mockups/Topics/ViewTopic.svg)
+
+### 2.3 Alternate Flows
+
+- **Access denied:** HTTP 403 for non-enrolled users on private courses.
+- **Topic not found:** HTTP 404.
+
+### 2.4 Narrative
 
 ```gherkin
-Feature: View an existing topic/module
+Feature: View Topic Items
+  As a student
+  I want to see all items in a topic
+  So that I can navigate lessons and challenges in order
 
-  As a User
-  I want to view a topic inside a course
-  So that I can see its content and available challenges.
+  Scenario: View items in a published topic
+    Given a published topic "chapter-1" exists
+    When I send a GET request to "/api/platform/topics/chapter-1/items/"
+    Then I receive a sorted list of lessons and challenges
 
-  Background:
-    Given a course with ID 10 exists
-    And a topic with ID 5 exists for course 10
-
-  Scenario: Successfully view a topic
-    When I send a GET request to "/api/platform/courses/10/topics/5/"
-    Then the response status code should be 200
-    And the response should contain the topic title
-
-  Scenario: Attempt to view a non-existing topic
-    When I send a GET request to "/api/platform/courses/10/topics/999/"
-    Then the response status code should be 404
-    And the response should contain "Topic not found"
-
-  Scenario: Permission error (hidden topic)
-    Given I am logged in as a student
-    And the topic is marked as hidden
-    When I send a GET request to "/api/platform/courses/10/topics/5/"
-    Then the response status code should be 403
-    And the response should contain "Not authorized"
+  Scenario: Student cannot view items in private course they are not enrolled in
+    Given a private course topic "private-topic" exists
+    And I am not enrolled
+    When I send a GET request to the topic's items
+    Then I receive a 403 response
 ```
 
-## 2.2 Alternative Flows
-
-- **Topic not found**
-
-- **Permission error:** User does not have access to the Topic.
-
-- **Drafted Topic:** System hides the Topic or its challenges until published.
-
 ---
 
-# 3 Special Requirements
+## 3. Preconditions
 
-- Students can only view Topics that are **published**.
-- Teachers can view all Topics, including **draft** or **hidden** ones.
-- The Topic must belong to the selected course.
+- User is authenticated.
+- Access rules for the parent course are satisfied.
 
----
+## 4. Postconditions
 
-# 4 Preconditions
+- No data is modified; items list is returned.
 
-- The course exists and is active.  
-- The Topic exists for the selected course.  
-- The user meets visibility or permission requirements (student or teacher role).
+## 5. Link to SRS
 
----
+[Software Requirements Specification](../../Documents/SoftwareRequirementsSpecification.md)
 
-# 5 Postconditions
+## 7. CRUD Classification
 
-- Topic information is displayed to the user.  
-- The user may navigate to the challenges contained within the Topic.
-
----
-
-# 6 Extension Points
-
-- **Edit Topic:** Teacher may modify the Topic.  
-- **Delete Topic:** Teacher may remove the Topic.  
-- **View Challenge:** User may select one of the Topic’s challenges to continue.  
+- **Read** — reads Topic and related Lesson/Challenge records.

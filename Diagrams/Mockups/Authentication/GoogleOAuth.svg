@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="#f0f0f0"/>
+
+  <!-- Navbar: dark top strip + light bar -->
+  <rect x="0" y="0" width="900" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="900" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <rect x="748" y="16" width="62" height="28" rx="4" fill="#ccc"/>
+  <text x="779" y="34" font-size="12" fill="#555" text-anchor="middle">Sign in</text>
+  <rect x="820" y="16" width="62" height="28" rx="14" fill="#888"/>
+  <text x="851" y="34" font-size="12" fill="#fff" text-anchor="middle">Sign up</text>
+
+  <!-- Card -->
+  <rect x="270" y="80" width="360" height="440" rx="12" fill="#fff" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Logo inside card -->
+  <rect x="295" y="110" width="20" height="20" rx="4" fill="#bbb"/>
+  <text x="322" y="125" font-size="14" font-weight="bold" fill="#444">Erudite</text>
+
+  <!-- Title -->
+  <text x="450" y="172" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Continue with Google</text>
+  <text x="450" y="196" font-size="12" fill="#888" text-anchor="middle">Sign in or sign up using your Google account</text>
+
+  <!-- Google branded button -->
+  <rect x="295" y="220" width="310" height="52" rx="8" fill="#f5f5f5" stroke="#ccc" stroke-width="1.5"/>
+  <!-- Google G placeholder -->
+  <circle cx="330" cy="246" r="14" fill="#ddd"/>
+  <text x="330" y="251" font-size="13" font-weight="bold" fill="#888" text-anchor="middle">G</text>
+  <text x="460" y="251" font-size="14" fill="#444" text-anchor="middle">Sign in with Google</text>
+
+  <!-- Divider -->
+  <line x1="295" y1="298" x2="440" y2="298" stroke="#ddd" stroke-width="1"/>
+  <text x="450" y="303" font-size="12" fill="#aaa" text-anchor="middle">or</text>
+  <line x1="460" y1="298" x2="605" y2="298" stroke="#ddd" stroke-width="1"/>
+
+  <!-- OAuth flow steps -->
+  <rect x="295" y="316" width="310" height="90" rx="8" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="310" y="338" font-size="11" fill="#888">1. Redirect to Google account selector</text>
+  <text x="310" y="358" font-size="11" fill="#888">2. Grant permissions to Erudite</text>
+  <text x="310" y="378" font-size="11" fill="#888">3. Redirected back &amp; authenticated</text>
+  <text x="310" y="398" font-size="11" fill="#888">4. Account created / matched automatically</text>
+
+  <!-- Consent notice -->
+  <text x="450" y="432" font-size="11" fill="#aaa" text-anchor="middle">By continuing you agree to our Terms &amp; Privacy Policy</text>
+
+  <!-- Back link -->
+  <text x="450" y="466" font-size="12" fill="#888" text-anchor="middle">← Back to sign in</text>
+
+  <!-- Redirect indicator -->
+  <rect x="295" y="478" width="310" height="30" rx="6" fill="#e8e8e8"/>
+  <text x="450" y="498" font-size="11" fill="#888" text-anchor="middle">Redirecting to accounts.google.com...</text>
+
+</svg>

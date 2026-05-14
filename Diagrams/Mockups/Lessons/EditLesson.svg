@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="760" font-family="Arial, sans-serif">
+  <rect width="960" height="760" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Modal backdrop -->
+  <rect x="0" y="52" width="960" height="708" fill="#e8e8e8" opacity="0.6"/>
+
+  <!-- Dialog -->
+  <rect x="200" y="64" width="560" height="672" rx="10" fill="#fff" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="200" y="64" width="560" height="48" rx="10" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="220" y="94" font-size="16" font-weight="bold" fill="#222">Edit Lesson</text>
+  <text x="736" y="94" font-size="18" fill="#aaa" text-anchor="middle">×</text>
+
+  <!-- Title -->
+  <text x="220" y="134" font-size="12" fill="#666">Title *</text>
+  <rect x="220" y="142" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="164" font-size="12" fill="#444">Introduction to Python</text>
+
+  <!-- Content type -->
+  <text x="220" y="198" font-size="12" fill="#666">Content Type</text>
+  <rect x="220" y="206" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="228" font-size="12" fill="#444">text ▼</text>
+
+  <!-- Estimated minutes -->
+  <text x="220" y="262" font-size="12" fill="#666">Estimated Minutes</text>
+  <rect x="220" y="270" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="292" font-size="12" fill="#444">10</text>
+
+  <!-- Image — existing preview -->
+  <text x="220" y="326" font-size="12" fill="#666">Image</text>
+  <rect x="220" y="334" width="520" height="44" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <rect x="228" y="342" width="52" height="28" rx="4" fill="#ddd"/>
+  <text x="254" y="360" font-size="9" fill="#888" text-anchor="middle">preview</text>
+  <text x="294" y="358" font-size="11" fill="#555">lesson-intro.jpg</text>
+  <rect x="638" y="342" width="94" height="20" rx="4" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+  <text x="685" y="356" font-size="10" fill="#666" text-anchor="middle">Remove image</text>
+
+  <!-- Video URL -->
+  <text x="220" y="402" font-size="12" fill="#666">Video URL (optional)</text>
+  <rect x="220" y="410" width="520" height="34" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="432" font-size="12" fill="#bbb">https://youtube.com/watch?v=…</text>
+
+  <!-- Content body -->
+  <text x="220" y="466" font-size="12" fill="#666">Content (Markdown + LaTeX supported)</text>
+  <rect x="220" y="474" width="520" height="160" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="494" font-size="12" fill="#444" font-family="monospace">## What is Python?</text>
+  <text x="236" y="512" font-size="12" fill="#444" font-family="monospace">Python is a high-level, interpreted language…</text>
+  <text x="236" y="530" font-size="12" fill="#444" font-family="monospace">- Easy to read</text>
+  <text x="236" y="548" font-size="12" fill="#444" font-family="monospace">- Dynamically typed</text>
+
+  <!-- Footer -->
+  <line x1="200" y1="648" x2="760" y2="648" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="566" y="658" width="80" height="32" rx="6" fill="#ddd"/>
+  <text x="606" y="678" font-size="12" fill="#555" text-anchor="middle">Cancel</text>
+  <rect x="656" y="658" width="84" height="32" rx="6" fill="#888"/>
+  <text x="698" y="678" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Save</text>
+</svg>

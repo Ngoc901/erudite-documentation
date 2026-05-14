@@ -1,0 +1,123 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram id="DeleteCourse" name="Page-1">
+    <mxGraphModel dx="1357" dy="1087" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;labelBackgroundColor=none;" value="Delete Course" vertex="1">
+          <mxGeometry height="40" width="560" x="160" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=13;swimlaneLine=1;strokeWidth=2;labelBackgroundColor=none;" value="Teacher" vertex="1">
+          <mxGeometry height="950" width="420" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="3" style="ellipse;aspect=fixed;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="190" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Navigate to course detail page" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Click &quot;Delete Course&quot;" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="3" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Confirm deletion?" vertex="1">
+          <mxGeometry height="60" width="180" x="120" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="No action taken" vertex="1">
+          <mxGeometry height="40" width="80" x="30" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="3" style="ellipse;aspect=fixed;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="43" width="43" x="48.5" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="3" style="ellipse;aspect=fixed;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="190" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Redirected to Courses list" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="3" style="ellipse;html=1;shape=endState;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="185" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=13;swimlaneLine=1;strokeWidth=2;labelBackgroundColor=none;" value="System" vertex="1">
+          <mxGeometry height="950" width="420" x="460" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Display confirmation dialog: &quot;This will permanently delete the course and all its content&quot;" vertex="1">
+          <mxGeometry height="60" width="210" x="120" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Check ownership (user = course.owner?)" vertex="1">
+          <mxGeometry height="50" width="210" x="100" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="4" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="User is owner?" vertex="1">
+          <mxGeometry height="60" width="190" x="177" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return HTTP 403 Forbidden" vertex="1">
+          <mxGeometry height="75" width="110" x="20" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Cascade delete: All Topics, Lessons, Challenges, Submissions, Enrollments, Certificates, Bookmarks &amp; Feedback" vertex="1">
+          <mxGeometry height="80" width="210" x="100" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return HTTP 204 No Content" vertex="1">
+          <mxGeometry height="40" width="210" x="100" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="50" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="52" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="250" />
+              <mxPoint x="490" y="150" />
+              <mxPoint x="685" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="53" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="310" />
+              <mxPoint x="230" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="10" value="cancel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="55" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="56" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="12" value="confirm">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="440" />
+              <mxPoint x="490" y="330" />
+              <mxPoint x="665" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="57" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="58" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="14" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="59" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="60" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="16" value="yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="61" edge="1" parent="1" source="16" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="62" edge="1" parent="1" source="17" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="63" edge="1" parent="1" source="18" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

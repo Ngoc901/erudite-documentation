@@ -1,105 +1,72 @@
-# 1 Use-Case Name
-Delete Topic / Module — CRUD: Delete
+# Use-Case Name: Delete Topic
 
-## 1.1 Brief Description
+Use-case: Delete Topic — CRUD: Delete
 
-This use case describes how a Teacher removes an existing **Topic** from a course.  
-A Topic may contain challenges. Once deleted, the Topic is no longer shown in the course structure.
----
+## 1. Brief Description
 
-# 2 Flow of Events
-
-## 2.1 Basic Flow
-1. Teacher logs into the platform.  
-2. Teacher navigates to **Courses** and selects an existing course.  
-3. Teacher opens the **Topics** section for that course.  
-4. Teacher selects the Topic they want to delete.  
-5. Teacher clicks **“Delete Topic.”**  
-6. System displays a confirmation dialog.
-7. Teacher confirms the deletion.  
-8. System verifies permissions and checks if deletion is allowed (e.g., topic not locked).  
-9. System deletes the Topic record from the database.  
-10. System shows confirmation: **“Topic deleted successfully.”**
-
-### 2.1.1 Activity Diagram
-![Activity Diagram](../ActivityDiagram/DeleteTopic.jpg)
-
-### 2.1.2 Mock-up
-![Mock-up](../Images/Topics-lofi.png)
-
-### 2.1.3 Narrative
-The Teacher opens the Topics list of a course and selects a Topic to delete.  
-If the Topic contains challenges, the system may either delete them automatically or prevent deletion until they are removed.  
-Once confirmed, the Topic is removed from the database and no longer appears in the course structure.
+A Teacher permanently deletes a topic from their course. All lessons and challenges belonging to the topic — including submissions — are cascade-deleted.
 
 ---
+
+## 2. Basic Flow
+
+1. Teacher navigates to the topic.
+2. Teacher clicks **"Delete Topic"**.
+3. System shows a confirmation dialog.
+4. Teacher confirms.
+5. System sends `DELETE /api/platform/topics/<slug>/delete/`.
+6. System cascade-deletes all Lessons, Challenges, and Submissions under the topic.
+7. System responds with HTTP 204.
+8. Teacher is redirected to the course detail page.
+
+### 2.1 Activity Diagram
+
+![Delete Topic Activity Diagram](../../Diagrams/ActivityDiagrams/Topics/DeleteTopic.drawio.png)
+
+### 2.2 Mock-up
+
+![Mock-up](../../Diagrams/Mockups/Topics/DeleteTopic.svg)
+
+### 2.3 Alternate Flows
+
+- **Cancel:** Teacher dismisses the dialog → no deletion.
+- **Non-owner:** HTTP 403.
+
+### 2.4 Narrative
 
 ```gherkin
-Feature: Delete an existing topic/module
-
+Feature: Delete Topic
   As a Teacher
-  I want to delete a topic from a course
-  So that I can reorganize or remove outdated course content.
-
-  Background:
-    Given I am logged in as a teacher with verified email
-    And a course with ID 10 exists
-    And a topic with ID 5 exists for course 10
+  I want to delete a topic from my course
+  So that I can remove outdated sections
 
   Scenario: Successfully delete a topic
-    When I send a DELETE request to "/api/platform/courses/10/topics/5/delete/"
-    Then the response status code should be 204
-    And the topic should no longer exist in the database
-
-  Scenario: Fail to delete a topic that does not exist
-    When I send a DELETE request to "/api/platform/courses/10/topics/999/delete/"
-    Then the response status code should be 404
-    And the response should contain "Topic not found"
-
-  Scenario: Fail to delete a topic due to insufficient permissions
-    Given I am logged in as a student
-    When I send a DELETE request to "/api/platform/courses/10/topics/5/delete/"
-    Then the response status code should be 403
-    And the response should contain "Not authorized"
+    Given I own a topic with slug "old-chapter"
+    When I send a DELETE request to "/api/platform/topics/old-chapter/delete/"
+    Then the response status code is 204
+    And the topic and all its content are removed
 ```
-## 2.2 Alternative Flows
-
-- **Cancel:** No deletion occurs.
-
-- **Validation/Dependency error:** Topic cannot be deleted because it contains challenges.
-
-- **Permission error:** Teacher does not own the course.
 
 ---
 
-# 3 Special Requirements
+## 3. Preconditions
 
-- Only authenticated users with **role = teacher** can delete topics.
-- The Topic must belong to the selected course.
-- The system may require challenges under the topic to be removed first.
+- Teacher is logged in.
+- The topic exists and belongs to a course owned by the Teacher.
 
----
+## 4. Postconditions
 
-# 4 Preconditions
+- Topic and all cascaded data (Lessons, Challenges, Submissions) are permanently deleted.
 
-- Teacher is logged in and active.
-- The course exists and is active.
-- The topic exists and belongs to the selected course.
-- Teacher has permission to modify the course.
+## 5. Exceptions
 
----
+- **Topic not found:** HTTP 404.
+- **Permission denied:** HTTP 403.
 
-# 5 Postconditions
+## 6. Link to SRS
 
-- The Topic record is removed from the database.
-- The Topic no longer appears in the Topics list for the course.
-- Associated challenges may also be removed.
+[Software Requirements Specification](../../Documents/SoftwareRequirementsSpecification.md)
 
----
+## 7. CRUD Classification
 
-# 6 Extension Points
-
-- **Edit Topic:** Not available after deletion. 
-- **View Topic:** System returns an error because the topic no longer exists. 
-- **Delete Challenges:** May occur before or during topic deletion depending on rules. 
-
+- **Delete** — removes a Topic record and cascades.

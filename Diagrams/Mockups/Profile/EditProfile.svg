@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" font-family="Arial, sans-serif">
+  <rect width="960" height="600" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Modal backdrop -->
+  <rect x="0" y="0" width="960" height="600" fill="#000" opacity="0.18"/>
+
+  <!-- Dialog -->
+  <rect x="230" y="56" width="500" height="496" rx="10" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <!-- Dialog header -->
+  <rect x="230" y="56" width="500" height="44" rx="10" fill="#e8e8e8"/>
+  <rect x="230" y="80" width="500" height="20" fill="#e8e8e8"/>
+  <text x="480" y="84" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Edit Profile</text>
+
+  <!-- Avatar upload -->
+  <circle cx="480" cy="148" r="40" fill="#ddd" stroke="#ccc" stroke-width="1"/>
+  <circle cx="480" cy="138" r="14" fill="#bbb"/>
+  <path d="M458,168 Q458,156 480,156 Q502,156 502,168" fill="#bbb"/>
+  <rect x="426" y="192" width="108" height="24" rx="6" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+  <text x="480" y="208" font-size="11" fill="#555" text-anchor="middle">Change photo</text>
+
+  <!-- Username field -->
+  <text x="250" y="240" font-size="12" fill="#555">Username</text>
+  <rect x="250" y="248" width="440" height="32" rx="4" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="262" y="268" font-size="12" fill="#aaa">student_alice</text>
+  <text x="262" y="292" font-size="10" fill="#bbb">locked — Moodle account</text>
+
+  <!-- Bio field -->
+  <text x="250" y="316" font-size="12" fill="#555">Bio</text>
+  <rect x="250" y="324" width="440" height="80" rx="4" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="262" y="344" font-size="12" fill="#444">Learning Python and data science.</text>
+  <text x="262" y="362" font-size="12" fill="#444">Passionate about algorithms.</text>
+
+  <!-- Email (read-only) -->
+  <text x="250" y="430" font-size="12" fill="#555">Email</text>
+  <rect x="250" y="438" width="440" height="32" rx="4" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="262" y="458" font-size="12" fill="#aaa">alice@example.com</text>
+  <text x="262" y="480" font-size="10" fill="#bbb">read-only</text>
+
+  <!-- Footer -->
+  <line x1="230" y1="498" x2="730" y2="498" stroke="#eee" stroke-width="1"/>
+  <rect x="250" y="510" width="100" height="34" rx="6" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="300" y="531" font-size="12" fill="#555" text-anchor="middle">Cancel</text>
+  <rect x="590" y="510" width="120" height="34" rx="6" fill="#888"/>
+  <text x="650" y="531" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Save</text>
+</svg>

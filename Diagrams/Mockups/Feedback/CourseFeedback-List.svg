@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="680" font-family="Arial, sans-serif">
+  <rect width="960" height="680" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Page context: course detail card -->
+  <rect x="24" y="64" width="912" height="592" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Course title context -->
+  <text x="40" y="94" font-size="18" font-weight="bold" fill="#222">Python for Beginners</text>
+  <line x1="40" y1="106" x2="920" y2="106" stroke="#eee" stroke-width="1"/>
+
+  <!-- Feedback section header -->
+  <text x="40" y="132" font-size="15" font-weight="bold" fill="#333">Reviews</text>
+  <rect x="820" y="118" width="84" height="28" rx="6" fill="#888"/>
+  <text x="862" y="136" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Write a review</text>
+
+  <!-- Rating summary -->
+  <rect x="40" y="150" width="200" height="100" rx="8" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="140" y="196" font-size="36" font-weight="bold" fill="#333" text-anchor="middle">4.5</text>
+  <!-- stars row -->
+  <text x="90" y="216" font-size="16" fill="#aaa">★★★★★</text>
+  <text x="140" y="236" font-size="11" fill="#aaa" text-anchor="middle">12 reviews</text>
+
+  <!-- Distribution bars -->
+  <text x="260" y="166" font-size="11" fill="#888">5 ★</text>
+  <rect x="290" y="156" width="260" height="10" rx="5" fill="#e0e0e0"/>
+  <rect x="290" y="156" width="208" height="10" rx="5" fill="#bbb"/>
+  <text x="560" y="166" font-size="11" fill="#aaa">80%</text>
+
+  <text x="260" y="186" font-size="11" fill="#888">4 ★</text>
+  <rect x="290" y="176" width="260" height="10" rx="5" fill="#e0e0e0"/>
+  <rect x="290" y="176" width="52" height="10" rx="5" fill="#bbb"/>
+  <text x="560" y="186" font-size="11" fill="#aaa">20%</text>
+
+  <text x="260" y="206" font-size="11" fill="#888">3 ★</text>
+  <rect x="290" y="196" width="260" height="10" rx="5" fill="#e0e0e0"/>
+  <text x="560" y="206" font-size="11" fill="#aaa">0%</text>
+
+  <text x="260" y="226" font-size="11" fill="#888">2 ★</text>
+  <rect x="290" y="216" width="260" height="10" rx="5" fill="#e0e0e0"/>
+  <text x="560" y="226" font-size="11" fill="#aaa">0%</text>
+
+  <text x="260" y="246" font-size="11" fill="#888">1 ★</text>
+  <rect x="290" y="236" width="260" height="10" rx="5" fill="#e0e0e0"/>
+  <text x="560" y="246" font-size="11" fill="#aaa">0%</text>
+
+  <line x1="40" y1="268" x2="920" y2="268" stroke="#eee" stroke-width="1"/>
+
+  <!-- Own review card (highlighted) -->
+  <rect x="40" y="280" width="880" height="96" rx="8" fill="#f7f8ff" stroke="#dde0f5" stroke-width="1"/>
+  <circle cx="66" cy="308" r="16" fill="#ddd"/>
+  <circle cx="66" cy="302" r="6" fill="#bbb"/>
+  <path d="M52,318 Q52,312 66,312 Q80,312 80,318" fill="#bbb"/>
+  <text x="96" y="304" font-size="13" font-weight="bold" fill="#333">student_alice</text>
+  <rect x="96" y="308" width="68" height="16" rx="8" fill="#e0e0e0"/>
+  <text x="130" y="320" font-size="9" fill="#666" text-anchor="middle">Your review</text>
+  <text x="780" y="304" font-size="14" fill="#aaa">★★★★★</text>
+  <!-- edit / delete -->
+  <rect x="832" y="348" width="40" height="22" rx="4" fill="#e8e8e8" stroke="#ddd" stroke-width="1"/>
+  <text x="852" y="363" font-size="11" fill="#555" text-anchor="middle">✎</text>
+  <rect x="876" y="348" width="40" height="22" rx="4" fill="#e8e8e8" stroke="#ddd" stroke-width="1"/>
+  <text x="896" y="363" font-size="11" fill="#888" text-anchor="middle">Delete</text>
+  <text x="96" y="344" font-size="12" fill="#555">Really well structured. The examples made everything click for me!</text>
+  <text x="96" y="362" font-size="11" fill="#ccc">Apr 28, 2024</text>
+
+  <line x1="40" y1="390" x2="920" y2="390" stroke="#eee" stroke-width="1"/>
+
+  <!-- Review card 2 -->
+  <rect x="40" y="402" width="880" height="88" rx="8" fill="#fff" stroke="#f0f0f0" stroke-width="1"/>
+  <circle cx="66" cy="428" r="16" fill="#ddd"/>
+  <circle cx="66" cy="422" r="6" fill="#bbb"/>
+  <path d="M52,438 Q52,432 66,432 Q80,432 80,438" fill="#bbb"/>
+  <text x="96" y="424" font-size="13" font-weight="bold" fill="#333">student_bob</text>
+  <text x="780" y="424" font-size="14" fill="#aaa">★★★★★</text>
+  <text x="96" y="452" font-size="12" fill="#555">Great course for absolute beginners. Highly recommend.</text>
+  <text x="96" y="476" font-size="11" fill="#ccc">Apr 15, 2024</text>
+
+  <line x1="40" y1="504" x2="920" y2="504" stroke="#eee" stroke-width="1"/>
+
+  <!-- Review card 3 -->
+  <rect x="40" y="516" width="880" height="88" rx="8" fill="#fff" stroke="#f0f0f0" stroke-width="1"/>
+  <circle cx="66" cy="542" r="16" fill="#ddd"/>
+  <circle cx="66" cy="536" r="6" fill="#bbb"/>
+  <path d="M52,552 Q52,546 66,546 Q80,546 80,552" fill="#bbb"/>
+  <text x="96" y="538" font-size="13" font-weight="bold" fill="#333">student_carol</text>
+  <text x="780" y="538" font-size="14" fill="#aaa">★★★★☆</text>
+  <text x="96" y="566" font-size="12" fill="#555">Clear explanations. Would love more exercises.</text>
+  <text x="96" y="590" font-size="11" fill="#ccc">Mar 30, 2024</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="780" font-family="Arial, sans-serif">
+  <rect width="960" height="780" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Modal backdrop hint -->
+  <rect x="0" y="52" width="960" height="728" fill="#e8e8e8" opacity="0.6"/>
+
+  <!-- Dialog box — Quiz/Text -->
+  <rect x="200" y="68" width="560" height="672" rx="10" fill="#fff" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Dialog header -->
+  <rect x="200" y="68" width="560" height="48" rx="10" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="228" y="98" font-size="16" font-weight="bold" fill="#222">New Challenge</text>
+  <text x="736" y="98" font-size="18" fill="#aaa" text-anchor="middle">×</text>
+
+  <!-- Type dropdown -->
+  <text x="220" y="140" font-size="12" fill="#666">Type *</text>
+  <rect x="220" y="148" width="520" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="171" font-size="12" fill="#444">Quiz (Multiple choice) ▼</text>
+
+  <!-- Title -->
+  <text x="220" y="206" font-size="12" fill="#666">Title *</text>
+  <rect x="220" y="214" width="520" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="237" font-size="12" fill="#bbb">Challenge title…</text>
+
+  <!-- Body -->
+  <text x="220" y="270" font-size="12" fill="#666">Question / Body *</text>
+  <rect x="220" y="278" width="520" height="70" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="299" font-size="12" fill="#bbb">Question text… (LaTeX supported: $\alpha$)</text>
+
+  <!-- Difficulty + Points -->
+  <text x="220" y="370" font-size="12" fill="#666">Difficulty *</text>
+  <rect x="220" y="378" width="240" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="401" font-size="12" fill="#444">easy ▼</text>
+
+  <text x="480" y="370" font-size="12" fill="#666">Points *</text>
+  <rect x="480" y="378" width="260" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="496" y="401" font-size="12" fill="#444">10</text>
+
+  <!-- Options (quiz) -->
+  <text x="220" y="436" font-size="12" fill="#666">Options (comma-separated) *</text>
+  <rect x="220" y="444" width="520" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="467" font-size="12" fill="#bbb">Paris, London, Berlin, Madrid</text>
+
+  <!-- Correct answer -->
+  <text x="220" y="502" font-size="12" fill="#666">Correct answer *</text>
+  <rect x="220" y="510" width="520" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="533" font-size="12" fill="#bbb">Must exactly match one of the options</text>
+
+  <!-- Hint -->
+  <text x="220" y="568" font-size="12" fill="#666">Hint (optional)</text>
+  <rect x="220" y="576" width="520" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="599" font-size="12" fill="#bbb">Shown on demand — costs student 50% of points</text>
+
+  <!-- Solution -->
+  <text x="220" y="634" font-size="12" fill="#666">Solution explanation (optional)</text>
+  <rect x="220" y="642" width="520" height="36" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="236" y="665" font-size="12" fill="#bbb">Full explanation — blocks further submission when revealed</text>
+
+  <!-- Footer buttons -->
+  <line x1="200" y1="692" x2="760" y2="692" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="570" y="700" width="80" height="34" rx="6" fill="#ddd"/>
+  <text x="610" y="721" font-size="12" fill="#555" text-anchor="middle">Cancel</text>
+  <rect x="660" y="700" width="80" height="34" rx="6" fill="#888"/>
+  <text x="700" y="721" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Create</text>
+</svg>

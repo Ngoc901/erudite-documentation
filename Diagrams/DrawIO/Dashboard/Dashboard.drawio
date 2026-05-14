@@ -1,0 +1,158 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram id="Dashboard" name="Page-1">
+    <mxGraphModel dx="1697" dy="1358" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;labelBackgroundColor=none;" value="Dashboard" vertex="1">
+          <mxGeometry height="40" width="560" x="160" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=13;swimlaneLine=1;strokeWidth=2;labelBackgroundColor=none;" value="User" vertex="1">
+          <mxGeometry height="1420" width="420" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="3" style="ellipse;aspect=fixed;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="190" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Navigate to Dashboard" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="3" style="ellipse;aspect=fixed;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="180" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="View enrolled courses, progress bars, recent activity, and certificate links" vertex="1">
+          <mxGeometry height="70" width="170" x="20" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="View course performance overview and student engagement metrics" vertex="1">
+          <mxGeometry height="70" width="170" x="235" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Navigate to Leaderboard" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="View ranked student list" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="3" style="ellipse;html=1;shape=endState;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="185" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=13;swimlaneLine=1;strokeWidth=2;labelBackgroundColor=none;" value="System" vertex="1">
+          <mxGeometry height="1420" width="420" x="460" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Check authentication" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="4" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="User authenticated?" vertex="1">
+          <mxGeometry height="60" width="180" x="120" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return HTTP 401" vertex="1">
+          <mxGeometry height="70" width="120" x="20" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="4" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="User role = student?" vertex="1">
+          <mxGeometry height="60" width="180" x="120" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Fetch student dashboard GET /api/users/dashboard/" vertex="1">
+          <mxGeometry height="50" width="160" x="20" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Aggregate: enrolled courses with progress %, recent submissions, total points, active certificates" vertex="1">
+          <mxGeometry height="80" width="160" x="20" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return dashboard data" vertex="1">
+          <mxGeometry height="40" width="160" x="20" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Fetch teacher dashboard GET /api/users/teacher-dashboard/" vertex="1">
+          <mxGeometry height="50" width="160" x="230" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Aggregate per course: enrollment count, avg score, # challenges, recent submissions" vertex="1">
+          <mxGeometry height="80" width="160" x="230" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return teacher dashboard data" vertex="1">
+          <mxGeometry height="40" width="160" x="230" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Fetch leaderboard GET /api/users/leaderboard/" vertex="1">
+          <mxGeometry height="50" width="200" x="110" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Rank all students by total accumulated score across all courses" vertex="1">
+          <mxGeometry height="60" width="200" x="110" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="Return ranked list (rank, username, photo, total points)" vertex="1">
+          <mxGeometry height="50" width="200" x="110" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="50" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="52" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="9" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="55" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="11" value="yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="56" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="12" value="yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="57" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="58" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="59" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="60" edge="1" parent="1" source="15" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="61" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="16" value="no (teacher)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="62" edge="1" parent="1" source="16" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="63" edge="1" parent="1" source="17" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64" edge="1" parent="1" source="18" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="65" edge="1" parent="1" source="19" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="66" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="1240" />
+              <mxPoint x="510" y="1240" />
+              <mxPoint x="510" y="1150" />
+              <mxPoint x="670" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="67" edge="1" parent="1" source="21" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="68" edge="1" parent="1" source="22" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="69" edge="1" parent="1" source="23" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="1375" />
+              <mxPoint x="400" y="1310" />
+              <mxPoint x="230" y="1310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="70" edge="1" parent="1" source="24" style="edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;fontColor=default;" target="25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

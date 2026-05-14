@@ -1,92 +1,88 @@
-# 1 Use-Case Name
-Create Topic / Module — CRUD: Create
+# Use-Case Name: Create Topic
 
-## 1.1 Brief Description
+Use-case: Create Topic — CRUD: Create
 
-This use case describes how a Teacher creates a new **Topic** within an existing course.
-A Topic contains a title. Once created, the Topic becomes part of the course structure and can later contain challenges.
+## 1. Brief Description
 
----
-
-# 2 Flow of Events
-
-## 2.1 Basic Flow
-1. Teacher logs into the platform.
-2. Teacher navigates to **Courses** and selects an existing course.
-3. Teacher opens the **Topics** section for that course.
-4. Teacher clicks **“Create Topic.”**
-5. System displays a form with the following fields:
-   - Topic title
-6. Teacher fills out the form and submits it.
-7. System validates the input.
-8. System inserts the new topic into the database, linked to the selected course.
-9. System shows confirmation: **“Topic created successfully.”**
-
-### 2.1.1 Activity Diagram
-![Activity Diagram](../ActivityDiagram/CreateTopic.jpg)
-
-### 2.1.2 Mock-up
-![Mock-up](../Images/Topics-lofi.png)
-
-### 2.1.3 Narrative
-The Teacher uses this form to create new Topics inside a course.
-Topics help organize the course into structured learning units.
-Once saved, the Topic appears within the course, and the Teacher can add challenges under it.
+A Teacher creates a new topic within an existing course. Topics are ordered sections that group related lessons and challenges. A `sort_order` value controls the topic's position within the course.
 
 ---
 
+## 2. Basic Flow
+
+1. Teacher navigates to a course detail page.
+2. Teacher clicks **"Add Topic"**.
+3. System displays a form with:
+   - Title *(required)*
+   - Description *(optional)*
+   - Sort order *(optional, auto-assigned if not provided)*
+4. Teacher fills the form and clicks **"Create"**.
+5. System sends `POST /api/platform/topics/create/` with the course slug.
+6. System validates input and creates the `Topic` record linked to the course.
+7. System responds with HTTP 201 and the new topic data.
+8. The new topic appears in the course's topic list.
+
+### 2.1 Activity Diagram
+
+![Create Topic Activity Diagram](../../Diagrams/ActivityDiagrams/Topics/CreateTopic.drawio.png)
+
+### 2.2 Mock-up
+
+![Mock-up](../../Diagrams/Mockups/Topics/CreateTopic.svg)
+
+### 2.3 Alternate Flows
+
+- **Missing title:** System returns HTTP 400 with a validation error.
+- **Course not found:** HTTP 404.
+- **Non-owner attempt:** HTTP 403.
+
+### 2.4 Narrative
 
 ```gherkin
-Feature: Create a new topic/module
-
+Feature: Create Topic
   As a Teacher
-  I want to add a topic to an existing course
-  So that I can structure the course into modules.
+  I want to add a topic to my course
+  So that I can organize lessons and challenges into sections
 
   Background:
-    Given I am logged in as an existing teacher with verified email
-    And a course with ID 10 exists
+    Given I am logged in as a Teacher and own a course "math-basics"
 
   Scenario: Successfully create a topic
-    When I send a POST request to "/api/platform/courses/10/topics/create/" with:
-        | title       | Introduction to Algebra |
-        | description | Basic concepts          |
-        | order       | 1                       |
-    Then the response status code should be 201
-    And the response should contain "Topic created successfully."
+    When I send a POST request to "/api/platform/topics/create/" with:
+      | course_slug | math-basics         |
+      | title       | Chapter 1: Algebra  |
+      | description | Intro to algebra    |
+      | sort_order  | 1                   |
+    Then the response status code is 201
+    And the topic appears in the course's topic list
 
-  Scenario: Fail to create a topic with missing title
-    When I send a POST request to "/api/platform/courses/10/topics/create/" with:
-        | title       |           |
-        | description | Basics    |
-    Then the response status code should be 400
-    And the response should contain "title"
+  Scenario: Create topic without a title
+    When I submit the form with an empty title
+    Then the response status code is 400
+    And I see a validation error for "title"
 ```
 
-## 2.2 Alternative Flows
-- **Cancel:** Teacher clicks “Cancel”: Return to topics list without saving.
-- **Validation error:** Missing or invalid input: Show error, no save.
+---
 
-# 3 Special Requirements
+## 3. Preconditions
 
-- Only authenticated users with **role = teacher** can create courses.
-- Topic titles must be unique within the same course.
-The course must already exist.
+- Teacher is logged in with `role = teacher`.
+- The target course exists and the Teacher is its owner.
 
-# 4 Preconditions
+## 4. Postconditions
 
-- Teacher is logged in and active.
-- Teacher has permission to edit the selected course.
-- The course exists and is active.
+- A new `Topic` record is created linked to the course.
+- The Teacher can now add Lessons and Challenges to the topic.
 
-# 5 Postconditions
+## 5. Exceptions
 
-- A new topic record exists in the database.
-- The topic is linked to the selected course.
-- The Teacher can now add challenges to the topic.
+- **Permission denied:** HTTP 403 for non-owners.
+- **Course not found:** HTTP 404.
 
-# 6 Extension Points
+## 6. Link to SRS
 
-- **Edit Topic:** Modify topic title or description.
-- **Delete Topic:** Remove the topic from the course.
-- **Add Challenge:** Teacher can add challenges under the topic.
+[Software Requirements Specification](../../Documents/SoftwareRequirementsSpecification.md)
+
+## 7. CRUD Classification
+
+- **Create** — creates a new Topic record.

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#f0f0f0"/>
+
+  <!-- Navbar: dark top strip + light bar -->
+  <rect x="0" y="0" width="900" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="900" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <rect x="748" y="16" width="62" height="28" rx="4" fill="#ccc"/>
+  <text x="779" y="34" font-size="12" fill="#555" text-anchor="middle">Sign in</text>
+  <rect x="820" y="16" width="62" height="28" rx="14" fill="#888"/>
+  <text x="851" y="34" font-size="12" fill="#fff" text-anchor="middle">Sign up</text>
+
+  <!-- Card -->
+  <rect x="270" y="80" width="360" height="500" rx="12" fill="#fff" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Logo inside card -->
+  <rect x="295" y="110" width="20" height="20" rx="4" fill="#bbb"/>
+  <text x="322" y="125" font-size="14" font-weight="bold" fill="#444">Erudite</text>
+
+  <!-- Title -->
+  <text x="295" y="172" font-size="26" font-weight="bold" fill="#222">Sign in</text>
+
+  <!-- Email field -->
+  <text x="295" y="210" font-size="12" fill="#666">Email</text>
+  <rect x="295" y="218" width="310" height="44" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="312" y="245" font-size="12" fill="#aaa">your@email.com</text>
+
+  <!-- Password field -->
+  <text x="295" y="284" font-size="12" fill="#666">Password</text>
+  <rect x="295" y="292" width="310" height="44" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="312" y="319" font-size="13" fill="#aaa">• • • • • •</text>
+
+  <!-- Sign in button -->
+  <rect x="295" y="356" width="310" height="44" rx="22" fill="#999"/>
+  <text x="450" y="383" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Sign in</text>
+
+  <!-- Forgot password -->
+  <text x="450" y="420" font-size="12" fill="#888" text-anchor="middle" text-decoration="underline">Forgot your password?</text>
+
+  <!-- Divider -->
+  <line x1="295" y1="442" x2="440" y2="442" stroke="#ddd" stroke-width="1"/>
+  <text x="450" y="447" font-size="12" fill="#aaa" text-anchor="middle">or</text>
+  <line x1="460" y1="442" x2="605" y2="442" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Google button -->
+  <rect x="295" y="458" width="310" height="44" rx="8" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <circle cx="322" cy="480" r="10" fill="#ddd"/>
+  <text x="450" y="485" font-size="12" fill="#555" text-anchor="middle">Sign in with Google</text>
+
+  <!-- Bottom link -->
+  <text x="450" y="538" font-size="12" fill="#666" text-anchor="middle">Don't have an account? <tspan fill="#888" text-decoration="underline">Sign up</tspan></text>
+
+</svg>

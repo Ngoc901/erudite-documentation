@@ -1,0 +1,489 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="0Q83FiH0ofARtUfijwqD" name="Page-1">
+    <mxGraphModel dx="1677" dy="1212" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Course" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="Course" vertex="1">
+          <mxGeometry height="130" width="220" x="50" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="Course_f" parent="Course" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="owner: FK(User)&#xa;title: str&#xa;slug: str&#xa;status: str&#xa;level: str&#xa;completion_threshold: int&#xa;created_at: datetime" vertex="1">
+          <mxGeometry height="94" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Topic" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="Topic" vertex="1">
+          <mxGeometry height="100" width="220" x="50" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Topic_f" parent="Topic" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="course: FK(Course)&#xa;owner: FK(User)&#xa;title: str&#xa;slug: str&#xa;sort_order: int" vertex="1">
+          <mxGeometry height="64" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Lesson" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="Lesson" vertex="1">
+          <mxGeometry height="130" width="220" x="50" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Lesson_f" parent="Lesson" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="topic: FK(Topic)&#xa;owner: FK(User)&#xa;title: str&#xa;slug: str&#xa;content_type: str&#xa;estimated_minutes: int&#xa;sort_order: int" vertex="1">
+          <mxGeometry height="84" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Enrollment" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CourseEnrollment" vertex="1">
+          <mxGeometry height="90" width="220" x="50" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="Enrollment_f" parent="Enrollment" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="course: FK(Course)&#xa;student: FK(User)&#xa;enrolled_at: datetime&#xa;lti_source: str" vertex="1">
+          <mxGeometry height="58" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Bookmark" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CourseBookmark" vertex="1">
+          <mxGeometry height="80" width="220" x="50" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="Bookmark_f" parent="Bookmark" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="course: FK(Course)&#xa;user: FK(User)&#xa;created_at: datetime" vertex="1">
+          <mxGeometry height="48" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Feedback" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CourseFeedback" vertex="1">
+          <mxGeometry height="110" width="220" x="50" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="Feedback_f" parent="Feedback" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="course: FK(Course)&#xa;user: FK(User)&#xa;rating: int&#xa;comment: str&#xa;created_at: datetime" vertex="1">
+          <mxGeometry height="78" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Challenge" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="Challenge" vertex="1">
+          <mxGeometry height="140" width="220" x="320" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Challenge_f" parent="Challenge" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="topic: FK(Topic)&#xa;title: str&#xa;slug: str&#xa;body: str&#xa;challenge_type: str&#xa;points: int&#xa;difficulty: str&#xa;created_at: datetime" vertex="1">
+          <mxGeometry height="84" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Option" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="ChallengeOption" vertex="1">
+          <mxGeometry height="80" width="220" x="320" y="277" as="geometry" />
+        </mxCell>
+        <mxCell id="Option_f" parent="Option" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="challenge: FK(Challenge)&#xa;text: str&#xa;is_correct: bool" vertex="1">
+          <mxGeometry height="48" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Answer" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="ChallengeCorrectAnswer" vertex="1">
+          <mxGeometry height="80" width="220" x="320" y="377" as="geometry" />
+        </mxCell>
+        <mxCell id="Answer_f" parent="Answer" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="challenge: OneToOne(Challenge)&#xa;correct_answer: str&#xa;case_sensitive: bool" vertex="1">
+          <mxGeometry height="48" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="CodeConfig" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CodeChallengeConfig" vertex="1">
+          <mxGeometry height="100" width="220" x="320" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="CodeConfig_f" parent="CodeConfig" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="challenge: OneToOne(Challenge)&#xa;language: str&#xa;solution_template: str&#xa;time_limit_seconds: int&#xa;memory_limit_mb: int" vertex="1">
+          <mxGeometry height="64" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="TestCase" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CodeTestCase" vertex="1">
+          <mxGeometry height="100" width="220" x="320" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="TestCase_f" parent="TestCase" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="config: FK(CodeChallengeConfig)&#xa;stdin: str&#xa;expected_stdout: str&#xa;weight: float&#xa;is_public: bool" vertex="1">
+          <mxGeometry height="68" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Submission" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="Submission" vertex="1">
+          <mxGeometry height="130" width="220" x="600" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Submission_f" parent="Submission" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="challenge: FK(Challenge)&#xa;user: FK(User)&#xa;attempt_no: int&#xa;answer_text: str&#xa;score: float&#xa;status: str&#xa;created_at: datetime" vertex="1">
+          <mxGeometry height="98" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="CodeResult" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CodeSubmissionResult" vertex="1">
+          <mxGeometry height="110" width="220" x="600" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="CodeResult_f" parent="CodeResult" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="submission: FK(Submission)&#xa;test_case: FK(CodeTestCase)&#xa;status: str&#xa;execution_time_ms: float&#xa;memory_used_mb: float" vertex="1">
+          <mxGeometry height="78" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Certificate" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="Certificate" vertex="1">
+          <mxGeometry height="110" width="220" x="600" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Certificate_f" parent="Certificate" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="user: FK(User)&#xa;course: FK(Course)&#xa;certificate_id: UUID&#xa;issued_at: datetime&#xa;score_pct: float" vertex="1">
+          <mxGeometry height="78" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="CertPDF" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="generate_certificate_pdf()" vertex="1">
+          <mxGeometry height="70" width="220" x="600" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="CertPDF_f" parent="CertPDF" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="generate_certificate_pdf(&#xa;  user, course, id, issued_at, score_pct): bytes" vertex="1">
+          <mxGeometry height="38" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="SubmitView" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="SubmitChallengeView" vertex="1">
+          <mxGeometry height="130" width="270" x="880" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="SubmitView_f1" parent="SubmitView" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ post(request, slug)" vertex="1">
+          <mxGeometry height="18" width="270" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="SubmitView_f2" parent="SubmitView" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ _grade_quiz / _grade_text / _grade_code" vertex="1">
+          <mxGeometry height="18" width="270" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SubmitView_f3" parent="SubmitView" style="text;html=1;align=left;spacingLeft=8;fontSize=9;fontStyle=2;fillColor=none;verticalAlign=top;" value="  GraderFactory.resolve(type, challenge)" vertex="1">
+          <mxGeometry height="18" width="270" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="SubmitView_f4" parent="SubmitView" style="text;html=1;align=left;spacingLeft=8;fontSize=9;fontStyle=2;fillColor=none;verticalAlign=top;" value="  ScoringContext.compute(...)" vertex="1">
+          <mxGeometry height="18" width="270" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="RevealView" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="RevealSolutionView" vertex="1">
+          <mxGeometry height="70" width="270" x="880" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="RevealView_f" parent="RevealView" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ post(request, slug)&#xa;+ _record_reveal(user, challenge)" vertex="1">
+          <mxGeometry height="34" width="270" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="HintView" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="UseHintView" vertex="1">
+          <mxGeometry height="70" width="270" x="880" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="HintView_f" parent="HintView" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ post(request, slug)&#xa;+ _record_hint_used(user, challenge)" vertex="1">
+          <mxGeometry height="34" width="270" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="CertView" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CourseCertificateView" vertex="1">
+          <mxGeometry height="80" width="270" x="880" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="CertView_f1" parent="CertView" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ get(request, slug)" vertex="1">
+          <mxGeometry height="18" width="270" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="CertView_f2" parent="CertView" style="text;html=1;align=left;spacingLeft=8;fontSize=9;fontStyle=2;fillColor=none;verticalAlign=top;" value="  CertificateBuilder().set_*().build()" vertex="1">
+          <mxGeometry height="18" width="270" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CertDLView" parent="1" style="swimlane;startSize=28;fontStyle=1;fontSize=11;" value="CourseCertificateDownloadView" vertex="1">
+          <mxGeometry height="60" width="270" x="880" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="CertDLView_f" parent="CertDLView" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ get(request, slug)  // returns PDF bytes" vertex="1">
+          <mxGeometry height="18" width="270" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="GraderFactory" parent="1" style="swimlane;startSize=28;fillColor=#ddffdd;strokeColor=#007700;fontStyle=1;fontSize=11;" value="GraderFactory" vertex="1">
+          <mxGeometry height="90" width="250" x="1280" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GF_f1" parent="GraderFactory" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="- _REGISTRY: dict" vertex="1">
+          <mxGeometry height="18" width="250" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="GF_f2" parent="GraderFactory" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ resolve(challenge_type, challenge): str  «static»" vertex="1">
+          <mxGeometry height="18" width="250" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GF_f3" parent="GraderFactory" style="text;html=1;align=left;spacingLeft=8;fontSize=9;fontStyle=2;verticalAlign=top;" value="  raises ValueError for unknown types" vertex="1">
+          <mxGeometry height="16" width="250" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="ScoringABC" parent="1" style="swimlane;startSize=28;fillColor=#ddffdd;strokeColor=#007700;fontStyle=1;fontSize=11;" value="«abstract» ScoringStrategy" vertex="1">
+          <mxGeometry height="60" width="250" x="1280" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="SA_f1" parent="ScoringABC" style="text;html=1;align=left;spacingLeft=8;fontSize=10;fontStyle=2;verticalAlign=top;" value="+ compute_score(challenge, is_correct, hint_used): int" vertex="1">
+          <mxGeometry height="24" width="250" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="ExactMatch" parent="1" style="swimlane;startSize=28;fillColor=#ddffdd;strokeColor=#007700;fontStyle=1;fontSize=11;" value="ExactMatchScoringStrategy" vertex="1">
+          <mxGeometry height="70" width="220" x="1170" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="EM_f1" parent="ExactMatch" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ compute_score(): int" vertex="1">
+          <mxGeometry height="38" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="PartialCredit" parent="1" style="swimlane;startSize=28;fillColor=#ddffdd;strokeColor=#007700;fontStyle=1;fontSize=11;" value="PartialCreditScoringStrategy" vertex="1">
+          <mxGeometry height="90" width="220" x="1430" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="PC_f1" parent="PartialCredit" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="- _earned: float&#xa;- _total: float" vertex="1">
+          <mxGeometry height="24" width="220" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="PC_f2" parent="PartialCredit" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ compute_score(): int&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ScoringCtx" parent="1" style="swimlane;startSize=28;fillColor=#ddffdd;strokeColor=#007700;fontStyle=1;fontSize=11;" value="ScoringContext" vertex="1">
+          <mxGeometry height="100" width="250" x="1440" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="SC_f1" parent="ScoringCtx" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="- _strategy: ScoringStrategy" vertex="1">
+          <mxGeometry height="18" width="250" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="SC_f2" parent="ScoringCtx" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ set_strategy(strategy)" vertex="1">
+          <mxGeometry height="18" width="250" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SC_f3" parent="ScoringCtx" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ compute(challenge, is_correct, hint_used): int" vertex="1">
+          <mxGeometry height="32" width="250" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="CertBuilder" parent="1" style="swimlane;startSize=28;fillColor=#ddffdd;strokeColor=#007700;fontStyle=1;fontSize=11;" value="CertificateBuilder" vertex="1">
+          <mxGeometry height="190" width="250" x="1280" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="CB_f1" parent="CertBuilder" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="- _user, _course, _certificate_id&#xa;- _issued_at, _score_pct" vertex="1">
+          <mxGeometry height="30" width="250" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="CB_f2" parent="CertBuilder" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ set_recipient(user): CertificateBuilder" vertex="1">
+          <mxGeometry height="18" width="250" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="CB_f3" parent="CertBuilder" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ set_course(course): CertificateBuilder" vertex="1">
+          <mxGeometry height="18" width="250" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="CB_f4" parent="CertBuilder" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ set_certificate_id(id): CertificateBuilder" vertex="1">
+          <mxGeometry height="18" width="250" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="CB_f5" parent="CertBuilder" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ set_issued_at(dt): CertificateBuilder" vertex="1">
+          <mxGeometry height="18" width="250" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="CB_f6" parent="CertBuilder" style="text;html=1;align=left;spacingLeft=8;fontSize=10;verticalAlign=top;" value="+ set_score(pct): CertificateBuilder" vertex="1">
+          <mxGeometry height="50" width="250" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="CB_f7" parent="CertBuilder" style="text;html=1;align=left;spacingLeft=8;fontSize=9;fontStyle=2;verticalAlign=top;" value="+ build(): bytes  // validates then delegates" vertex="1">
+          <mxGeometry height="16" width="250" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ct" edge="1" parent="1" source="Topic" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Course">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ct_n" connectable="0" parent="e_ct" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ct_1" connectable="0" parent="e_ct" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tl" edge="1" parent="1" source="Lesson" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Topic">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tl_n" connectable="0" parent="e_tl" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tl_1" connectable="0" parent="e_tl" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tch" edge="1" parent="1" source="Challenge" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Topic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="160" />
+              <mxPoint x="290" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tch_n" connectable="0" parent="e_tch" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tch_1" connectable="0" parent="e_tch" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cho" edge="1" parent="1" source="Option" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#aaaaaa;endFill=0;" target="Challenge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cho_n" connectable="0" parent="e_cho" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cho_1" connectable="0" parent="e_cho" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cha" edge="1" parent="1" source="Answer" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Challenge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="395" />
+              <mxPoint x="570" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cha_n" connectable="0" parent="e_cha" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cha_1" connectable="0" parent="e_cha" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chcc" edge="1" parent="1" source="CodeConfig" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#aaaaaa;endFill=0;" target="Challenge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="520" />
+              <mxPoint x="580" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chcc_n" connectable="0" parent="e_chcc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chcc_1" connectable="0" parent="e_chcc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cctc" edge="1" parent="1" source="TestCase" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="CodeConfig">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cctc_n" connectable="0" parent="e_cctc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cctc_1" connectable="0" parent="e_cctc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chs" edge="1" parent="1" source="Submission" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#aaaaaa;endFill=0;" target="Challenge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="160" />
+              <mxPoint x="590" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chs_n" connectable="0" parent="e_chs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chs_1" connectable="0" parent="e_chs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_scr" edge="1" parent="1" source="CodeResult" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Submission">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scr_n" connectable="0" parent="e_scr" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_scr_1" connectable="0" parent="e_scr" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.6" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cc" edge="1" parent="1" source="Certificate" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Course">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="450" />
+              <mxPoint x="280" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cc_n" connectable="0" parent="e_cc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint y="17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cc_1" connectable="0" parent="e_cc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cenr" edge="1" parent="1" source="Enrollment" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Course">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="580" />
+              <mxPoint x="30" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cenr_n" connectable="0" parent="e_cenr" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cenr_1" connectable="0" parent="e_cenr" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cbm" edge="1" parent="1" source="Bookmark" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Course">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="685" />
+              <mxPoint x="20" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cbm_n" connectable="0" parent="e_cbm" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cbm_1" connectable="0" parent="e_cbm" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cfb" edge="1" parent="1" source="Feedback" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;strokeColor=#aaaaaa;" target="Course">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="790" />
+              <mxPoint x="10" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cfb_n" connectable="0" parent="e_cfb" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="n" vertex="1">
+          <mxGeometry relative="1" x="-0.8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cfb_1" connectable="0" parent="e_cfb" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_svc" edge="1" parent="1" source="SubmitView" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#aaaaaa;" target="Challenge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1015" y="80" />
+              <mxPoint x="430" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_svs" edge="1" parent="1" source="SubmitView" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#aaaaaa;" target="Submission">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cvc" edge="1" parent="1" source="CertView" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#aaaaaa;" target="Certificate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep1" edge="1" parent="1" source="SubmitView" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#007700;strokeWidth=2;" target="GraderFactory">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep1_l" connectable="0" parent="ep1" style="edgeLabel;fontSize=9;fontStyle=1;" value="calls" vertex="1">
+          <mxGeometry relative="0.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ep2" edge="1" parent="1" source="SubmitView" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#007700;strokeWidth=2;" target="ScoringCtx">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="60" />
+              <mxPoint x="1670" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ep2_l" connectable="0" parent="ep2" style="edgeLabel;fontSize=9;fontStyle=1;" value="uses" vertex="1">
+          <mxGeometry relative="0.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ep3" edge="1" parent="1" source="ScoringCtx" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#007700;" target="ScoringABC">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1405" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QK7BvkGpodRsbO4xnwLE-3" connectable="0" parent="ep3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="delegates" vertex="1">
+          <mxGeometry relative="1" x="-0.237" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ep4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeColor=#007700;" target="ScoringABC">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1290" y="350" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ep5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeColor=#007700;" target="ScoringABC">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1530" y="350" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ep6" edge="1" parent="1" source="CertView" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#007700;strokeWidth=2;" target="CertBuilder">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ep6_l" connectable="0" parent="ep6" style="edgeLabel;fontSize=9;fontStyle=1;" value="uses" vertex="1">
+          <mxGeometry relative="0.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ep7" edge="1" parent="1" source="CertBuilder" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;dashed=1;strokeColor=#007700;" target="CertPDF">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep7_l" connectable="0" parent="ep7" style="edgeLabel;fontSize=9;" value="delegates" vertex="1">
+          <mxGeometry relative="0.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

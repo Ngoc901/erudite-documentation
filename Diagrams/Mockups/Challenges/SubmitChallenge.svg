@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="820" font-family="Arial, sans-serif">
+  <rect width="960" height="820" fill="#f0f0f0"/>
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- CODE CHALLENGE CARD -->
+  <rect x="24" y="68" width="912" height="720" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="24" y="68" width="912" height="5" rx="4" fill="#bbb"/>
+
+  <!-- header -->
+  <circle cx="52" cy="100" r="16" fill="#ddd"/>
+  <text x="52" y="105" font-size="11" font-weight="bold" fill="#555" text-anchor="middle">03</text>
+  <text x="80" y="103" font-size="14" font-weight="bold" fill="#222">Double the Number</text>
+  <rect x="256" y="91" width="38" height="18" rx="9" fill="#ebebeb"/>
+  <text x="275" y="104" font-size="10" fill="#666" text-anchor="middle">20 pts</text>
+  <rect x="302" y="91" width="46" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="325" y="104" font-size="10" fill="#666" text-anchor="middle">medium</text>
+  <rect x="356" y="91" width="34" height="18" rx="9" fill="#e8e8e8"/>
+  <text x="373" y="104" font-size="10" fill="#666" text-anchor="middle">code</text>
+
+  <line x1="44" y1="116" x2="916" y2="116" stroke="#eee" stroke-width="1"/>
+
+  <!-- problem text -->
+  <text x="44" y="136" font-size="12" fill="#444">Read an integer from stdin and print it doubled.</text>
+
+  <!-- Monaco editor -->
+  <rect x="44" y="150" width="872" height="200" rx="6" fill="#2d2d2d"/>
+  <!-- editor header -->
+  <rect x="44" y="150" width="872" height="32" rx="6" fill="#252526"/>
+  <circle cx="62" cy="166" r="5" fill="#888"/>
+  <circle cx="76" cy="166" r="5" fill="#888"/>
+  <circle cx="90" cy="166" r="5" fill="#888"/>
+  <text x="116" y="170" font-size="11" fill="#aaa">EDITOR</text>
+  <rect x="852" y="156" width="56" height="20" rx="4" fill="#3c3c3c"/>
+  <text x="880" y="170" font-size="10" fill="#aaa" text-anchor="middle">python ▼</text>
+  <!-- code lines -->
+  <text x="60" y="202" font-size="11" fill="#888" font-family="monospace">1</text>
+  <text x="80" y="202" font-size="11" fill="#9cdcfe" font-family="monospace">n = int(input())</text>
+  <text x="60" y="220" font-size="11" fill="#888" font-family="monospace">2</text>
+  <text x="80" y="220" font-size="11" fill="#dcdcaa" font-family="monospace">print</text>
+  <text x="122" y="220" font-size="11" fill="#d4d4d4" font-family="monospace">(n * 2)</text>
+  <text x="60" y="238" font-size="11" fill="#888" font-family="monospace">3</text>
+  <text x="60" y="256" font-size="11" fill="#888" font-family="monospace">4</text>
+  <text x="60" y="274" font-size="11" fill="#888" font-family="monospace">5</text>
+  <text x="60" y="292" font-size="11" fill="#888" font-family="monospace">6</text>
+  <text x="60" y="310" font-size="11" fill="#888" font-family="monospace">7</text>
+  <text x="60" y="328" font-size="11" fill="#888" font-family="monospace">8</text>
+
+  <!-- Run results -->
+  <rect x="44" y="362" width="872" height="120" rx="6" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="44" y="362" width="872" height="32" rx="6" fill="#f0f0f0"/>
+  <text x="60" y="382" font-size="12" font-weight="bold" fill="#444">Run: 2/3 tests passed ▼</text>
+
+  <!-- test result rows -->
+  <rect x="54" y="400" width="852" height="22" rx="4" fill="#e8f5e9"/>
+  <text x="68" y="415" font-size="11" fill="#555">✓  ACCEPTED  ·  in: "5"  ·  expected: "10"  ·  12ms</text>
+
+  <rect x="54" y="428" width="852" height="22" rx="4" fill="#fdecea"/>
+  <text x="68" y="443" font-size="11" fill="#555">✗  WRONG ANSWER  ·  in: "0"  ·  expected: "0"  ·  got: ""</text>
+
+  <rect x="54" y="456" width="852" height="22" rx="4" fill="#fff3e0"/>
+  <text x="68" y="471" font-size="11" fill="#555">⚠  TIME LIMIT  ·  expected: "20"  ·  5123ms</text>
+
+  <!-- error alert -->
+  <rect x="44" y="494" width="872" height="28" rx="6" fill="#fdecea" stroke="#f5c6c6" stroke-width="1"/>
+  <text x="60" y="512" font-size="12" fill="#888">✗  2/3 tests passed · 15 pts earned</text>
+
+  <!-- hint / solution -->
+  <rect x="44" y="534" width="120" height="26" rx="5" fill="#ebebeb" stroke="#ddd" stroke-width="1"/>
+  <text x="104" y="551" font-size="11" fill="#666" text-anchor="middle">Use hint (−50%)</text>
+  <rect x="174" y="534" width="110" height="26" rx="5" fill="#ebebeb" stroke="#ddd" stroke-width="1"/>
+  <text x="229" y="551" font-size="11" fill="#666" text-anchor="middle">Reveal solution</text>
+
+  <!-- run + submit buttons -->
+  <rect x="760" y="534" width="64" height="26" rx="13" fill="#ddd" stroke="#ccc" stroke-width="1"/>
+  <text x="792" y="551" font-size="12" fill="#555" text-anchor="middle">Run ▶</text>
+  <rect x="834" y="534" width="82" height="26" rx="13" fill="#999"/>
+  <text x="875" y="551" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Submit ➜</text>
+
+  <!-- teacher toolbar -->
+  <line x1="44" y1="572" x2="916" y2="572" stroke="#eee" stroke-width="1"/>
+  <text x="56" y="590" font-size="11" fill="#888">Show answer</text>
+  <text x="820" y="590" font-size="11" fill="#888">✎ Edit</text>
+  <text x="868" y="590" font-size="11" fill="#888">Delete</text>
+
+  <!-- hint expanded box -->
+  <rect x="44" y="604" width="872" height="56" rx="6" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="60" y="624" font-size="12" font-weight="bold" fill="#666">Hint</text>
+  <text x="60" y="644" font-size="12" fill="#888">Use the * operator to multiply the input by 2 and print the result.</text>
+
+  <!-- solution revealed box -->
+  <rect x="44" y="672" width="872" height="56" rx="6" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="60" y="692" font-size="12" font-weight="bold" fill="#666">Solution explanation</text>
+  <text x="60" y="712" font-size="12" fill="#888">Simply read the integer from stdin, multiply it by 2 and print the result.</text>
+
+  <!-- locked badge -->
+  <rect x="44" y="740" width="240" height="24" rx="6" fill="#e8e8e8"/>
+  <text x="60" y="756" font-size="11" fill="#666">Solution revealed — submission locked</text>
+
+</svg>

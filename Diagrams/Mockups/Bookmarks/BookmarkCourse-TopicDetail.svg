@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="960" height="560" fill="#f0f0f0"/>
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="960" height="8" fill="#c8c8c8"/>
+  <rect x="0" y="8" width="960" height="44" fill="#e8e8e8"/>
+  <rect x="16" y="16" width="28" height="28" rx="6" fill="#aaa"/>
+  <text x="52" y="36" font-size="15" font-weight="bold" fill="#333">Erudite</text>
+  <text x="140" y="35" font-size="13" fill="#555">Courses</text>
+  <text x="205" y="35" font-size="13" fill="#555">About Project</text>
+  <text x="295" y="35" font-size="13" fill="#555">FAQ</text>
+  <circle cx="930" cy="30" r="16" fill="#bbb"/>
+  <circle cx="930" cy="24" r="5" fill="#fff"/>
+  <path d="M916,40 Q916,33 930,33 Q944,33 944,40" fill="#fff"/>
+
+  <!-- Difficulty badge + date -->
+  <rect x="24" y="68" width="72" height="24" rx="12" fill="#e0e0e0"/>
+  <text x="60" y="85" font-size="11" fill="#555" text-anchor="middle">Advanced</text>
+  <text x="108" y="85" font-size="11" fill="#999">Updated Apr 10, 2026</text>
+
+  <!-- Bookmark icon (filled) -->
+  <rect x="900" y="64" width="36" height="36" rx="6" fill="#ddd" stroke="#ccc" stroke-width="1"/>
+  <polygon points="910,70 926,70 926,96 918,90 910,96" fill="#888"/>
+
+  <!-- Remove bookmark tooltip -->
+  <rect x="748" y="104" width="152" height="26" rx="6" fill="#e4e4e4" stroke="#ccc" stroke-width="1"/>
+  <text x="824" y="121" font-size="11" fill="#444" text-anchor="middle">Remove bookmark</text>
+
+  <!-- Course title -->
+  <text x="24" y="132" font-size="26" font-weight="bold" fill="#222">Competitive Programming</text>
+  <text x="24" y="154" font-size="12" fill="#888">Sharpen your problem-solving skills for competitive programming.</text>
+  <text x="24" y="170" font-size="12" fill="#888">All challenges are coding problems with strict time and memory limits.</text>
+
+  <!-- Section title -->
+  <text x="24" y="204" font-size="15" font-weight="bold" fill="#333">Course Topics</text>
+
+  <!-- Topic rows -->
+  <!-- Topic 1 -->
+  <rect x="24" y="216" width="912" height="52" rx="8" fill="#fff" stroke="#e8e8e8" stroke-width="1"/>
+  <rect x="34" y="226" width="32" height="32" rx="16" fill="#e0e0e0"/>
+  <text x="50" y="247" font-size="11" font-weight="bold" fill="#666" text-anchor="middle">01</text>
+  <text x="80" y="240" font-size="13" font-weight="bold" fill="#333">Greedy Algorithms</text>
+  <rect x="360" y="227" width="82" height="18" rx="9" fill="#ebebeb"/>
+  <text x="401" y="240" font-size="10" fill="#666" text-anchor="middle">10 challenges</text>
+  <rect x="80" y="252" width="820" height="3" rx="1" fill="#e8e8e8"/>
+  <text x="920" y="247" font-size="11" fill="#aaa" text-anchor="middle">0%</text>
+
+  <!-- Topic 2 -->
+  <rect x="24" y="276" width="912" height="52" rx="8" fill="#fff" stroke="#e8e8e8" stroke-width="1"/>
+  <rect x="34" y="286" width="32" height="32" rx="16" fill="#e0e0e0"/>
+  <text x="50" y="307" font-size="11" font-weight="bold" fill="#666" text-anchor="middle">02</text>
+  <text x="80" y="300" font-size="13" font-weight="bold" fill="#333">Graph Algorithms</text>
+  <rect x="360" y="287" width="82" height="18" rx="9" fill="#ebebeb"/>
+  <text x="401" y="300" font-size="10" fill="#666" text-anchor="middle">10 challenges</text>
+  <rect x="80" y="312" width="820" height="3" rx="1" fill="#e8e8e8"/>
+  <text x="920" y="307" font-size="11" fill="#aaa" text-anchor="middle">0%</text>
+
+  <!-- Topic 3 -->
+  <rect x="24" y="336" width="912" height="52" rx="8" fill="#fff" stroke="#e8e8e8" stroke-width="1"/>
+  <rect x="34" y="346" width="32" height="32" rx="16" fill="#e0e0e0"/>
+  <text x="50" y="367" font-size="11" font-weight="bold" fill="#666" text-anchor="middle">03</text>
+  <text x="80" y="360" font-size="13" font-weight="bold" fill="#333">String Algorithms</text>
+  <rect x="360" y="347" width="82" height="18" rx="9" fill="#ebebeb"/>
+  <text x="401" y="360" font-size="10" fill="#666" text-anchor="middle">10 challenges</text>
+  <rect x="80" y="372" width="820" height="3" rx="1" fill="#e8e8e8"/>
+  <text x="920" y="367" font-size="11" fill="#aaa" text-anchor="middle">0%</text>
+
+  <!-- Topic 4 -->
+  <rect x="24" y="396" width="912" height="52" rx="8" fill="#fff" stroke="#e8e8e8" stroke-width="1"/>
+  <rect x="34" y="406" width="32" height="32" rx="16" fill="#e0e0e0"/>
+  <text x="50" y="427" font-size="11" font-weight="bold" fill="#666" text-anchor="middle">04</text>
+  <text x="80" y="420" font-size="13" font-weight="bold" fill="#333">Advanced Data Structures</text>
+  <rect x="360" y="407" width="82" height="18" rx="9" fill="#ebebeb"/>
+  <text x="401" y="420" font-size="10" fill="#666" text-anchor="middle">10 challenges</text>
+  <rect x="80" y="432" width="820" height="3" rx="1" fill="#e8e8e8"/>
+  <text x="920" y="427" font-size="11" fill="#aaa" text-anchor="middle">0%</text>
+
+  <!-- Topic 5 -->
+  <rect x="24" y="456" width="912" height="52" rx="8" fill="#fff" stroke="#e8e8e8" stroke-width="1"/>
+  <rect x="34" y="466" width="32" height="32" rx="16" fill="#e0e0e0"/>
+  <text x="50" y="487" font-size="11" font-weight="bold" fill="#666" text-anchor="middle">05</text>
+  <text x="80" y="480" font-size="13" font-weight="bold" fill="#333">Advanced Number Theory</text>
+  <rect x="360" y="467" width="82" height="18" rx="9" fill="#ebebeb"/>
+  <text x="401" y="480" font-size="10" fill="#666" text-anchor="middle">10 challenges</text>
+  <rect x="80" y="492" width="820" height="3" rx="1" fill="#e8e8e8"/>
+  <text x="920" y="487" font-size="11" fill="#aaa" text-anchor="middle">0%</text>
+
+</svg>
