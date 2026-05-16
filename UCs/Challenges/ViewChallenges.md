@@ -58,3 +58,16 @@ Feature: View Challenges
 ## 7. CRUD Classification
 
 - **Read** — reads Challenge records for a topic.
+
+## 8. Function Points
+
+Function Points are tracked at **group level** for Erudite because the project contains many small, structurally similar Use Cases. Grouping produces a more reliable FP vs Time correlation (R² = 0.67) and matches the Berkling UCL methodology.
+
+This Use Case belongs to group **`challenges`** (AFP = **70 (Week 20 actual)**).
+
+| Attribute | Value |
+|---|---|
+| **Group** | `challenges` |
+| **UCs in group** | CreateChallenge, EditChallenge, DeleteChallenge, ViewChallenges, SubmitChallenge |
+| **Group AFP** | 70 (Week 20 actual) |
+| **Full FP breakdown** | [UCs/FUNCTION_POINTS.md](../FUNCTION_POINTS.md) |

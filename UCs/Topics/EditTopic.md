@@ -80,3 +80,16 @@ Feature: Edit Topic
 ## 7. CRUD Classification
 
 - **Update** — modifies an existing Topic record.
+
+## 8. Function Points
+
+Function Points are tracked at **group level** for Erudite because the project contains many small, structurally similar Use Cases. Grouping produces a more reliable FP vs Time correlation (R² = 0.67) and matches the Berkling UCL methodology.
+
+This Use Case belongs to group **`topics`** (AFP = **43 (Week 20 actual)**).
+
+| Attribute | Value |
+|---|---|
+| **Group** | `topics` |
+| **UCs in group** | CreateTopic, EditTopic, DeleteTopic, ViewTopic |
+| **Group AFP** | 43 (Week 20 actual) |
+| **Full FP breakdown** | [UCs/FUNCTION_POINTS.md](../FUNCTION_POINTS.md) |

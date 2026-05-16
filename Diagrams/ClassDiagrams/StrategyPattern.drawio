@@ -1,0 +1,80 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram id="strategy-pattern-diagram" name="Strategy Pattern">
+    <mxGraphModel dx="1566" dy="1254" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="730" width="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#F1F5F9;" value="Strategy Pattern / Scoring" vertex="1">
+          <mxGeometry height="36" width="600" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#94A3B8;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;core/patterns/scoring_strategy.py — GoF Behavioral Pattern&lt;/font&gt;" vertex="1">
+          <mxGeometry height="22" width="600" x="40" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="container" parent="1" style="rounded=2;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#A855F7;fontColor=#A855F7;fontSize=13;fontStyle=1;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;⬡ Strategy Pattern&lt;/font&gt;" vertex="1">
+          <mxGeometry height="600" width="1300" x="50" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ss_title" parent="1" style="rounded=2;whiteSpace=wrap;html=1;fillColor=#3B0764;strokeColor=#A855F7;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" value="ScoringStrategy" vertex="1">
+          <mxGeometry height="36" width="360" x="520" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ss_stereotype" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=center;fontSize=10;fontStyle=2;fontColor=#C084FC;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;«ABC»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="360" x="520" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="ss_methods" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#A855F7;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="# compute_score(challenge, is_correct: bool, hint_used: bool): int  {abstract}" vertex="1">
+          <mxGeometry height="44" width="360" x="520" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="em_title" parent="1" style="rounded=2;whiteSpace=wrap;html=1;fillColor=#3B0764;strokeColor=#A855F7;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" value="ExactMatchScoringStrategy" vertex="1">
+          <mxGeometry height="36" width="360" x="140" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="em_stereotype" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=left;fontSize=10;fontStyle=2;fontColor=#C084FC;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;«ScoringStrategy»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="360" x="140" y="357" as="geometry" />
+        </mxCell>
+        <mxCell id="em_note" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=center;fontSize=14;fontStyle=2;fontColor=#94A3B8;" value="quiz_mcq · quiz_text · text" vertex="1">
+          <mxGeometry height="16" width="360" x="140" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="em_methods" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#A855F7;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;+ compute_score(challenge, is_correct, hint_used): int&lt;br&gt;  — full points if correct; 50% if hint used&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="360" x="140" y="436" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_title" parent="1" style="rounded=2;whiteSpace=wrap;html=1;fillColor=#3B0764;strokeColor=#A855F7;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" value="PartialCreditScoringStrategy" vertex="1">
+          <mxGeometry height="36" width="360" x="900" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_stereotype" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=right;fontSize=10;fontStyle=2;fontColor=#C084FC;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;«ScoringStrategy»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="360" x="900" y="356" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_note" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=center;fontSize=14;fontStyle=2;fontColor=#94A3B8;" value="code challenges" vertex="1">
+          <mxGeometry height="16" width="360" x="900" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_fields" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#A855F7;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="- _earned: float&#xa;- _total: float" vertex="1">
+          <mxGeometry height="44" width="360" x="900" y="436" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_methods" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A1F35;strokeColor=#A855F7;fontColor=#94A3B8;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;+ compute_score(challenge, is_correct, hint_used): int&lt;br&gt;  — weighted by test case results&lt;/font&gt;" vertex="1">
+          <mxGeometry height="44" width="360" x="900" y="477" as="geometry" />
+        </mxCell>
+        <mxCell id="sc_title" parent="1" style="rounded=2;whiteSpace=wrap;html=1;fillColor=#3B0764;strokeColor=#A855F7;fontColor=#F1F5F9;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" value="ScoringContext" vertex="1">
+          <mxGeometry height="36" width="360" x="520" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="sc_fields" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#A855F7;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="- _strategy: ScoringStrategy" vertex="1">
+          <mxGeometry height="36" width="360" x="520" y="576" as="geometry" />
+        </mxCell>
+        <mxCell id="sc_methods" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A1F35;strokeColor=#A855F7;fontColor=#94A3B8;fontSize=12;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="+ set_strategy(strategy: ScoringStrategy): void&#xa;+ compute(challenge, is_correct: bool, hint_used: bool): int" vertex="1">
+          <mxGeometry height="44" width="360" x="520" y="612" as="geometry" />
+        </mxCell>
+        <mxCell id="em_real" edge="1" parent="1" source="em_title" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;endArrow=block;endFill=0;strokeColor=#A855F7;fontColor=#A855F7;strokeWidth=4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="592" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pc_real" edge="1" parent="1" source="pc_title" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;endArrow=block;endFill=0;strokeColor=#A855F7;fontColor=#A855F7;strokeWidth=4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="808" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sc_comp" edge="1" parent="1" source="sc_title" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=diamondThin;startFill=1;endArrow=none;strokeColor=#A855F7;fontColor=#A855F7;strokeWidth=4;" target="ss_methods">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

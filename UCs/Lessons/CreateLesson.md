@@ -90,3 +90,16 @@ Feature: Create Lesson
 ## 7. CRUD Classification
 
 - **Create** — creates a new Lesson record.
+
+## 8. Function Points
+
+Function Points are tracked at **group level** for Erudite because the project contains many small, structurally similar Use Cases. Grouping produces a more reliable FP vs Time correlation (R² = 0.67) and matches the Berkling UCL methodology.
+
+This Use Case belongs to group **`lessons`** (AFP = **55.08 (UFP × VAF 1.02)**).
+
+| Attribute | Value |
+|---|---|
+| **Group** | `lessons` |
+| **UCs in group** | CreateLesson, EditLesson, DeleteLesson, ViewLesson |
+| **Group AFP** | 55.08 (UFP × VAF 1.02) |
+| **Full FP breakdown** | [UCs/FUNCTION_POINTS.md](../FUNCTION_POINTS.md) |

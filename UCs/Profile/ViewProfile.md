@@ -44,3 +44,16 @@ Any authenticated user can view their own profile via the `/profile/me/` endpoin
 ## 7. CRUD Classification
 
 - **Read** — reads the User record.
+
+## 8. Function Points
+
+Function Points are tracked at **group level** for Erudite because the project contains many small, structurally similar Use Cases. Grouping produces a more reliable FP vs Time correlation (R² = 0.67) and matches the Berkling UCL methodology.
+
+This Use Case belongs to group **`profile`** (AFP = **49.98 (UFP × VAF 1.02)**).
+
+| Attribute | Value |
+|---|---|
+| **Group** | `profile` |
+| **UCs in group** | EditProfile, ChangePassword, ViewProfile |
+| **Group AFP** | 49.98 (UFP × VAF 1.02) |
+| **Full FP breakdown** | [UCs/FUNCTION_POINTS.md](../FUNCTION_POINTS.md) |

@@ -15,6 +15,9 @@ Supporting documentation for the **Erudite Education Platform** - a full-stack e
 - **[Test Plan](Documents/TestPlanDocument.md)**  
   Testing strategy, scope, frameworks (pytest, behave, Vitest, Playwright), CI pipelines, and SonarCloud coverage results.
 
+- **[Risk Management Log](Documents/RiskManagement.md)**  
+  10 identified risks tracked weekly across Weeks 11–19, with probability/damage scores, mitigations, and final outcomes.
+
 - **[Diagrams](Diagrams/)**  
   Use case diagram, activity diagrams, class diagrams, deployment view, and UI mockups.
 

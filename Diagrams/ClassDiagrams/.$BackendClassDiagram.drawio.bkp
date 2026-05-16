@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram id="backend-class-diagram" name="Backend Class Diagram">
-    <mxGraphModel dx="2909" dy="2329" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1800" math="0" shadow="0">
+    <mxGraphModel dx="1697" dy="1358" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -163,11 +163,13 @@
         <mxCell id="lses_fields" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#EC4899;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="+ id: UUIDField (PK)&#xa;+ user: FK → User&#xa;+ registration: FK → LTIRegistration&#xa;+ resource_mapping: FK → LTIResourceMapping&#xa;+ lti_user_id: CharField(255)&#xa;+ score_url: URLField(null)&#xa;+ created_at: DateTimeField" vertex="1">
           <mxGeometry height="130" width="500" x="1820" y="646" as="geometry" />
         </mxCell>
-        <mxCell id="r_user_otp" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="otp_fields" value="1..*">
+        <mxCell id="r_user_otp" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="otp_title" value="1..*">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r_user_evc" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="evc_fields" value="1..*">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="r_user_evc" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" value="1..*">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="600" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="r_user_course" edge="1" parent="1" source="user_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#94A3B8;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;dashed=1;strokeWidth=3;" target="course_title" value="owns">
           <mxGeometry relative="1" as="geometry" />

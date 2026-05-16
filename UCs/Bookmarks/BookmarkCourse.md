@@ -92,3 +92,16 @@ Feature: Bookmark Course
 ## 6. Link to SRS
 
 [Software Requirements Specification](../../Documents/SoftwareRequirementsSpecification.md)
+
+## 7. Function Points
+
+Function Points are tracked at **group level** for Erudite because the project contains many small, structurally similar Use Cases. Grouping produces a more reliable FP vs Time correlation (R² = 0.67) and matches the Berkling UCL methodology.
+
+This Use Case belongs to group **`bookmarks`** (AFP = **13.26 (UFP × VAF 1.02)**).
+
+| Attribute | Value |
+|---|---|
+| **Group** | `bookmarks` |
+| **UCs in group** | BookmarkCourse |
+| **Group AFP** | 13.26 (UFP × VAF 1.02) |
+| **Full FP breakdown** | [UCs/FUNCTION_POINTS.md](../FUNCTION_POINTS.md) |

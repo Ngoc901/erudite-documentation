@@ -103,3 +103,16 @@ Feature: Course Enrollment Management
 ## 7. CRUD Classification
 
 - **Create/Delete** — manages CourseEnrollment records.
+
+## 8. Function Points
+
+Function Points are tracked at **group level** for Erudite because the project contains many small, structurally similar Use Cases. Grouping produces a more reliable FP vs Time correlation (R² = 0.67) and matches the Berkling UCL methodology.
+
+This Use Case belongs to group **`courses`** (AFP = **95 (Week 20 actual)**).
+
+| Attribute | Value |
+|---|---|
+| **Group** | `courses` |
+| **UCs in group** | CreateCourse, EditCourse, DeleteCourse, ViewCourses, ManageEnrollments |
+| **Group AFP** | 95 (Week 20 actual) |
+| **Full FP breakdown** | [UCs/FUNCTION_POINTS.md](../FUNCTION_POINTS.md) |

@@ -124,3 +124,16 @@ Feature: LTI Moodle Integration
 ## 6. Link to SRS
 
 [Software Requirements Specification](../../Documents/SoftwareRequirementsSpecification.md)
+
+## 7. Function Points
+
+Function Points are tracked at **group level** for Erudite because the project contains many small, structurally similar Use Cases. Grouping produces a more reliable FP vs Time correlation (R² = 0.67) and matches the Berkling UCL methodology.
+
+This Use Case belongs to group **`lti`** (AFP = **28.56 (UFP × VAF 1.02)**).
+
+| Attribute | Value |
+|---|---|
+| **Group** | `lti` |
+| **UCs in group** | LTI-MoodleIntegration |
+| **Group AFP** | 28.56 (UFP × VAF 1.02) |
+| **Full FP breakdown** | [UCs/FUNCTION_POINTS.md](../FUNCTION_POINTS.md) |

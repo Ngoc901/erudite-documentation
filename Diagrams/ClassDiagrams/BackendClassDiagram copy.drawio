@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram id="backend-class-diagram" name="Backend Class Diagram">
-    <mxGraphModel dx="1018" dy="815" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1800" math="0" shadow="0">
+    <mxGraphModel dx="2262" dy="1811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -163,109 +163,121 @@
         <mxCell id="lses_fields" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#EC4899;fontColor=#CBD5E1;fontSize=11;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" value="+ id: UUIDField (PK)&#xa;+ user: FK → User&#xa;+ registration: FK → LTIRegistration&#xa;+ resource_mapping: FK → LTIResourceMapping&#xa;+ lti_user_id: CharField(255)&#xa;+ score_url: URLField(null)&#xa;+ created_at: DateTimeField" vertex="1">
           <mxGeometry height="130" width="500" x="1820" y="646" as="geometry" />
         </mxCell>
-        <mxCell id="r_user_otp" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="otp_title" value="1..*">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="r_user_otp" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" value="1..*">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="600" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="r_user_evc" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" value="1..*">
+        <mxCell id="r_user_evc" edge="1" parent="1" source="user_methods" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6366F1;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" value="1..*">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="460" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_user_course" edge="1" parent="1" source="user_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#94A3B8;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;dashed=1;strokeWidth=3;" target="course_title" value="owns">
+        <mxCell id="r_user_course" edge="1" parent="1" source="user_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#94A3B8;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;dashed=1;strokeWidth=3;entryX=0.005;entryY=0.101;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.001;exitY=0.129;exitDx=0;exitDy=0;exitPerimeter=0;" target="course_fields" value="owns">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r_course_topic" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="topic_fields" value="1..*">
+        <mxCell id="r_course_topic" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" value="1..*">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="440" as="sourcePoint" />
+            <mxPoint x="820" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r_topic_lesson" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" value="1..*">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="660" as="sourcePoint" />
+            <mxPoint x="820" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r_topic_chal" edge="1" parent="1" source="topic_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="chal_fields" value="1..*">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r_topic_lesson" edge="1" parent="1" source="topic_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="lesson_fields" value="1..*">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="r_topic_chal" edge="1" parent="1" source="topic_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="chal_fields" value="1..*">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="r_chal_opt" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="opt_fields" value="1..*">
+        <mxCell id="r_chal_opt" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="opt_fields" value="1..*">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1550" y="565" />
-              <mxPoint x="1720" y="565" />
+              <mxPoint x="1550" y="640" />
+              <mxPoint x="1720" y="640" />
               <mxPoint x="1720" y="763" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_chal_ans" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERone;startArrow=ERone;" target="ans_fields" value="1:1">
+        <mxCell id="r_chal_ans" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="ans_fields" value="1:1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1550" y="619" />
-              <mxPoint x="1370" y="619" />
+              <mxPoint x="1550" y="670" />
+              <mxPoint x="1370" y="670" />
               <mxPoint x="1370" y="876" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_chal_code" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERone;startArrow=ERone;" target="code_fields" value="1:1">
+        <mxCell id="r_chal_code" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="code_fields" value="1:1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1550" y="620" />
-              <mxPoint x="1720" y="620" />
+              <mxPoint x="1550" y="670" />
+              <mxPoint x="1720" y="670" />
               <mxPoint x="1720" y="1029" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_code_tc" edge="1" parent="1" source="code_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="tc_fields" value="1..*">
+        <mxCell id="r_code_tc" edge="1" parent="1" source="code_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="tc_fields" value="1..*">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r_chal_sub" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="sub_fields" value="1..*">
+        <mxCell id="r_chal_sub" edge="1" parent="1" source="chal_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="sub_fields" value="1..*">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r_sub_csr" edge="1" parent="1" source="sub_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="csr_fields" value="1..*">
+        <mxCell id="r_sub_csr" edge="1" parent="1" source="sub_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="csr_title" value="1..*">
           <mxGeometry relative="1" x="0.0004" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_tc_csr" edge="1" parent="1" source="tc_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="csr_fields" value="1..*">
+        <mxCell id="r_tc_csr" edge="1" parent="1" source="tc_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#F59E0B;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="csr_fields" value="1..*">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r_course_enroll" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="enroll_fields" value="1..*">
+        <mxCell id="r_course_enroll" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="enroll_fields" value="1..*">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="990" y="284" />
-              <mxPoint x="990" y="1140" />
+              <mxPoint x="1000" y="284" />
+              <mxPoint x="1000" y="1140" />
               <mxPoint x="820" y="1140" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_course_book" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="book_fields" value="0..*">
+        <mxCell id="r_course_book" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="book_fields" value="0..*">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="990" y="284" />
-              <mxPoint x="990" y="1320" />
+              <mxPoint x="1000" y="284" />
+              <mxPoint x="1000" y="1320" />
               <mxPoint x="1190" y="1320" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_course_cert" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="cert_fields" value="0..*">
+        <mxCell id="r_course_cert" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="cert_fields" value="0..*">
           <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="284" />
+              <mxPoint x="1000" y="1244" />
+            </Array>
             <mxPoint x="990" y="392" as="sourcePoint" />
             <mxPoint x="990" y="1526" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_course_fb" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" target="fb_fields" value="0..*">
+        <mxCell id="r_course_fb" edge="1" parent="1" source="course_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#10B981;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" target="fb_fields" value="0..*">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="990" y="284" />
-              <mxPoint x="990" y="1320" />
+              <mxPoint x="1000" y="284" />
+              <mxPoint x="1000" y="1320" />
               <mxPoint x="1540" y="1320" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_lreg_lmap" edge="1" parent="1" source="lreg_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;" value="1..*">
+        <mxCell id="r_lreg_lmap" edge="1" parent="1" source="lreg_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;" value="1..*">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2070" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_lmap_lses" edge="1" parent="1" source="lmap_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERmany;startArrow=ERone;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="lses_title" value="1..*">
+        <mxCell id="r_lmap_lses" edge="1" parent="1" source="lmap_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="lses_title" value="1..*">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r_lmap_course" edge="1" parent="1" source="lmap_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERone;startArrow=ERmany;dashed=1;strokeWidth=3;" target="course_title" value="maps to">
+        <mxCell id="r_lmap_course" edge="1" parent="1" source="lmap_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;dashed=1;strokeWidth=3;" target="course_title" value="maps to">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1770" y="510" />
@@ -274,7 +286,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r_lses_user" edge="1" parent="1" source="lses_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=ERone;startArrow=ERmany;dashed=1;strokeWidth=3;" target="user_title" value="session owner">
+        <mxCell id="r_lses_user" edge="1" parent="1" source="lses_fields" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EC4899;fontColor=#94A3B8;fontSize=10;endArrow=open;endFill=0;startArrow=none;dashed=1;strokeWidth=3;" target="user_title" value="session owner">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1760" y="720" />
@@ -305,11 +317,23 @@
         <mxCell id="leg_lti" parent="1" style="rounded=2;fillColor=#831843;strokeColor=#EC4899;fontColor=#F1F5F9;fontSize=11;align=left;spacingLeft=8;" value="  lti app models" vertex="1">
           <mxGeometry height="26" width="520" x="1796" y="1246" as="geometry" />
         </mxCell>
-        <mxCell id="leg_fk" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=left;fontSize=11;fontColor=#94A3B8;" value="━━▶  FK / OneToOne (solid)     - - ▶  cross-app FK (dashed)" vertex="1">
+        <mxCell id="leg_fk" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=left;fontSize=11;fontColor=#94A3B8;" value="━━▶  Association / FK (solid)     - - ▶  cross-app FK (dashed)" vertex="1">
           <mxGeometry height="22" width="520" x="1796" y="1278" as="geometry" />
         </mxCell>
         <mxCell id="leg_card" parent="1" style="text;html=1;fillColor=none;strokeColor=none;align=left;fontSize=11;fontColor=#94A3B8;" value="1..* one-to-many     1:1 one-to-one     0..* zero-to-many" vertex="1">
           <mxGeometry height="22" width="520" x="1796" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="sp_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#1E1B4B;strokeColor=#A855F7;fontColor=#E9D5FF;fontSize=11;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;«Strategy Pattern»&lt;br&gt;ScoringContext selects strategy&lt;br&gt;by challenge_type:&lt;br&gt;• quiz / text → ExactMatchScoringStrategy&lt;br&gt;  (full pts; 50% if hint used)&lt;br&gt;• code → PartialCreditScoringStrategy&lt;br&gt;  (weighted by test-case results)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="170" x="1560" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="sp_note_arrow" edge="1" parent="1" source="sp_note" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;startArrow=none;strokeColor=#A855F7;fontColor=#A855F7;fontSize=10;entryX=1;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=4;" target="chal_fields" value="«uses»">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1645" y="430" />
+              <mxPoint x="1730" y="430" />
+              <mxPoint x="1730" y="230" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="jPe1mejNuP7etkd5A4rR-1" connectable="0" parent="1" style="group" value="" vertex="1">
           <mxGeometry height="282" width="320" x="1390" y="140" as="geometry" />
