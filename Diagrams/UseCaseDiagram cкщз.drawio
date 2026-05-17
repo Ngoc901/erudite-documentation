@@ -4,116 +4,116 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="actor_G" parent="1" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;fontStyle=1;fontSize=11;" value="" vertex="1">
-          <mxGeometry height="80" width="60" x="40" y="240" as="geometry" />
+        <mxCell id="actor_G" parent="1" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;fontStyle=1;fontSize=25;" value="" vertex="1">
+          <mxGeometry height="86" width="60" x="40" y="217" as="geometry" />
         </mxCell>
         <mxCell id="actor_S" parent="1" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=11;" value="" vertex="1">
-          <mxGeometry height="80" width="60" x="40" y="460" as="geometry" />
+          <mxGeometry height="91" width="88" x="25" y="460" as="geometry" />
         </mxCell>
         <mxCell id="actor_T" parent="1" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; font-weight: 400; text-align: start; white-space: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22shape%3DumlActor%3BverticalLabelPosition%3Dbottom%3BverticalAlign%3Dtop%3Bhtml%3D1%3BoutlineConnect%3D0%3B%22%20value%3D%22%26lt%3Bb%26gt%3BAdmin%26lt%3B%2Fb%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%2254%22%20width%3D%2224%22%20x%3D%2258%22%20y%3D%221045%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" vertex="1">
-          <mxGeometry height="80" width="60" x="40" y="840" as="geometry" />
+          <mxGeometry height="92" width="85" x="30" y="840" as="geometry" />
         </mxCell>
         <mxCell id="actor_A" parent="1" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" value="" vertex="1">
-          <mxGeometry height="80" width="60" x="40" y="1040" as="geometry" />
+          <mxGeometry height="95" width="83" x="30" y="1040" as="geometry" />
         </mxCell>
         <mxCell id="actor_M" parent="1" style="shape=mxgraph.uml.actor;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="" vertex="1">
-          <mxGeometry height="80" width="60" x="1560" y="980" as="geometry" />
+          <mxGeometry height="94" width="100" x="1540" y="980" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_auth" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Authentication &amp; Authorization" vertex="1">
+        <mxCell id="pkg_auth" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Authentication &amp; Authorization" vertex="1">
           <mxGeometry height="320" width="360" x="160" y="-8" as="geometry" />
         </mxCell>
-        <mxCell id="UC_REG" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Register" vertex="1">
+        <mxCell id="UC_REG" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Register" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_LOGIN" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Login" vertex="1">
+        <mxCell id="UC_LOGIN" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Login" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_LOGOUT" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Logout" vertex="1">
+        <mxCell id="UC_LOGOUT" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Logout" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="UC_VER" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Verify Email" vertex="1">
+        <mxCell id="UC_VER" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Verify Email" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="UC_RESET" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Reset Password" vertex="1">
+        <mxCell id="UC_RESET" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Reset Password" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="UC_GOOGLE" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Google OAuth" vertex="1">
+        <mxCell id="UC_GOOGLE" parent="pkg_auth" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Google OAuth" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_courses" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Courses" vertex="1">
+        <mxCell id="pkg_courses" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Courses" vertex="1">
           <mxGeometry height="320" width="360" x="560" y="-8" as="geometry" />
         </mxCell>
-        <mxCell id="UC_VCOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Browse / View Courses" vertex="1">
-          <mxGeometry height="45" width="150" x="20" y="50" as="geometry" />
+        <mxCell id="UC_VCOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Browse / View Courses" vertex="1">
+          <mxGeometry height="57" width="150" x="20" y="38" as="geometry" />
         </mxCell>
-        <mxCell id="UC_CCOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Create Course" vertex="1">
+        <mxCell id="UC_CCOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Create Course" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_ECOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Edit Course" vertex="1">
+        <mxCell id="UC_ECOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Edit Course" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="UC_DCOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Delete Course" vertex="1">
+        <mxCell id="UC_DCOURSE" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Delete Course" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="UC_ENROLL" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Manage Enrollments" vertex="1">
+        <mxCell id="UC_ENROLL" parent="pkg_courses" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Manage Enrollments" vertex="1">
           <mxGeometry height="45" width="150" x="100" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_topics" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Topics" vertex="1">
+        <mxCell id="pkg_topics" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Topics" vertex="1">
           <mxGeometry height="250" width="360" x="998" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="UC_VTOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Topic Items" vertex="1">
-          <mxGeometry height="45" width="150" x="20" y="50" as="geometry" />
+        <mxCell id="UC_VTOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="View Topic Items" vertex="1">
+          <mxGeometry height="45" width="159" x="20" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_CTOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Create Topic" vertex="1">
+        <mxCell id="UC_CTOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Create Topic" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_ETOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Edit Topic" vertex="1">
+        <mxCell id="UC_ETOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Edit Topic" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="UC_DTOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Delete Topic" vertex="1">
+        <mxCell id="UC_DTOPIC" parent="pkg_topics" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Delete Topic" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_lessons" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Lessons" vertex="1">
+        <mxCell id="pkg_lessons" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Lessons" vertex="1">
           <mxGeometry height="250" width="360" x="160" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="UC_VLESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Lesson" vertex="1">
+        <mxCell id="UC_VLESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="View Lesson" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_CLESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Create Lesson" vertex="1">
+        <mxCell id="UC_CLESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Create Lesson" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_ELESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Edit Lesson" vertex="1">
+        <mxCell id="UC_ELESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Edit Lesson" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="UC_DLESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Delete Lesson" vertex="1">
+        <mxCell id="UC_DLESSON" parent="pkg_lessons" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Delete Lesson" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_challenges" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Challenges" vertex="1">
+        <mxCell id="pkg_challenges" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Challenges" vertex="1">
           <mxGeometry height="380" width="360" x="560" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="UC_VCHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Challenges" vertex="1">
+        <mxCell id="UC_VCHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="View Challenges" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_CCHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Create Challenge (Quiz / Text / Code)" vertex="1">
+        <mxCell id="UC_CCHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=15;" value="Create Challenge (Quiz / Text / Code)" vertex="1">
           <mxGeometry height="55" width="150" x="190" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="UC_ECHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Edit Challenge" vertex="1">
+        <mxCell id="UC_ECHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Edit Challenge" vertex="1">
           <mxGeometry height="45" width="150" x="20" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="UC_DCHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Delete Challenge" vertex="1">
+        <mxCell id="UC_DCHALLENGE" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Delete Challenge&lt;/font&gt;" vertex="1">
           <mxGeometry height="45" width="150" x="190" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="UC_SUBMIT" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Submit Answer" vertex="1">
+        <mxCell id="UC_SUBMIT" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Submit Answer" vertex="1">
           <mxGeometry height="45" width="150" x="100" y="185" as="geometry" />
         </mxCell>
-        <mxCell id="UC_HINT" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Use Hint" vertex="1">
+        <mxCell id="UC_HINT" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Use Hint" vertex="1">
           <mxGeometry height="45" width="130" x="91" y="329" as="geometry" />
         </mxCell>
-        <mxCell id="UC_REVEAL" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Reveal Solution" vertex="1">
+        <mxCell id="UC_REVEAL" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Reveal Solution" vertex="1">
           <mxGeometry height="45" width="130" x="3" y="276" as="geometry" />
         </mxCell>
-        <mxCell id="UC_RUN" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Run Code (dry-run)" vertex="1">
-          <mxGeometry height="45" width="130" x="225" y="313" as="geometry" />
+        <mxCell id="UC_RUN" parent="pkg_challenges" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Run Code (dry-run)" vertex="1">
+          <mxGeometry height="53" width="137" x="218" y="305" as="geometry" />
         </mxCell>
         <mxCell id="e_SUBMIT_HINT" edge="1" parent="pkg_challenges" source="UC_SUBMIT" style="endArrow=open;endSize=8;dashed=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UC_HINT" value="&lt;&lt;extend&gt;&gt;">
           <mxGeometry relative="1" as="geometry" />
@@ -124,62 +124,62 @@
         <mxCell id="e_SUBMIT_RUN" edge="1" parent="pkg_challenges" source="UC_SUBMIT" style="endArrow=open;endSize=8;dashed=1;fontSize=10;" target="UC_RUN" value="&lt;&lt;extend&gt;&gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_bookmarks" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Bookmarks" vertex="1">
+        <mxCell id="pkg_bookmarks" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Bookmarks" vertex="1">
           <mxGeometry height="185" width="360" x="998" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="UC_BOOK" parent="pkg_bookmarks" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Bookmark / Unsave Course" vertex="1">
-          <mxGeometry height="50" width="150" x="20" y="55" as="geometry" />
+        <mxCell id="UC_BOOK" parent="pkg_bookmarks" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Bookmark / Unsave Course" vertex="1">
+          <mxGeometry height="70" width="159" x="20" y="83" as="geometry" />
         </mxCell>
-        <mxCell id="UC_BLIST" parent="pkg_bookmarks" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Saved Courses" vertex="1">
+        <mxCell id="UC_BLIST" parent="pkg_bookmarks" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="View Saved Courses" vertex="1">
           <mxGeometry height="50" width="150" x="190" y="55" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_feedback" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Feedback" vertex="1">
+        <mxCell id="pkg_feedback" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Feedback" vertex="1">
           <mxGeometry height="185" width="360" x="160" y="700" as="geometry" />
         </mxCell>
-        <mxCell id="UC_FEED" parent="pkg_feedback" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Submit / Edit / Delete Review" vertex="1">
+        <mxCell id="UC_FEED" parent="pkg_feedback" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Submit / Edit / Delete Review&lt;/font&gt;" vertex="1">
           <mxGeometry height="50" width="150" x="20" y="55" as="geometry" />
         </mxCell>
-        <mxCell id="UC_FEEDVIEW" parent="pkg_feedback" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Reviews" vertex="1">
+        <mxCell id="UC_FEEDVIEW" parent="pkg_feedback" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;View Reviews&lt;/font&gt;" vertex="1">
           <mxGeometry height="50" width="150" x="190" y="55" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_profile" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Profile" vertex="1">
+        <mxCell id="pkg_profile" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Profile" vertex="1">
           <mxGeometry height="185" width="360" x="560" y="795" as="geometry" />
         </mxCell>
-        <mxCell id="UC_VPROFILE" parent="pkg_profile" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View Profile" vertex="1">
+        <mxCell id="UC_VPROFILE" parent="pkg_profile" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="View Profile" vertex="1">
           <mxGeometry height="45" width="140" x="17" y="126" as="geometry" />
         </mxCell>
-        <mxCell id="UC_EPROFILE" parent="pkg_profile" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Edit Profile" vertex="1">
+        <mxCell id="UC_EPROFILE" parent="pkg_profile" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Edit Profile" vertex="1">
           <mxGeometry height="45" width="140" x="129" y="67" as="geometry" />
         </mxCell>
-        <mxCell id="UC_PASSWD" parent="pkg_profile" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Change Password" vertex="1">
-          <mxGeometry height="45" width="140" x="211" y="126" as="geometry" />
+        <mxCell id="UC_PASSWD" parent="pkg_profile" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Change Password" vertex="1">
+          <mxGeometry height="56" width="155" x="196" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_certs" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Certificates" vertex="1">
+        <mxCell id="pkg_certs" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Certificates" vertex="1">
           <mxGeometry height="150" width="360" x="998" y="550" as="geometry" />
         </mxCell>
-        <mxCell id="UC_CERT" parent="pkg_certs" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="View &amp; Download Certificate" vertex="1">
-          <mxGeometry height="55" width="190" x="80" y="55" as="geometry" />
+        <mxCell id="UC_CERT" parent="pkg_certs" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="View &amp;amp; Download Certificate" vertex="1">
+          <mxGeometry height="66" width="210" x="60" y="44" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_dash" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="Dashboard &amp; Leaderboard" vertex="1">
+        <mxCell id="pkg_dash" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="Dashboard &amp; Leaderboard" vertex="1">
           <mxGeometry height="220" width="360" x="160" y="940" as="geometry" />
         </mxCell>
-        <mxCell id="UC_SDASH" parent="pkg_dash" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Student Dashboard" vertex="1">
-          <mxGeometry height="45" width="140" x="20" y="55" as="geometry" />
+        <mxCell id="UC_SDASH" parent="pkg_dash" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Student Dashboard" vertex="1">
+          <mxGeometry height="69" width="168" x="20" y="55" as="geometry" />
         </mxCell>
-        <mxCell id="UC_TDASH" parent="pkg_dash" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Teacher Dashboard" vertex="1">
-          <mxGeometry height="45" width="140" x="190" y="55" as="geometry" />
+        <mxCell id="UC_TDASH" parent="pkg_dash" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Teacher Dashboard" vertex="1">
+          <mxGeometry height="67" width="154" x="190" y="55" as="geometry" />
         </mxCell>
-        <mxCell id="UC_LEADER" parent="pkg_dash" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Leaderboard" vertex="1">
-          <mxGeometry height="45" width="150" x="100" y="130" as="geometry" />
+        <mxCell id="UC_LEADER" parent="pkg_dash" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Leaderboard" vertex="1">
+          <mxGeometry height="59" width="150" x="100" y="130" as="geometry" />
         </mxCell>
-        <mxCell id="pkg_lti" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;strokeWidth=3;" value="LTI / Moodle Integration" vertex="1">
+        <mxCell id="pkg_lti" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;strokeWidth=3;" value="LTI / Moodle Integration" vertex="1">
           <mxGeometry height="185" width="360" x="998" y="748" as="geometry" />
         </mxCell>
-        <mxCell id="UC_LTI" parent="pkg_lti" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="LTI Launch (SSO)" vertex="1">
-          <mxGeometry height="50" width="150" x="179" y="52" as="geometry" />
+        <mxCell id="UC_LTI" parent="pkg_lti" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="LTI Launch (SSO)" vertex="1">
+          <mxGeometry height="50" width="185" x="144" y="52" as="geometry" />
         </mxCell>
-        <mxCell id="UC_GRADE" parent="pkg_lti" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Grade Passback (AGS)" vertex="1">
-          <mxGeometry height="50" width="150" x="25" y="93" as="geometry" />
+        <mxCell id="UC_GRADE" parent="pkg_lti" style="ellipse;whiteSpace=wrap;html=1;fontSize=19;" value="Grade Passback (AGS)" vertex="1">
+          <mxGeometry height="62" width="185" x="26" y="103" as="geometry" />
         </mxCell>
         <mxCell id="e_G_REG" edge="1" parent="1" source="actor_G" style="endArrow=none;endSize=8;edgeStyle=orthogonalEdgeStyle;endFill=0;strokeColor=light-dark(#000000,#FFFF00);" target="UC_REG" value="">
           <mxGeometry relative="1" as="geometry">
@@ -193,7 +193,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="76" y="-60" />
-              <mxPoint x="459" y="-60" />
+              <mxPoint x="527" y="-60" />
+              <mxPoint x="527" y="65" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -236,8 +237,7 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="16" y="472" />
-              <mxPoint x="16" y="233" />
-              <mxPoint x="255" y="233" />
+              <mxPoint x="16" y="195" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -246,9 +246,10 @@
             <Array as="points">
               <mxPoint x="-218" y="522" />
               <mxPoint x="-218" y="1344" />
-              <mxPoint x="1890" y="1344" />
-              <mxPoint x="1890" y="-21" />
-              <mxPoint x="1055" y="-21" />
+              <mxPoint x="1836" y="1344" />
+              <mxPoint x="1836" y="240" />
+              <mxPoint x="1009" y="240" />
+              <mxPoint x="1009" y="103" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -272,8 +273,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="87" y="375" />
-              <mxPoint x="686" y="375" />
-              <mxPoint x="686" y="440" />
+              <mxPoint x="647" y="375" />
+              <mxPoint x="647" y="440" />
               <mxPoint x="735" y="440" />
             </Array>
           </mxGeometry>
@@ -545,7 +546,8 @@
             <Array as="points">
               <mxPoint x="-47" y="1089" />
               <mxPoint x="-47" y="-69" />
-              <mxPoint x="469" y="-69" />
+              <mxPoint x="532" y="-69" />
+              <mxPoint x="532" y="65" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -573,32 +575,32 @@
         <mxCell id="e_LTI_ENROLL" edge="1" parent="1" source="UC_LTI" style="endArrow=open;endSize=8;dashed=1;fontSize=10;" target="UC_ENROLL" value="&lt;&lt;include&gt;&gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;Admin&lt;/b&gt;" vertex="1">
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Admin&lt;/font&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="54" width="24" x="58" y="1045" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;Teacher&lt;/b&gt;" vertex="1">
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Teacher&lt;/font&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="54" width="24" x="58" y="845" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;Student&lt;/b&gt;" vertex="1">
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Student&lt;/font&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="54" width="24" x="58" y="466" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;Quest&lt;/b&gt;" vertex="1">
-          <mxGeometry height="54" width="24" x="58" y="244" as="geometry" />
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Guest&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="54" width="24" x="58" y="219" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-6" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;Moodle&lt;/b&gt;" vertex="1">
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-6" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Moodle&lt;/font&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="54" width="24" x="1578" y="986" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-9" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=12;" value="Admin Panel" vertex="1">
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-9" parent="1" style="swimlane;startSize=30;fontStyle=1;fontSize=23;" value="Admin Panel" vertex="1">
           <mxGeometry height="185" width="360" x="569" y="1010" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-10" parent="Q7A6HABR1FpYnz38eV7g-9" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Manage Users" vertex="1">
-          <mxGeometry height="45" width="140" x="17" y="126" as="geometry" />
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-10" parent="Q7A6HABR1FpYnz38eV7g-9" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Manage Users" vertex="1">
+          <mxGeometry height="62" width="153" x="17" y="109" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-11" parent="Q7A6HABR1FpYnz38eV7g-9" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Manage Roles" vertex="1">
-          <mxGeometry height="45" width="140" x="129" y="67" as="geometry" />
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-11" parent="Q7A6HABR1FpYnz38eV7g-9" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="Manage Roles" vertex="1">
+          <mxGeometry height="58" width="178" x="91" y="54" as="geometry" />
         </mxCell>
-        <mxCell id="Q7A6HABR1FpYnz38eV7g-12" parent="Q7A6HABR1FpYnz38eV7g-9" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" value="Manage System Settings" vertex="1">
-          <mxGeometry height="45" width="140" x="211" y="126" as="geometry" />
+        <mxCell id="Q7A6HABR1FpYnz38eV7g-12" parent="Q7A6HABR1FpYnz38eV7g-9" style="ellipse;whiteSpace=wrap;html=1;fontSize=21;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Manage System Settings&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64" width="158" x="193" y="107" as="geometry" />
         </mxCell>
         <mxCell id="Q7A6HABR1FpYnz38eV7g-13" edge="1" parent="1" source="actor_A" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.204;exitY=1.001;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;curved=0;exitPerimeter=0;strokeColor=light-dark(#000000,#00CC00);" target="Q7A6HABR1FpYnz38eV7g-12">
           <mxGeometry relative="1" as="geometry">
