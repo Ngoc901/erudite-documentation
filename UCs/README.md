@@ -4,6 +4,15 @@
 
 ---
 
+## Use Case Diagram
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../Diagrams/UseCaseDiagramDark.drawio.png">
+  <img src="../Diagrams/UseCaseDiagram.drawio.png" alt="Erudite Use Case Diagram" width="100%">
+</picture>
+
+---
+
 ## Authentication (6)
 
 | #   | Use Case       | File                                                |

@@ -38,6 +38,18 @@ These groups were added in Semester 2 and are plotted as individual points on th
 
 ---
 
+## Charts
+
+**All UC groups — Week 13 → Week 20 (including Semester 2 additions)**
+
+![FP vs Effort all UC groups](../Images/fp-all-uc-groups.png)
+
+**Cost estimation: old model (k=0.520) vs new model (k=0.626)**
+
+![Cost estimation old vs new model](../Images/fp-cost-estimation.png)
+
+---
+
 ## FP Calculation Method
 
 Each UC was classified by its dominant transaction type:
